@@ -1,0 +1,81 @@
+default_platform(:ios)
+
+platform :ios do
+
+  desc "Build and upload to App Store Connect"
+  lane :release do
+    app_slug = ENV["APP_SLUG"]
+    bundle_id = ENV["BUNDLE_ID"]
+    asc_app_id = ENV["ASC_APP_ID"]
+
+    UI.message("Building: #{app_slug} (#{bundle_id})")
+
+    # Set up code signing using ASC API key
+    api_key = app_store_connect_api_key(
+      key_id:      ENV["ASC_KEY_ID"],
+      issuer_id:   ENV["ASC_ISSUER_ID"],
+      key_content: ENV["ASC_PRIVATE_KEY"],  # contents of .p8 file
+      is_key_content_base64: false
+    )
+
+    # Auto-manage provisioning profiles
+    automatic_code_signing(
+      path:         "ios/App/App.xcodeproj",
+      use_automatic_signing: true,
+      team_id:      ENV["TEAM_ID"]
+    )
+
+    # Build the IPA
+    gym(
+      scheme:                  "App",
+      workspace:               "ios/App/App.xcworkspace",
+      configuration:           "Release",
+      export_method:           "app-store",
+      export_options: {
+        provisioningProfiles: {},
+        signingStyle:         "automatic"
+      },
+      output_directory:        "./build",
+      output_name:             "#{app_slug}.ipa",
+      clean:                   true,
+      silent:                  true,
+      suppress_xcode_output:   true
+    )
+
+    # Upload to ASC
+    upload_to_app_store(
+      api_key:                        api_key,
+      app_identifier:                 bundle_id,
+      ipa:                            "./build/#{app_slug}.ipa",
+      app_version:                    "1.0",
+      skip_metadata:                  true,   # already filled via browser
+      skip_screenshots:               true,   # already uploaded
+      submit_for_review:              false,  # manual review trigger
+      automatic_release:              false,
+      precheck_include_in_app_purchases: false
+    )
+
+    UI.success("Uploaded #{app_slug} to ASC!")
+  end
+
+  desc "Only build, don't upload (for testing)"
+  lane :build_only do
+    api_key = app_store_connect_api_key(
+      key_id:      ENV["ASC_KEY_ID"],
+      issuer_id:   ENV["ASC_ISSUER_ID"],
+      key_content: ENV["ASC_PRIVATE_KEY"],
+      is_key_content_base64: false
+    )
+
+    gym(
+      scheme:                "App",
+      workspace:             "ios/App/App.xcworkspace",
+      configuration:         "Release",
+      export_method:         "app-store",
+      output_directory:      "./build",
+      output_name:           "#{ENV['APP_SLUG']}.ipa",
+      clean:                 true
+    )
+  end
+
+end

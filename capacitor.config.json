@@ -1,0 +1,23 @@
+{
+  "appId": "BUNDLE_ID_PLACEHOLDER",
+  "appName": "APP_NAME_PLACEHOLDER",
+  "webDir": "dist",
+  "server": {
+    "url": "WEBVIEW_URL_PLACEHOLDER",
+    "cleartext": false,
+    "allowNavigation": ["practicetestgeeks.com", "*.practicetestgeeks.com"]
+  },
+  "plugins": {
+    "SplashScreen": {
+      "launchShowDuration": 2000,
+      "backgroundColor": "#1a73e8",
+      "showSpinner": true,
+      "spinnerColor": "#ffffff",
+      "androidSpinnerStyle": "large",
+      "iosSpinnerStyle": "large"
+    },
+    "PushNotifications": {
+      "presentationOptions": ["badge", "sound", "alert"]
+    }
+  }
+}

@@ -1,0 +1,97 @@
+name: Build & Upload iOS Apps
+
+on:
+  workflow_dispatch:
+    inputs:
+      apps:
+        description: 'Comma-separated slugs to build, or "all" for all new apps'
+        required: true
+        default: 'reading'
+
+jobs:
+  prepare:
+    runs-on: ubuntu-latest
+    outputs:
+      matrix: ${{ steps.set-matrix.outputs.matrix }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build app matrix
+        id: set-matrix
+        run: |
+          INPUT="${{ github.event.inputs.apps }}"
+          if [ "$INPUT" = "all" ]; then
+            # All new apps (not the 8 already published)
+            SLUGS='["reading","bluebook-sat","mensa","cefr","nbt","bartender","ielts","police-officer","ap-us-history","celpip","alcpt","truck-dispatcher","amcat","ibew-aptitude","amc-mcq","bar-exam","ucat","millwright","bls","smart-serve","air-brake"]'
+          else
+            # Convert comma-separated to JSON array
+            SLUGS=$(echo "$INPUT" | python3 -c "import sys,json; s=sys.stdin.read().strip(); print(json.dumps([x.strip() for x in s.split(',')]))")
+          fi
+          echo "matrix={\"slug\":$SLUGS}" >> $GITHUB_OUTPUT
+          echo "Building: $SLUGS"
+
+  build:
+    needs: prepare
+    runs-on: macos-14
+    strategy:
+      matrix: ${{ fromJson(needs.prepare.outputs.matrix) }}
+      max-parallel: 5  # GitHub allows up to 20 parallel macOS jobs (free tier = 5)
+      fail-fast: false
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Customize app config
+        run: node scripts/customize.js ${{ matrix.slug }}
+        env:
+          APP_SLUG: ${{ matrix.slug }}
+
+      - name: Add iOS platform
+        run: |
+          npx cap add ios 2>/dev/null || true
+          npx cap sync ios
+
+      - name: Setup Ruby & Fastlane
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.2'
+          bundler-cache: true
+
+      - name: Install Fastlane
+        run: gem install fastlane --no-document
+
+      - name: Get app metadata from apps.json
+        id: app-meta
+        run: |
+          BUNDLE_ID=$(node -e "const a=require('./apps.json'); const s='${{ matrix.slug }}'; console.log(a[s].bundleId || 'com.practicetestgeeks.'+s.replace(/-/g,''))")
+          ASC_APP_ID=$(node -e "const a=require('./apps.json'); console.log(a['${{ matrix.slug }}'].ascAppId || '')")
+          echo "bundle_id=$BUNDLE_ID" >> $GITHUB_OUTPUT
+          echo "asc_app_id=$ASC_APP_ID" >> $GITHUB_OUTPUT
+          echo "Bundle ID: $BUNDLE_ID, ASC App ID: $ASC_APP_ID"
+
+      - name: Build & upload to ASC
+        run: fastlane release
+        env:
+          APP_SLUG:        ${{ matrix.slug }}
+          BUNDLE_ID:       ${{ steps.app-meta.outputs.bundle_id }}
+          ASC_APP_ID:      ${{ steps.app-meta.outputs.asc_app_id }}
+          ASC_KEY_ID:      ${{ secrets.ASC_KEY_ID }}
+          ASC_ISSUER_ID:   ${{ secrets.ASC_ISSUER_ID }}
+          ASC_PRIVATE_KEY: ${{ secrets.ASC_PRIVATE_KEY }}
+          TEAM_ID:         ${{ secrets.APPLE_TEAM_ID }}
+
+      - name: Upload IPA as artifact (backup)
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ${{ matrix.slug }}-ipa
+          path: build/*.ipa
+          retention-days: 7
