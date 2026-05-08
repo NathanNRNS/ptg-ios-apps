@@ -101,16 +101,39 @@ def get_or_create_version_localization(token, app_id, locale="en-US"):
         return version_id, create["data"]["id"]
     return version_id, None
 
+def get_or_create_screenshot_set(token, version_loc_id, display_type="APP_IPHONE_65"):
+    # Check existing sets
+    sets = asc_request(token, "GET",
+        f"/v1/appStoreVersionLocalizations/{version_loc_id}/appScreenshotSets?filter[screenshotDisplayType]={display_type}")
+    if sets and sets.get("data"):
+        return sets["data"][0]["id"]
+    # Create new set
+    resp = asc_request(token, "POST", "/v1/appScreenshotSets", {
+        "data": {"type": "appScreenshotSets",
+                 "attributes": {"screenshotDisplayType": display_type},
+                 "relationships": {"appStoreVersionLocalization":
+                     {"data": {"type": "appStoreVersionLocalizations", "id": version_loc_id}}}}
+    })
+    if resp and resp.get("data"):
+        return resp["data"]["id"]
+    return None
+
 def upload_screenshot(token, version_loc_id, img_path, display_type="APP_IPHONE_65"):
     img = Path(img_path)
     size = img.stat().st_size
+
+    # Get/create screenshot set for this display type
+    set_id = get_or_create_screenshot_set(token, version_loc_id, display_type)
+    if not set_id:
+        print(f"  Could not get screenshot set for {display_type}")
+        return False
+
     # Reserve slot
     reserve = asc_request(token, "POST", "/v1/appScreenshots", {
         "data": {"type": "appScreenshots",
-                 "attributes": {"fileSize": size, "fileName": img.name,
-                                "screenshotDisplayType": display_type},
-                 "relationships": {"appStoreVersionLocalization":
-                     {"data": {"type": "appStoreVersionLocalizations", "id": version_loc_id}}}}
+                 "attributes": {"fileSize": size, "fileName": img.name},
+                 "relationships": {"appScreenshotSet":
+                     {"data": {"type": "appScreenshotSets", "id": set_id}}}}
     })
     if not reserve or not reserve.get("data"):
         print(f"  Could not reserve screenshot slot for {img.name}")
@@ -229,13 +252,16 @@ def process_app(token, slug, app_data):
         set_version_metadata(token, version_loc_id, description, meta["keywords"],
                              "Initial release.")
 
-        # 3. Screenshots
+        # 3. Screenshots — check via appScreenshotSets
         sc_dir = ROOT / "screenshots" / slug
         if sc_dir.exists():
-            existing = asc_request(token, "GET",
-                f"/v1/appStoreVersionLocalizations/{version_loc_id}/appScreenshots")
-            if existing and existing.get("data"):
-                print(f"  Screenshots already exist ({len(existing['data'])}), skipping")
+            existing_sets = asc_request(token, "GET",
+                f"/v1/appStoreVersionLocalizations/{version_loc_id}/appScreenshotSets")
+            has_screenshots = (existing_sets and existing_sets.get("data") and
+                               any(s.get("attributes", {}).get("screenshotCount", 0) > 0
+                                   for s in existing_sets["data"]))
+            if has_screenshots:
+                print(f"  Screenshots already exist, skipping")
             else:
                 sc_files = sorted(sc_dir.glob("*.png"))[:3]
                 for sc_path in sc_files:
