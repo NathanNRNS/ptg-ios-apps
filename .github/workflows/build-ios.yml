@@ -70,7 +70,7 @@ jobs:
       - name: Get app metadata from apps.json
         id: app-meta
         run: |
-          BUNDLE_ID=$(node -e "const a=require('./apps.json'); const s='${{ matrix.slug }}'; console.log(a[s].bundleId || 'com.practicetestgeeks.'+s.replace(/-/g,''))")
+          BUNDLE_ID=$(node -e "const a=require('./apps.json'); const s='${{ matrix.slug }}'; const app=a[s]; console.log(app.ascBundleId || app.bundleId || 'com.practicetestgeeks.'+s.replace(/-/g,''))")
           ASC_APP_ID=$(node -e "const a=require('./apps.json'); console.log(a['${{ matrix.slug }}'].ascAppId || '')")
           echo "bundle_id=$BUNDLE_ID" >> $GITHUB_OUTPUT
           echo "asc_app_id=$ASC_APP_ID" >> $GITHUB_OUTPUT

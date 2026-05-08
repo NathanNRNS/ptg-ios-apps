@@ -13,7 +13,7 @@ const app = apps[slug];
 if (!app) { console.error(`App "${slug}" not found`); process.exit(1); }
 
 const config = {
-  appId: app.bundleId || `com.practicetestgeeks.${slug.replace(/-/g, '')}`,
+  appId: app.ascBundleId || app.bundleId || `com.practicetestgeeks.${slug.replace(/-/g, '')}`,
   appName: app.ascName || app.name,
   webDir: 'dist',
   server: {
