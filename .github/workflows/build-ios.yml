@@ -76,6 +76,14 @@ jobs:
           echo "asc_app_id=$ASC_APP_ID" >> $GITHUB_OUTPUT
           echo "Bundle ID: $BUNDLE_ID, ASC App ID: $ASC_APP_ID"
 
+      - name: Clean up stale Development certificates
+        run: python3 scripts/cleanup-dev-certs.py
+        continue-on-error: true
+        env:
+          ASC_KEY_ID:      ${{ secrets.ASC_KEY_ID }}
+          ASC_ISSUER_ID:   ${{ secrets.ASC_ISSUER_ID }}
+          ASC_PRIVATE_KEY: ${{ secrets.ASC_PRIVATE_KEY }}
+
       - name: Build & upload to ASC
         run: fastlane release
         env:

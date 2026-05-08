@@ -13,22 +13,25 @@ platform :ios do
 
     UI.message("Building: #{app_slug} (#{bundle_id})")
 
-    # Write .p8 key where altool and xcodebuild both expect it
+    # Write .p8 key to temp file for xcodebuild and altool
+    require 'tempfile'
     require 'fileutils'
+    key_file = Tempfile.new(['asc_key', '.p8'])
+    key_file.write(private_key)
+    key_file.flush
+
+    # Also write to ~/.appstoreconnect/private_keys/ for altool auto-discovery
     key_dir  = File.expand_path("~/.appstoreconnect/private_keys")
     FileUtils.mkdir_p(key_dir)
-    key_path = "#{key_dir}/AuthKey_#{key_id}.p8"
-    File.write(key_path, private_key)
+    File.write("#{key_dir}/AuthKey_#{key_id}.p8", private_key)
 
-    # Set up API key context (used by signing/provisioning steps)
-    app_store_connect_api_key(
+    api_key = app_store_connect_api_key(
       key_id:                key_id,
       issuer_id:             issuer_id,
       key_content:           private_key,
       is_key_content_base64: false
     )
 
-    # Update code signing to automatic with the team
     update_code_signing_settings(
       path:                  "ios/App/App.xcodeproj",
       use_automatic_signing: true,
@@ -36,7 +39,6 @@ platform :ios do
       bundle_identifier:     bundle_id
     )
 
-    # Build — force Distribution signing to skip Dev cert check on ephemeral runners
     gym(
       scheme:                "App",
       workspace:             "ios/App/App.xcworkspace",
@@ -50,7 +52,7 @@ platform :ios do
         uploadSymbols:        true,
         compileBitcode:       false
       },
-      xcargs:                "CODE_SIGN_IDENTITY='Apple Distribution' -allowProvisioningUpdates -authenticationKeyPath #{key_path} -authenticationKeyID #{key_id} -authenticationKeyIssuerID #{issuer_id}",
+      xcargs:                "-allowProvisioningUpdates -authenticationKeyPath #{key_file.path} -authenticationKeyID #{key_id} -authenticationKeyIssuerID #{issuer_id}",
       output_directory:      "./build",
       output_name:           "#{app_slug}.ipa",
       clean:                 true,
@@ -58,10 +60,11 @@ platform :ios do
       suppress_xcode_output: false
     )
 
-    # Upload via xcrun altool (bypasses Spaceship::Tunes auth issues in deliver)
-    sh("xcrun altool --upload-app --type ios --file '../build/#{app_slug}.ipa' --apiKey '#{key_id}' --apiIssuer '#{issuer_id}' 2>&1")
+    key_file.close
+    key_file.unlink
 
-    File.delete(key_path) if File.exist?(key_path)
+    # Upload via altool (avoids Spaceship::Tunes auth issues in deliver)
+    sh("xcrun altool --upload-app --type ios --file '../build/#{app_slug}.ipa' --apiKey '#{key_id}' --apiIssuer '#{issuer_id}' 2>&1")
 
     UI.success("✅ Uploaded #{app_slug} to ASC!")
   end
