@@ -1,0 +1,36 @@
+name: Upload App Metadata to ASC
+
+on:
+  workflow_dispatch:
+    inputs:
+      apps:
+        description: 'Comma-separated slugs, or "all"'
+        required: true
+        default: 'all'
+
+jobs:
+  upload:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install cryptography pillow
+
+      - name: Upload metadata
+        run: |
+          INPUT="${{ github.event.inputs.apps }}"
+          if [ "$INPUT" = "all" ]; then
+            python3 scripts/upload-metadata.py --all
+          else
+            python3 scripts/upload-metadata.py $(echo "$INPUT" | tr ',' ' ')
+          fi
+        env:
+          ASC_KEY_ID:      ${{ secrets.ASC_KEY_ID }}
+          ASC_ISSUER_ID:   ${{ secrets.ASC_ISSUER_ID }}
+          ASC_PRIVATE_KEY: ${{ secrets.ASC_PRIVATE_KEY }}

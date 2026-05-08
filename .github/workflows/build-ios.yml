@@ -65,6 +65,13 @@ jobs:
           npx cap add ios 2>/dev/null || true
           npx cap sync ios
 
+      - name: Set app icon
+        run: |
+          mkdir -p resources
+          cp icons/${{ matrix.slug }}.png resources/icon.png
+          npx @capacitor/assets generate --ios 2>&1 || echo "Icon gen warning (non-fatal)"
+        continue-on-error: true
+
       - name: Setup Ruby & Fastlane
         uses: ruby/setup-ruby@v1
         with:
