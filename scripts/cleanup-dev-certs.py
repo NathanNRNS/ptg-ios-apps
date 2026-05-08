@@ -53,16 +53,17 @@ def main():
 
     headers = {"Authorization": f"Bearer {token}"}
 
-    # List Development certs
+    DEV_TYPES = {"DEVELOPMENT", "IOS_DEVELOPMENT", "MAC_APP_DEVELOPMENT"}
+
+    # List ALL certs and filter locally (ASC API doesn't support multi-value filter)
     try:
         req = urllib.request.Request(
-            "https://api.appstoreconnect.apple.com/v1/certificates"
-            "?filter[certificateType]=IOS_DEVELOPMENT&limit=200",
+            "https://api.appstoreconnect.apple.com/v1/certificates?limit=200",
             headers=headers
         )
-        data = json.loads(urllib.request.urlopen(req, timeout=30).read())
-        certs = data.get('data', [])
-        print(f"Found {len(certs)} IOS_DEVELOPMENT certificates")
+        all_certs = json.loads(urllib.request.urlopen(req, timeout=30).read()).get('data', [])
+        certs = [c for c in all_certs if c.get('attributes', {}).get('certificateType', '') in DEV_TYPES]
+        print(f"Found {len(all_certs)} total certs, {len(certs)} Development type")
     except Exception as e:
         print(f"Failed to list certs: {e}")
         return
