@@ -31,7 +31,7 @@ jobs:
 
   build:
     needs: prepare
-    runs-on: macos-15
+    runs-on: macos-latest
     strategy:
       matrix: ${{ fromJson(needs.prepare.outputs.matrix) }}
       max-parallel: 5  # GitHub allows up to 20 parallel macOS jobs (free tier = 5)
@@ -39,6 +39,13 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
+
+      - name: Select latest Xcode
+        run: |
+          XCODE=$(ls /Applications/ | grep -E '^Xcode' | sort -V | tail -1)
+          echo "Using: $XCODE"
+          sudo xcode-select -s "/Applications/$XCODE/Contents/Developer"
+          xcodebuild -version
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
