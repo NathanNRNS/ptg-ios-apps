@@ -46,6 +46,7 @@ platform :ios do
       export_method:         "app-store",
       export_options: {
         method:               "app-store",
+        destination:          "upload",      # Xcode 15: upload directly, skip altool
         teamID:               team_id,
         signingStyle:         "automatic",
         uploadBitcode:        false,
@@ -62,9 +63,6 @@ platform :ios do
 
     key_file.close
     key_file.unlink
-
-    # Upload via altool (avoids Spaceship::Tunes auth issues in deliver)
-    sh("xcrun altool --upload-app --type ios --file '../build/#{app_slug}.ipa' --apiKey '#{key_id}' --apiIssuer '#{issuer_id}' 2>&1")
 
     UI.success("✅ Uploaded #{app_slug} to ASC!")
   end
