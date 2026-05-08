@@ -94,6 +94,7 @@
   "bluebook-sat": {
     "name": "Bluebook SAT Practice Test",
     "ascName": "Bluebook SAT Practice Test",
+    "bundleId": "com.practicetestgeeks.bluebooksat",
     "ascBundleId": "Bluebook-SAT-Practice-Test",
     "ascAppId": "6767160507",
     "url": "https://ios-bluebook-sat.practicetestgeeks.com/bluebook-sat-practice-test",
@@ -105,6 +106,7 @@
   "mensa": {
     "name": "MENSA Practice Test",
     "ascName": "MENSA Practice Test",
+    "bundleId": "com.practicetestgeeks.mensa",
     "ascBundleId": "MENSA-Practice-Test",
     "ascAppId": "6767160509",
     "url": "https://ios-mensa.practicetestgeeks.com/mensa-practice-test",
@@ -116,6 +118,7 @@
   "cefr": {
     "name": "CEFR Practice Test",
     "ascName": "CEFR Practice Test",
+    "bundleId": "com.practicetestgeeks.cefr",
     "ascBundleId": "CEFR-Practice-Test",
     "ascAppId": "6767160638",
     "url": "https://ios-cefr.practicetestgeeks.com/cefr-practice-test",
@@ -127,6 +130,7 @@
   "nbt": {
     "name": "NBT Practice Test",
     "ascName": "NBT Practice Test",
+    "bundleId": "com.practicetestgeeks.nbt",
     "ascBundleId": "NBT-Practice-Test",
     "ascAppId": "6767160853",
     "url": "https://ios-nbt.practicetestgeeks.com/nbt-practice-test",
@@ -138,6 +142,7 @@
   "bartender": {
     "name": "Bartender Practice Test",
     "ascName": "Bartender Practice Test",
+    "bundleId": "com.practicetestgeeks.bartender",
     "ascBundleId": "Bartender-Practice-Test",
     "ascAppId": "6767160868",
     "url": "https://ios-bartender.practicetestgeeks.com/bartender-test",
@@ -149,6 +154,7 @@
   "ielts": {
     "name": "IELTS Practice Test",
     "ascName": "IELTS Exam Test",
+    "bundleId": "com.practicetestgeeks.ielts",
     "ascBundleId": "IELTS-Practice-Test",
     "ascAppId": "6767161031",
     "url": "https://ios-ielts.practicetestgeeks.com/ielts/practice-tests",
@@ -160,6 +166,7 @@
   "police-officer": {
     "name": "Police Officer Practice Test",
     "ascName": "Police Officer Practice Test",
+    "bundleId": "com.practicetestgeeks.policeofficer",
     "ascBundleId": "Police-Officer-Practice-Test",
     "ascAppId": "6767161044",
     "url": "https://ios-police-officer.practicetestgeeks.com/police-officer-practice-test-exam",
@@ -171,6 +178,7 @@
   "ap-us-history": {
     "name": "AP US History Practice Test",
     "ascName": "AP US History Exam Test",
+    "bundleId": "com.practicetestgeeks.apushistory",
     "ascBundleId": "AP-US-History-Practice-Test",
     "ascAppId": "6767161241",
     "url": "https://ios-ap-us-history.practicetestgeeks.com/ap-us-history-exam",
@@ -182,6 +190,7 @@
   "celpip": {
     "name": "CELPIP Practice Test",
     "ascName": "CELPIP Practice Test",
+    "bundleId": "com.practicetestgeeks.celpip",
     "ascBundleId": "CELPIP-Practice-Test",
     "ascAppId": "6767161119",
     "url": "https://ios-celpip.practicetestgeeks.com/celpip",
@@ -193,6 +202,7 @@
   "alcpt": {
     "name": "ALCPT Practice Test",
     "ascName": "ALCPT Practice Test",
+    "bundleId": "com.practicetestgeeks.alcpt",
     "ascBundleId": "ALCPT-Practice-Test",
     "ascAppId": "6767161230",
     "url": "https://ios-alcpt.practicetestgeeks.com/alcpt-test",
@@ -204,6 +214,7 @@
   "truck-dispatcher": {
     "name": "Truck Dispatcher Practice Test",
     "ascName": "Truck Dispatcher Practice Test",
+    "bundleId": "com.practicetestgeeks.truckdispatcher",
     "ascBundleId": "Truck-Dispatcher-Practice-Test",
     "ascAppId": "6767161172",
     "url": "https://ios-truck-dispatcher.practicetestgeeks.com/truck-dispatcher-test",
@@ -215,6 +226,7 @@
   "amcat": {
     "name": "AMCAT Practice Test",
     "ascName": "AMCAT Practice Test",
+    "bundleId": "com.practicetestgeeks.amcat",
     "ascBundleId": "AMCAT-Practice-Test",
     "ascAppId": "6767161207",
     "url": "https://ios-amcat.practicetestgeeks.com/amcat",
@@ -226,6 +238,7 @@
   "ibew-aptitude": {
     "name": "IBEW Aptitude Practice Test",
     "ascName": "IBEW Aptitude Practice Test",
+    "bundleId": "com.practicetestgeeks.ibewaptitude",
     "ascBundleId": "IBEW-Aptitude-Practice-Test",
     "ascAppId": "6767161579",
     "url": "https://ios-ibew-aptitude.practicetestgeeks.com/ibew-aptitude-test",
@@ -237,6 +250,7 @@
   "amc-mcq": {
     "name": "AMC MCQ Practice Test",
     "ascName": "AMC MCQ Practice Test",
+    "bundleId": "com.practicetestgeeks.amcmcq",
     "ascBundleId": "AMC-MCQ-Practice-Test",
     "ascAppId": "6767161375",
     "url": "https://ios-amc-mcq.practicetestgeeks.com/amc-mcq-practice-test-exam",
@@ -248,6 +262,7 @@
   "bar-exam": {
     "name": "Bar Exam Practice Test",
     "ascName": "Bar Exam Practice Test",
+    "bundleId": "com.practicetestgeeks.barexam",
     "ascBundleId": "Bar-Exam-Practice-Test",
     "ascAppId": "6767162051",
     "url": "https://ios-bar-exam.practicetestgeeks.com/bar-exam-practice-test-exam",
@@ -259,6 +274,7 @@
   "ucat": {
     "name": "UCAT Practice Test",
     "ascName": "UCAT Practice Test",
+    "bundleId": "com.practicetestgeeks.ucat",
     "ascBundleId": "UCAT-Practice-Test",
     "ascAppId": "6767161894",
     "url": "https://ios-ucat.practicetestgeeks.com/ucat-practice-test-exam",
@@ -270,6 +286,7 @@
   "millwright": {
     "name": "Millwright Practice Test",
     "ascName": "Millwright Practice Test",
+    "bundleId": "com.practicetestgeeks.millwright",
     "ascBundleId": "Millwright-Practice-Test",
     "ascAppId": "6767162266",
     "url": "https://ios-millwright.practicetestgeeks.com/millwright-certification-test",
@@ -281,6 +298,7 @@
   "bls": {
     "name": "BLS Practice Test",
     "ascName": "BLS Practice Test",
+    "bundleId": "com.practicetestgeeks.bls",
     "ascBundleId": "BLS-Practice-Test",
     "ascAppId": "6767162196",
     "url": "https://ios-bls.practicetestgeeks.com/basic-life-support",
@@ -292,6 +310,7 @@
   "smart-serve": {
     "name": "Smart Serve Practice Test",
     "ascName": "Smart Serve Practice Test",
+    "bundleId": "com.practicetestgeeks.smartserve",
     "ascBundleId": "Smart-Serve-Practice-Test",
     "ascAppId": "6767162565",
     "url": "https://ios-smart-serve.practicetestgeeks.com/smart-serve-test",
@@ -303,6 +322,7 @@
   "air-brake": {
     "name": "Air Brake Practice Test",
     "ascName": "Air Brake Exam Test",
+    "bundleId": "com.practicetestgeeks.airbrake",
     "ascBundleId": "Air-Brake-PTG-Test",
     "ascAppId": "6767262340",
     "url": "https://ios-air-brake.practicetestgeeks.com/air-brake-practice-test-2",
