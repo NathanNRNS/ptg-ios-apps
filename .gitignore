@@ -1,5 +1,4 @@
 node_modules/
-ios/
 build/
 *.ipa
 .DS_Store
@@ -8,3 +7,12 @@ fastlane/report.xml
 fastlane/Preview.html
 fastlane/screenshots
 fastlane/test_output
+
+# Xcode build artifacts (keep ios/ tracked for Xcode Cloud)
+ios/App/Pods/
+ios/App/build/
+ios/DerivedData/
+ios/App/App/public/
+*.xcuserdata/
+*.xcuserstate
+xcuserdata/
