@@ -13,12 +13,20 @@ platform :ios do
 
     UI.message("Building: #{app_slug} (#{bundle_id})")
 
-    # Write .p8 key to the location altool and xcodebuild both expect
+    # Write .p8 key where altool and xcodebuild both expect it
     require 'fileutils'
     key_dir  = File.expand_path("~/.appstoreconnect/private_keys")
     FileUtils.mkdir_p(key_dir)
     key_path = "#{key_dir}/AuthKey_#{key_id}.p8"
     File.write(key_path, private_key)
+
+    # Set up API key context (used by signing/provisioning steps)
+    app_store_connect_api_key(
+      key_id:                key_id,
+      issuer_id:             issuer_id,
+      key_content:           private_key,
+      is_key_content_base64: false
+    )
 
     # Update code signing to automatic with the team
     update_code_signing_settings(
@@ -28,7 +36,7 @@ platform :ios do
       bundle_identifier:     bundle_id
     )
 
-    # Build — pass ASC key to xcodebuild for auto-provisioning
+    # Build — force Distribution signing to skip Dev cert check on ephemeral runners
     gym(
       scheme:                "App",
       workspace:             "ios/App/App.xcworkspace",
@@ -42,7 +50,7 @@ platform :ios do
         uploadSymbols:        true,
         compileBitcode:       false
       },
-      xcargs:                "-allowProvisioningUpdates -authenticationKeyPath #{key_path} -authenticationKeyID #{key_id} -authenticationKeyIssuerID #{issuer_id}",
+      xcargs:                "CODE_SIGN_IDENTITY='Apple Distribution' -allowProvisioningUpdates -authenticationKeyPath #{key_path} -authenticationKeyID #{key_id} -authenticationKeyIssuerID #{issuer_id}",
       output_directory:      "./build",
       output_name:           "#{app_slug}.ipa",
       clean:                 true,
