@@ -22,6 +22,9 @@ jobs:
           if [ "$INPUT" = "all" ]; then
             # All new apps (not the 8 already published)
             SLUGS='["reading","bluebook-sat","mensa","cefr","nbt","bartender","ielts","police-officer","ap-us-history","celpip","alcpt","truck-dispatcher","amcat","ibew-aptitude","amc-mcq","bar-exam","ucat","millwright","bls","smart-serve","air-brake"]'
+          elif [ "$INPUT" = "batch2" ]; then
+            # 41 newly added apps (batch 2)
+            SLUGS='["473-postal-exam","act","ase","boating","canada-citizenship","ccht","cda","chauffeur","clb","cpr","dmv","ekg","epa","esl","f-02","forklift","fsc","g1","hha","hiset","language-proficiency","lpn","mace","moca","nccco","notary-public","nremt","parapro","pca","pert","ptcb","pte","ramsay","rbt","rma","snhd","tabe","toefl","tsi","wonderlic","workkeys"]'
           else
             # Convert comma-separated to JSON array
             SLUGS=$(echo "$INPUT" | python3 -c "import sys,json; s=sys.stdin.read().strip(); print(json.dumps([x.strip() for x in s.split(',')]))")
