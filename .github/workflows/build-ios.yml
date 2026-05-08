@@ -31,7 +31,7 @@ jobs:
 
   build:
     needs: prepare
-    runs-on: macos-14
+    runs-on: macos-15
     strategy:
       matrix: ${{ fromJson(needs.prepare.outputs.matrix) }}
       max-parallel: 5  # GitHub allows up to 20 parallel macOS jobs (free tier = 5)
