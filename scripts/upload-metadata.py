@@ -170,13 +170,14 @@ def upload_screenshot(token, version_loc_id, img_path, display_type="APP_IPHONE_
     return True
 
 def set_app_info(token, app_id, name, subtitle, locale="en-US"):
-    _, loc_id = get_or_create_localization(token, app_id, locale)
+    info_id, loc_id = get_or_create_localization(token, app_id, locale)
     if not loc_id:
         print("  Could not get app info localization")
         return
     asc_request(token, "PATCH", f"/v1/appInfoLocalizations/{loc_id}", {
         "data": {"type": "appInfoLocalizations", "id": loc_id,
-                 "attributes": {"name": name[:30], "subtitle": subtitle[:30]}}
+                 "attributes": {"name": name[:30], "subtitle": subtitle[:30],
+                                "privacyPolicyUrl": "https://practicetestgeeks.com/privacy-policy/"}}
     })
     print(f"  App info updated: name={name[:30]}")
 
