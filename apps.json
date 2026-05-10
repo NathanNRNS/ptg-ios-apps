@@ -381,7 +381,7 @@
   },
   "canada-citizenship": {
     "name": "Canada Citizenship Practice Test",
-    "ascName": "Canada Citizenship Practice",
+    "ascName": "Citizenship Practice Test",
     "bundleId": "com.practicetestgeeks.canadacitizenship",
     "ascBundleId": "Canada-Citizenship-Practice-Test",
     "ascAppId": "6751770197",
@@ -453,7 +453,7 @@
   },
   "dmv": {
     "name": "DMV Practice Test",
-    "ascName": "DMV Practice Test Online",
+    "ascName": "DMV Practice Test",
     "bundleId": "com.practicetestgeeks.dmv",
     "ascBundleId": "DMVPracticeTest",
     "ascAppId": "6751262708",
@@ -573,7 +573,7 @@
   },
   "language-proficiency": {
     "name": "Language Proficiency Test",
-    "ascName": "Language Proficiency Practice",
+    "ascName": "Language Proficiency",
     "bundleId": "com.practicetestgeeks.languageproficiency",
     "ascBundleId": "Language-Proficiency-Practice-Test",
     "ascAppId": "6752597627",
@@ -825,7 +825,7 @@
   },
   "aat-level-4-professional": {
     "name": "AAT Level 4 - Professional Diploma in Accounting",
-    "ascName": "AAT L4 Practice Test",
+    "ascName": "AAT Practice Test",
     "bundleId": "com.practicetestgeeks.aatlevel4professional",
     "ascBundleId": "com.practicetestgeeks.aatlevel4professional",
     "url": "https://practicetestgeeks.com/aat-level-4-practice-test",
@@ -918,7 +918,7 @@
   },
   "boat-licence-nsw": {
     "name": "General Boat Licence NSW",
-    "ascName": "GBL NSW Practice Test",
+    "ascName": "Boat Licence Practice Test",
     "bundleId": "com.practicetestgeeks.boatlicencensw",
     "ascBundleId": "com.practicetestgeeks.boatlicencensw",
     "url": "https://practicetestgeeks.com/nsw-boat-licence-practice-test",
@@ -984,7 +984,7 @@
   },
   "cilex-level-3": {
     "name": "CILEx Level 3 - Professional Diploma in Law and Practice",
-    "ascName": "CILEx L3 Practice Test",
+    "ascName": "CILEx Practice Test",
     "bundleId": "com.practicetestgeeks.cilexlevel3",
     "ascBundleId": "com.practicetestgeeks.cilexlevel3",
     "url": "https://practicetestgeeks.com/cilex-level-3-practice-test",
@@ -1011,7 +1011,7 @@
   },
   "confined-space-australia": {
     "name": "Confined Space Entry - RIIWHS202E",
-    "ascName": "RIIWHS202E Practice Test",
+    "ascName": "Confined Space Practice Test",
     "bundleId": "com.practicetestgeeks.confinedspaceaustralia",
     "ascBundleId": "com.practicetestgeeks.confinedspaceaustralia",
     "url": "https://practicetestgeeks.com/confined-space-practice-test-australia",
@@ -1024,7 +1024,7 @@
   },
   "cpp41419-real-estate-australia": {
     "name": "CPP41419 - Certificate IV in Real Estate Practice",
-    "ascName": "CPP41419 Practice Test",
+    "ascName": "Real Estate Practice Test",
     "bundleId": "com.practicetestgeeks.cpp41419realestateaustralia",
     "ascBundleId": "com.practicetestgeeks.cpp41419realestateaustralia",
     "url": "https://practicetestgeeks.com/real-estate-licence-practice-test-australia",
@@ -1089,7 +1089,7 @@
   },
   "dogging-licence-australia": {
     "name": "Dogging Licence Australia",
-    "ascName": "DG Practice Test",
+    "ascName": "Dogging Practice Test",
     "bundleId": "com.practicetestgeeks.dogginglicenceaustralia",
     "ascBundleId": "com.practicetestgeeks.dogginglicenceaustralia",
     "url": "https://practicetestgeeks.com/dogging-licence-practice-test",
@@ -1183,7 +1183,7 @@
   },
   "f-03-fire-guard-f-03-practice-test": {
     "name": "F-03 - Fire Guard F-03 Test",
-    "ascName": "F-03 Practice Test",
+    "ascName": "F-03 Fire Guard Practice Test",
     "bundleId": "com.practicetestgeeks.f03fireguardf03practicetest",
     "ascBundleId": "com.practicetestgeeks.f03fireguardf03practicetest",
     "url": "https://practicetestgeeks.com/f-03-test",
@@ -1196,7 +1196,7 @@
   },
   "food-safety-supervisor-australia": {
     "name": "Food Safety Supervisor Certificate Australia",
-    "ascName": "FSS Practice Test",
+    "ascName": "Food Safety Practice Test",
     "bundleId": "com.practicetestgeeks.foodsafetysupervisoraustralia",
     "ascBundleId": "com.practicetestgeeks.foodsafetysupervisoraustralia",
     "url": "https://practicetestgeeks.com/food-safety-supervisor-practice-test-australia",
@@ -1288,7 +1288,7 @@
   },
   "nebosh-construction-certificate": {
     "name": "NEBOSH - Construction Certificate",
-    "ascName": "NEBOSH CC Practice Test",
+    "ascName": "NEBOSH Practice Test",
     "bundleId": "com.practicetestgeeks.neboshconstructioncertificate",
     "ascBundleId": "com.practicetestgeeks.neboshconstructioncertificate",
     "url": "https://practicetestgeeks.com/nebosh-construction-certificate-practice-test",
@@ -1341,7 +1341,7 @@
   },
   "permis-conduire-wallonie-belgium": {
     "name": "Permis de Conduire Th\u00e9orique - Wallonie Belgique",
-    "ascName": "Permis B Practice Test",
+    "ascName": "Permis Wallonie Practice Test",
     "bundleId": "com.practicetestgeeks.permisconduirewalloniebelgium",
     "ascBundleId": "com.practicetestgeeks.permisconduirewalloniebelgium",
     "url": "https://practicetestgeeks.com/permis-conduire-wallonie-practice-test",
@@ -1396,7 +1396,7 @@
   },
   "rcg-nsw-gambling": {
     "name": "RCG NSW - Responsible Conduct of Gambling",
-    "ascName": "RCG Practice Test",
+    "ascName": "RCG NSW Practice Test",
     "bundleId": "com.practicetestgeeks.rcgnswgambling",
     "ascBundleId": "com.practicetestgeeks.rcgnswgambling",
     "url": "https://practicetestgeeks.com/rcg-nsw-practice-test",
@@ -1422,7 +1422,7 @@
   },
   "rigging-licence-australia": {
     "name": "Basic Rigging Licence Australia",
-    "ascName": "RB Practice Test",
+    "ascName": "Rigging Practice Test",
     "bundleId": "com.practicetestgeeks.rigginglicenceaustralia",
     "ascBundleId": "com.practicetestgeeks.rigginglicenceaustralia",
     "url": "https://practicetestgeeks.com/rigging-licence-practice-test",
@@ -1542,7 +1542,7 @@
   },
   "standard-11-mining-induction": {
     "name": "Standard 11 Mining Induction - Queensland",
-    "ascName": "S11/GI Practice Test",
+    "ascName": "Standard 11 Practice Test",
     "bundleId": "com.practicetestgeeks.standard11mininginduction",
     "ascBundleId": "com.practicetestgeeks.standard11mininginduction",
     "url": "https://practicetestgeeks.com/standard-11-mining-practice-test",
@@ -1595,7 +1595,7 @@
   },
   "vaarbewijs-1-netherlands": {
     "name": "Vaarbewijs 1 - Klein Vaarbewijs",
-    "ascName": "Vaarbewijs 1 Practice Test",
+    "ascName": "Vaarbewijs Practice Test",
     "bundleId": "com.practicetestgeeks.vaarbewijs1netherlands",
     "ascBundleId": "com.practicetestgeeks.vaarbewijs1netherlands",
     "url": "https://practicetestgeeks.com/vaarbewijs-1-practice-test",
@@ -1608,7 +1608,7 @@
   },
   "vca-basis-netherlands": {
     "name": "VCA Basis (B-VCA) - Veiligheid Gezondheid en Milieu",
-    "ascName": "B-VCA Practice Test",
+    "ascName": "VCA Basis Practice Test",
     "bundleId": "com.practicetestgeeks.vcabasisnetherlands",
     "ascBundleId": "com.practicetestgeeks.vcabasisnetherlands",
     "url": "https://practicetestgeeks.com/b-vca-practice-test",
@@ -1621,7 +1621,7 @@
   },
   "vca-vol-netherlands": {
     "name": "VCA VOL (VOL-VCA) - Veiligheid voor Operationeel Leidinggeve",
-    "ascName": "VOL-VCA Practice Test",
+    "ascName": "VCA VOL Practice Test",
     "bundleId": "com.practicetestgeeks.vcavolnetherlands",
     "ascBundleId": "com.practicetestgeeks.vcavolnetherlands",
     "url": "https://practicetestgeeks.com/vol-vca-practice-test",
