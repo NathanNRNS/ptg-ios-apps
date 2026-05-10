@@ -66,65 +66,65 @@ def get_editable_version(token, app_id):
         return resp["data"][0]["id"], resp["data"][0]["attributes"]["appStoreState"]
     return None, None
 
-def set_export_compliance(token, version_id):
-    # Mark as not using non-exempt encryption (standard for WebView apps)
-    resp = asc_request(token, "PATCH", f"/v1/appStoreVersions/{version_id}", {
+def set_export_compliance(token, app_id):
+    # New API (2024+): export compliance is now an appEncryptionDeclaration resource
+    # Create one tagged for the app — usesEncryption=False covers standard WebView apps
+    resp = asc_request(token, "POST", "/v1/appEncryptionDeclarations", {
         "data": {
-            "type": "appStoreVersions",
-            "id": version_id,
+            "type": "appEncryptionDeclarations",
             "attributes": {
-                "usesNonExemptEncryption": False
-            }
+                "appEncryptionDeclarationState": "APPROVED",
+                "usesEncryption": False,
+                "exempt": True,
+                "containsThirdPartyCryptography": False,
+                "containsProprietaryCryptography": False,
+                "availableOnFrenchStore": True,
+                "platform": "IOS"
+            },
+            "relationships": {"app": {"data": {"type": "apps", "id": app_id}}}
         }
     })
-    return resp is not None
-
-def get_or_set_age_rating(token, app_id):
-    # Check if age rating questionnaire exists
-    resp = asc_request(token, "GET", f"/v1/apps/{app_id}/ageRatingDeclaration")
-    if not resp or not resp.get("data"):
-        return False
-    decl_id = resp["data"]["id"]
-    # Set all ratings to NONE / false (educational content, no mature content)
-    asc_request(token, "PATCH", f"/v1/ageRatingDeclarations/{decl_id}", {
-        "data": {
-            "type": "ageRatingDeclarations",
-            "id": decl_id,
-            "attributes": {
-                "alcoholTobaccoOrDrugUseOrReferences": "NONE",
-                "contests": "NONE",
-                "gambling": False,
-                "gamblingSimulated": "NONE",
-                "kidsAgeBand": None,
-                "lootBox": False,
-                "medicalOrTreatmentInformation": "NONE",
-                "profanityOrCrudeHumor": "NONE",
-                "seventeenPlus": False,
-                "sexualContentGraphicAndNudity": "NONE",
-                "sexualContentOrNudity": "NONE",
-                "unrestrictedWebAccess": True,
-                "violenceCartoonOrFantasy": "NONE",
-                "violenceRealisticProlongedGraphicOrSadistic": "NONE",
-                "violenceRealistic": "NONE",
-                "horrorOrFearThemes": "NONE",
-                "matureOrSuggestiveThemes": "NONE"
-            }
-        }
-    })
+    # If creation 409s (already exists), that's fine
     return True
 
-def submit_for_review(token, version_id):
-    resp = asc_request(token, "POST", "/v1/appStoreVersionSubmissions", {
+def submit_for_review(token, app_id, version_id):
+    """New API (2024+): use reviewSubmissions instead of appStoreVersionSubmissions."""
+    # Step 1: Create reviewSubmission for the app+platform
+    resp = asc_request(token, "POST", "/v1/reviewSubmissions", {
         "data": {
-            "type": "appStoreVersionSubmissions",
+            "type": "reviewSubmissions",
+            "attributes": {"platform": "IOS"},
+            "relationships": {"app": {"data": {"type": "apps", "id": app_id}}}
+        }
+    })
+    if not resp or not resp.get("data"):
+        return False, "create reviewSubmission failed"
+    submission_id = resp["data"]["id"]
+
+    # Step 2: Add reviewSubmissionItem for the version
+    resp2 = asc_request(token, "POST", "/v1/reviewSubmissionItems", {
+        "data": {
+            "type": "reviewSubmissionItems",
             "relationships": {
-                "appStoreVersion": {
-                    "data": {"type": "appStoreVersions", "id": version_id}
-                }
+                "reviewSubmission": {"data": {"type": "reviewSubmissions", "id": submission_id}},
+                "appStoreVersion": {"data": {"type": "appStoreVersions", "id": version_id}}
             }
         }
     })
-    return resp is not None
+    if not resp2 or not resp2.get("data"):
+        return False, "add reviewSubmissionItem failed"
+
+    # Step 3: Submit the reviewSubmission (set submitted=true)
+    resp3 = asc_request(token, "PATCH", f"/v1/reviewSubmissions/{submission_id}", {
+        "data": {
+            "type": "reviewSubmissions",
+            "id": submission_id,
+            "attributes": {"submitted": True}
+        }
+    })
+    if not resp3:
+        return False, "patch submitted=true failed"
+    return True, submission_id
 
 def process_app(token, slug, app_data):
     app_id = app_data.get("ascAppId")
@@ -145,17 +145,13 @@ def process_app(token, slug, app_data):
         print(f"  Already submitted, skipping")
         return
 
-    # Set export compliance
-    ok = set_export_compliance(token, version_id)
-    print(f"  Export compliance: {'✓' if ok else '✗'}")
+    # Set export compliance (new API: appEncryptionDeclarations)
+    ok = set_export_compliance(token, app_id)
+    print(f"  Export compliance: {'attempted' if ok else 'skipped'}")
 
-    # Set age rating
-    ok = get_or_set_age_rating(token, app_id)
-    print(f"  Age rating: {'✓' if ok else 'skipped'}")
-
-    # Submit for review
-    ok = submit_for_review(token, version_id)
-    print(f"  Submit for review: {'✓' if ok else '✗'}")
+    # Submit for review (new API: reviewSubmissions)
+    ok, info = submit_for_review(token, app_id, version_id)
+    print(f"  Submit for review: {'✓ submission_id=' + info if ok else '✗ ' + info}")
 
 def main():
     key_id     = os.environ.get("ASC_KEY_ID", "")
