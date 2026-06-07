@@ -39,21 +39,13 @@ platform :ios do
       bundle_identifier:     bundle_id
     )
 
-    # Bump version to avoid "Invalid Pre-Release Train" / "version 1.0 closed" errors.
-    # Use GitHub run number + epoch minutes for monotonic uniqueness.
+    # Version: 2.0.{run_number} — always above any previously-closed 1.x version.
+    # Pass via xcargs so it overrides .pbxproj regardless of project settings.
     run_number  = (ENV["GITHUB_RUN_NUMBER"] || "1").to_i
     epoch_min   = (Time.now.to_i / 60) % 1000000
-    new_version = "1.0.#{run_number}"
+    new_version = "2.0.#{run_number}"
     new_build   = "#{epoch_min}"
     UI.message("Setting version=#{new_version} build=#{new_build}")
-    increment_version_number(
-      xcodeproj:      "ios/App/App.xcodeproj",
-      version_number: new_version
-    )
-    increment_build_number(
-      xcodeproj:      "ios/App/App.xcodeproj",
-      build_number:   new_build
-    )
 
     gym(
       scheme:                "App",
@@ -68,7 +60,7 @@ platform :ios do
         uploadSymbols:        true,
         compileBitcode:       false
       },
-      xcargs:                "-allowProvisioningUpdates -authenticationKeyPath #{key_file.path} -authenticationKeyID #{key_id} -authenticationKeyIssuerID #{issuer_id}",
+      xcargs:                "-allowProvisioningUpdates MARKETING_VERSION=#{new_version} CURRENT_PROJECT_VERSION=#{new_build} -authenticationKeyPath #{key_file.path} -authenticationKeyID #{key_id} -authenticationKeyIssuerID #{issuer_id}",
       output_directory:      "./build",
       output_name:           "#{app_slug}.ipa",
       clean:                 true,
