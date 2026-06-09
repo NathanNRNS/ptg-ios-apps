@@ -78,11 +78,11 @@ jobs:
       - name: Setup Ruby & Fastlane
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: '3.2'
+          ruby-version: '3.3'
           bundler-cache: true
 
       - name: Install Fastlane
-        run: gem install fastlane --no-document
+        run: bundle install --jobs 4 --retry 3
 
       - name: Get app metadata from apps.json
         id: app-meta
@@ -102,7 +102,7 @@ jobs:
           ASC_PRIVATE_KEY: ${{ secrets.ASC_PRIVATE_KEY }}
 
       - name: Build & upload to ASC
-        run: fastlane release
+        run: bundle exec fastlane release
         env:
           APP_SLUG:        ${{ matrix.slug }}
           BUNDLE_ID:       ${{ steps.app-meta.outputs.bundle_id }}
