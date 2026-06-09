@@ -71,14 +71,25 @@ platform :ios do
     key_file.close
     key_file.unlink
 
-    # Upload via pilot (uses Spaceship::ConnectAPI — works with API key unlike deliver)
-    upload_to_testflight(
-      api_key:                           api_key,
-      app_identifier:                    bundle_id,
-      ipa:                               "./build/#{app_slug}.ipa",
-      skip_waiting_for_build_processing: true,
-      skip_submission:                   true
-    )
+    # Upload via pilot — retry up to 3x for transient Apple 500 errors
+    upload_attempts = 0
+    begin
+      upload_attempts += 1
+      upload_to_testflight(
+        api_key:                           api_key,
+        app_identifier:                    bundle_id,
+        ipa:                               "./build/#{app_slug}.ipa",
+        skip_waiting_for_build_processing: true,
+        skip_submission:                   true
+      )
+    rescue => e
+      if upload_attempts < 3 && e.message.to_s.include?("500")
+        UI.message("Apple 500 error on attempt #{upload_attempts}, retrying in 30s...")
+        sleep(30)
+        retry
+      end
+      raise
+    end
 
     UI.success("✅ Uploaded #{app_slug} to ASC!")
   end
