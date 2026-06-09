@@ -25,6 +25,9 @@ jobs:
           elif [ "$INPUT" = "batch2" ]; then
             # 41 newly added apps (batch 2)
             SLUGS='["473-postal-exam","act","ase","boating","canada-citizenship","ccht","cda","chauffeur","clb","cpr","dmv","ekg","epa","esl","f-02","forklift","fsc","g1","hha","hiset","language-proficiency","lpn","mace","moca","nccco","notary-public","nremt","parapro","pca","pert","ptcb","pte","ramsay","rbt","rma","snhd","tabe","toefl","tsi","wonderlic","workkeys"]'
+          elif [ "$INPUT" = "batch3" ]; then
+            # 20 newly registered apps (asvab/cdl/cna/ged/nclex/sat/servsafe/teas pre-registered + batch1 new registrations)
+            SLUGS='["aat-level-4-professional","aca-icaew-qualification","amc-clinical-examination","asvab","azure-ai-900","bafa-animateur-france","bhv-examen-netherlands","boat-licence-nsw","cambridge-fce-b2-first","cbr-theorie-examen-motor-netherlands","cdl","cilex-level-3","cna","confined-space-australia","cpre-certified-park-and-recreation-executive","ged","nclex","sat","servsafe","teas"]'
           else
             # Convert comma-separated to JSON array
             SLUGS=$(echo "$INPUT" | python3 -c "import sys,json; s=sys.stdin.read().strip(); print(json.dumps([x.strip() for x in s.split(',')]))")
