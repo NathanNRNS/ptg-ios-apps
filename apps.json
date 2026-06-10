@@ -4,7 +4,7 @@
     "ascName": "GED Practice Test",
     "bundleId": "com.practicetestgeeks.ged",
     "ascBundleId": "GEDPracticeTest",
-    "url": "https://ios-ged.practicetestgeeks.com/ged",
+    "url": "https://practicetestgeeks.com/ged/",
     "ascAppId": "6751770083",
     "category": "Education",
     "keywords": "GED, practice test, high school equivalency, exam prep"
@@ -14,7 +14,7 @@
     "ascName": "ServSafe Practice Test Online",
     "bundleId": "com.practicetestgeeks.servsafe",
     "ascBundleId": "ServSafe-Practice-Test",
-    "url": "https://ios-servsafe.practicetestgeeks.com/servsafe",
+    "url": "https://practicetestgeeks.com/servsafe/",
     "ascAppId": "6751770183",
     "category": "Education",
     "keywords": "ServSafe, food handler, food safety, certification"
@@ -24,7 +24,7 @@
     "ascName": "CNA Practice Test Online",
     "bundleId": "com.practicetestgeeks.cna",
     "ascBundleId": "CNAPracticeTest",
-    "url": "https://ios-cna.practicetestgeeks.com/cna",
+    "url": "https://practicetestgeeks.com/cna/",
     "ascAppId": "6747978792",
     "category": "Education",
     "keywords": "CNA, nursing assistant, clinical skills, exam prep"
@@ -34,7 +34,7 @@
     "ascName": "ASVAB Practice Test Online",
     "bundleId": "com.practicetestgeeks.asvab",
     "ascBundleId": "ASVAB-Practice-Test",
-    "url": "https://ios-asvab.practicetestgeeks.com/asvab",
+    "url": "https://practicetestgeeks.com/asvab/",
     "ascAppId": "6751770181",
     "category": "Education",
     "keywords": "ASVAB, military, armed forces, math, science"
@@ -44,7 +44,7 @@
     "ascName": "NCLEX Practice Test",
     "bundleId": "com.practicetestgeeks.nclex",
     "ascBundleId": "NCLEXPracticeTest",
-    "url": "https://ios-nclex.practicetestgeeks.com/nclex",
+    "url": "https://practicetestgeeks.com/nclex/",
     "ascAppId": "6751264648",
     "category": "Medical",
     "keywords": "NCLEX, nursing, RN, LPN, board exam"
@@ -54,7 +54,7 @@
     "ascName": "SATs Online Practice Test",
     "bundleId": "com.practicetestgeeks.sat",
     "ascBundleId": "SATs-Practice-Test",
-    "url": "https://ios-sat.practicetestgeeks.com/sat",
+    "url": "https://practicetestgeeks.com/sat/",
     "ascAppId": "6753707389",
     "category": "Education",
     "keywords": "SAT, college admission, reading, math, writing"
@@ -64,7 +64,7 @@
     "ascName": "TEAS Practice Test",
     "bundleId": "com.practicetestgeeks.teas",
     "ascBundleId": "TEAS-Practice-Test",
-    "url": "https://ios-teas.practicetestgeeks.com/teas",
+    "url": "https://practicetestgeeks.com/teas/",
     "ascAppId": "6752114539",
     "category": "Medical",
     "keywords": "TEAS, nursing school, ATI, science, math"
@@ -74,7 +74,7 @@
     "ascName": "CDL Practice Test Online",
     "bundleId": "com.practicetestgeeks.cdl",
     "ascBundleId": "CDLPracticeTest",
-    "url": "https://ios-cdl.practicetestgeeks.com/cdl",
+    "url": "https://practicetestgeeks.com/cdl/",
     "ascAppId": "6748854100",
     "category": "Education",
     "keywords": "CDL, commercial driver, truck driver, license"
@@ -84,7 +84,7 @@
     "ascName": "Reading Comprehension Test",
     "bundleId": "com.practicetestgeeks.reading",
     "ascBundleId": "Reading-Comprehension-Practice-Test",
-    "url": "https://ios-reading.practicetestgeeks.com/reading-comprehension",
+    "url": "https://practicetestgeeks.com/reading-comprehension/",
     "ascAppId": "6767134126",
     "category": "Education",
     "keywords": "reading comprehension, practice test, reading skills, exam prep",
@@ -828,7 +828,7 @@
     "ascName": "AAT Practice Test",
     "bundleId": "com.practicetestgeeks.aatlevel4professional",
     "ascBundleId": "com.practicetestgeeks.aatlevel4professional",
-    "url": "https://ios-aat-level-4-professional.practicetestgeeks.com/aat-level-4-practice-test",
+    "url": "https://practicetestgeeks.com/aat-level-4-practice-test",
     "category": "Education",
     "keywords": "AAT L4,AAT Level 4,practice test,exam prep",
     "country": "uk",
@@ -841,7 +841,7 @@
     "ascName": "ACA Practice Test",
     "bundleId": "com.practicetestgeeks.acaicaewqualification",
     "ascBundleId": "com.practicetestgeeks.acaicaewqualification",
-    "url": "https://ios-aca-icaew-qualification.practicetestgeeks.com/aca-icaew-practice-test",
+    "url": "https://practicetestgeeks.com/aca-icaew-practice-test",
     "category": "Education",
     "keywords": "ACA,ACA,practice test,exam prep",
     "country": "uk",
@@ -854,7 +854,7 @@
     "ascName": "AMC Clinical Practice Test",
     "bundleId": "com.practicetestgeeks.amcclinicalexamination",
     "ascBundleId": "com.practicetestgeeks.amcclinicalexamination",
-    "url": "https://ios-amc-clinical-examination.practicetestgeeks.com/amc-clinical-practice-test",
+    "url": "https://practicetestgeeks.com/amc-clinical-practice-test",
     "category": "Education",
     "keywords": "AMC Clinical,AMC Clinical Examination,practice test,exam prep",
     "country": "au",
@@ -865,7 +865,7 @@
   "aws-ai-practitioner": {
     "name": "AWS AI Practice Test",
     "bundleId": "com.ptg2026.awsai",
-    "url": "https://ios-aws-ai-practitioner.practicetestgeeks.com/aws-ai-practitioner",
+    "url": "https://practicetestgeeks.com/aws-ai-practitioner/",
     "category": "Education",
     "country": "us",
     "keywords": "AWS, AI, AIF-C01, practice test, exam prep",
@@ -877,7 +877,7 @@
     "ascName": "AI-900 Practice Test",
     "bundleId": "com.ptg2026.azureai900",
     "ascBundleId": "com.ptg2026.azureai900",
-    "url": "https://ios-azure-ai-900.practicetestgeeks.com/ai-900-practice-test",
+    "url": "https://practicetestgeeks.com/ai-900-practice-test",
     "category": "Education",
     "keywords": "AI-900,AI,practice test,exam prep",
     "country": "us",
@@ -891,7 +891,7 @@
     "ascName": "BAFA Practice Test",
     "bundleId": "com.practicetestgeeks.bafaanimateurfrance",
     "ascBundleId": "com.practicetestgeeks.bafaanimateurfrance",
-    "url": "https://ios-bafa-animateur-france.practicetestgeeks.com/bafa-practice-test",
+    "url": "https://practicetestgeeks.com/bafa-practice-test",
     "category": "Education",
     "keywords": "BAFA,BAFA,practice test,exam prep",
     "country": "fr",
@@ -904,7 +904,7 @@
     "ascName": "BHV Practice Test",
     "bundleId": "com.practicetestgeeks.bhvexamennetherlands",
     "ascBundleId": "com.practicetestgeeks.bhvexamennetherlands",
-    "url": "https://ios-bhv-examen-netherlands.practicetestgeeks.com/bhv-practice-test",
+    "url": "https://practicetestgeeks.com/bhv-practice-test",
     "category": "Education",
     "keywords": "BHV,BHV Examen,practice test,exam prep",
     "country": "nl",
@@ -917,7 +917,7 @@
     "ascName": "Boat Licence Practice Test",
     "bundleId": "com.practicetestgeeks.boatlicencensw",
     "ascBundleId": "com.practicetestgeeks.boatlicencensw",
-    "url": "https://ios-boat-licence-nsw.practicetestgeeks.com/nsw-boat-licence-practice-test",
+    "url": "https://practicetestgeeks.com/nsw-boat-licence-practice-test",
     "category": "Education",
     "keywords": "GBL NSW,General Boat Licence NSW,practice test,exam prep",
     "country": "au",
@@ -930,7 +930,7 @@
     "ascName": "FCE Practice Test",
     "bundleId": "com.ptg2026.cambridgefce",
     "ascBundleId": "com.ptg2026.cambridgefce",
-    "url": "https://ios-cambridge-fce-b2-first.practicetestgeeks.com/cambridge-fce-practice-test",
+    "url": "https://practicetestgeeks.com/cambridge-fce-practice-test",
     "category": "Education",
     "keywords": "FCE,Cambridge B2 First (FCE),practice test,exam prep",
     "country": "us",
@@ -940,11 +940,11 @@
     "ascAppId": "6778413605"
   },
   "capes-france": {
-    "name": "CAPES - Certificat d'Aptitude au Professorat du Second Degr\u00e9",
+    "name": "CAPES - Certificat d'Aptitude au Professorat du Second Degré",
     "ascName": "CAPES Practice Test",
     "bundleId": "com.practicetestgeeks.capesfrance",
     "ascBundleId": "com.practicetestgeeks.capesfrance",
-    "url": "https://ios-capes-france.practicetestgeeks.com/capes-practice-test",
+    "url": "https://practicetestgeeks.com/capes-practice-test",
     "category": "Education",
     "keywords": "CAPES,CAPES,practice test,exam prep",
     "country": "fr",
@@ -957,7 +957,7 @@
     "ascName": "CBR Motor Practice Test",
     "bundleId": "com.practicetestgeeks.cbrtheorieexamenmotornetherlands",
     "ascBundleId": "com.practicetestgeeks.cbrtheorieexamenmotornetherlands",
-    "url": "https://ios-cbr-theorie-examen-motor-netherlands.practicetestgeeks.com/cbr-motor-theorie-practice-test",
+    "url": "https://practicetestgeeks.com/cbr-motor-theorie-practice-test",
     "category": "Education",
     "keywords": "CBR Motor,CBR Theorie,practice test,exam prep",
     "country": "nl",
@@ -970,7 +970,7 @@
     "ascName": "CEH Practice Test",
     "bundleId": "com.practicetestgeeks.cehcertifiedethicalhacker",
     "ascBundleId": "com.practicetestgeeks.cehcertifiedethicalhacker",
-    "url": "https://ios-ceh-certified-ethical-hacker.practicetestgeeks.com/ceh-practice-test",
+    "url": "https://practicetestgeeks.com/ceh-practice-test",
     "category": "Education",
     "keywords": "CEH,CEH,practice test,exam prep",
     "country": "us",
@@ -983,20 +983,20 @@
     "ascName": "CILEx Practice Test",
     "bundleId": "com.practicetestgeeks.cilexlevel3",
     "ascBundleId": "com.practicetestgeeks.cilexlevel3",
-    "url": "https://ios-cilex-level-3.practicetestgeeks.com/cilex-level-3-practice-test",
+    "url": "https://practicetestgeeks.com/cilex-level-3-practice-test",
     "category": "Education",
     "keywords": "CILEx L3,CILEx Level 3,practice test,exam prep",
     "country": "uk",
     "language": "en",
     "createdDate": "2026-05-08",
-    "androidOnly": true
+    "ascAppId": "6778414307"
   },
   "comptia-secai-plus": {
     "name": "CompTIA SecAI+ - Security AI Certification",
     "ascName": "SecAI+ Practice Test",
     "bundleId": "com.practicetestgeeks.comptiasecaiplus",
     "ascBundleId": "com.practicetestgeeks.comptiasecaiplus",
-    "url": "https://ios-comptia-secai-plus.practicetestgeeks.com/comptia-secai-plus-practice-test",
+    "url": "https://practicetestgeeks.com/comptia-secai-plus-practice-test",
     "category": "Education",
     "keywords": "SecAI+,CompTIA SecAI+,practice test,exam prep",
     "country": "us",
@@ -1010,20 +1010,20 @@
     "ascName": "Confined Space Practice Test",
     "bundleId": "com.practicetestgeeks.confinedspaceaustralia",
     "ascBundleId": "com.practicetestgeeks.confinedspaceaustralia",
-    "url": "https://ios-confined-space-australia.practicetestgeeks.com/confined-space-practice-test-australia",
+    "url": "https://practicetestgeeks.com/confined-space-practice-test-australia",
     "category": "Education",
     "keywords": "RIIWHS202E,Confined Space Entry,practice test,exam prep",
     "country": "au",
     "language": "en",
     "createdDate": "2026-05-08",
-    "androidOnly": true
+    "ascAppId": "6778414543"
   },
   "cpp41419-real-estate-australia": {
     "name": "CPP41419 - Certificate IV in Real Estate Practice",
     "ascName": "Real Estate Practice Test",
     "bundleId": "com.practicetestgeeks.cpp41419realestateaustralia",
     "ascBundleId": "com.practicetestgeeks.cpp41419realestateaustralia",
-    "url": "https://ios-cpp41419-real-estate-australia.practicetestgeeks.com/real-estate-licence-practice-test-australia",
+    "url": "https://practicetestgeeks.com/real-estate-licence-practice-test-australia",
     "category": "Education",
     "keywords": "CPP41419,CPP41419,practice test,exam prep",
     "country": "au",
@@ -1036,72 +1036,72 @@
     "ascName": "CPRE Practice Test",
     "bundleId": "com.practicetestgeeks.cprecertifiedparkandrecreationexecutive",
     "ascBundleId": "com.practicetestgeeks.cprecertifiedparkandrecreationexecutive",
-    "url": "https://ios-cpre-certified-park-and-recreation-executive.practicetestgeeks.com/cpre-test",
+    "url": "https://practicetestgeeks.com/cpre-test",
     "category": "Education",
     "keywords": "CPRE,CPRE,practice test,exam prep",
     "country": "us",
     "language": "en",
     "createdDate": "2026-05-08",
-    "androidOnly": true
+    "ascAppId": "6778414990"
   },
   "crni-exam": {
     "name": "CRNI Exam",
     "ascName": "CRNI Practice Test",
     "bundleId": "com.practicetestgeeks.crniexam",
     "ascBundleId": "com.practicetestgeeks.crniexam",
-    "url": "https://ios-crni-exam.practicetestgeeks.com/crni-exam",
+    "url": "https://practicetestgeeks.com/crni-exam",
     "category": "Education",
     "keywords": "CRNI,CRNI Exam,practice test,exam prep",
     "country": "us",
     "language": "en",
     "createdDate": "2026-05-08",
-    "androidOnly": true
+    "ascAppId": "6778415362"
   },
   "dkt-nsw": {
     "name": "DKT NSW - Driver Knowledge Test New South Wales",
     "ascName": "DKT NSW Practice Test",
     "bundleId": "com.practicetestgeeks.dktnsw",
     "ascBundleId": "com.practicetestgeeks.dktnsw",
-    "url": "https://ios-dkt-nsw.practicetestgeeks.com/dkt-nsw-practice-test",
+    "url": "https://practicetestgeeks.com/dkt-nsw-practice-test",
     "category": "Education",
     "keywords": "DKT NSW,DKT NSW,practice test,exam prep",
     "country": "au",
     "language": "en",
     "createdDate": "2026-05-08",
-    "androidOnly": true
+    "ascAppId": "6778415169"
   },
   "dkt-vic": {
     "name": "DKT VIC - Learner Permit Test Victoria",
     "ascName": "DKT VIC Practice Test",
     "bundleId": "com.practicetestgeeks.dktvic",
     "ascBundleId": "com.practicetestgeeks.dktvic",
-    "url": "https://ios-dkt-vic.practicetestgeeks.com/dkt-vic-practice-test",
+    "url": "https://practicetestgeeks.com/dkt-vic-practice-test",
     "category": "Education",
     "keywords": "DKT VIC,DKT VIC,practice test,exam prep",
     "country": "au",
     "language": "en",
     "createdDate": "2026-05-08",
-    "androidOnly": true
+    "ascAppId": "6778415658"
   },
   "dogging-licence-australia": {
     "name": "Dogging Licence Australia",
     "ascName": "Dogging Practice Test",
     "bundleId": "com.practicetestgeeks.dogginglicenceaustralia",
     "ascBundleId": "com.practicetestgeeks.dogginglicenceaustralia",
-    "url": "https://ios-dogging-licence-australia.practicetestgeeks.com/dogging-licence-practice-test",
+    "url": "https://practicetestgeeks.com/dogging-licence-practice-test",
     "category": "Education",
     "keywords": "DG,Dogging Licence Australia,practice test,exam prep",
     "country": "au",
     "language": "en",
     "createdDate": "2026-05-08",
-    "androidOnly": true
+    "ascAppId": "6778415824"
   },
   "doh-nursing-abu-dhabi": {
     "name": "DOH Nursing Exam - Abu Dhabi",
     "ascName": "DOH Nursing Practice Test",
     "bundleId": "com.practicetestgeeks.dohnursingabudhabi",
     "ascBundleId": "com.practicetestgeeks.dohnursingabudhabi",
-    "url": "https://ios-doh-nursing-abu-dhabi.practicetestgeeks.com/doh-nursing-practice-test",
+    "url": "https://practicetestgeeks.com/doh-nursing-practice-test",
     "category": "Education",
     "keywords": "DOH Nursing,DOH Nursing Exam,practice test,exam prep",
     "country": "ae",
@@ -1114,44 +1114,45 @@
     "ascName": "DP-600 Practice Test",
     "bundleId": "com.practicetestgeeks.dp600fabricanalyticsengineer",
     "ascBundleId": "com.practicetestgeeks.dp600fabricanalyticsengineer",
-    "url": "https://ios-dp-600-fabric-analytics-engineer.practicetestgeeks.com/dp-600-practice-test",
+    "url": "https://practicetestgeeks.com/dp-600-practice-test",
     "category": "Education",
     "keywords": "DP-600,DP,practice test,exam prep",
     "country": "us",
     "language": "en",
     "createdDate": "2026-05-08",
-    "androidOnly": true,
-    "skip_reason": "master page does not exist (redirects to wrong target)"
+    "skip_reason": "master page does not exist (redirects to wrong target)",
+    "ascAppId": "6778416537"
   },
   "dp-900-azure-data-fundamentals": {
     "name": "DP-900 Practice Test",
     "bundleId": "com.ptg2026.dp900",
-    "url": "https://ios-dp-900-azure-data-fundamentals.practicetestgeeks.com/dp-900-azure-data-fundamentals",
+    "url": "https://practicetestgeeks.com/dp-900-azure-data-fundamentals/",
     "category": "Education",
     "country": "us",
     "keywords": "DP-900, Azure, data fundamentals, practice test",
     "ascName": "DP-900 Practice Test",
-    "ascBundleId": "com.ptg2026.dp900"
+    "ascBundleId": "com.ptg2026.dp900",
+    "ascAppId": "6778416885"
   },
   "ehbo-examen-netherlands": {
     "name": "EHBO Examen - Eerste Hulp Bij Ongelukken",
     "ascName": "EHBO Practice Test",
     "bundleId": "com.practicetestgeeks.ehboexamennetherlands",
     "ascBundleId": "com.practicetestgeeks.ehboexamennetherlands",
-    "url": "https://ios-ehbo-examen-netherlands.practicetestgeeks.com/ehbo-practice-test",
+    "url": "https://practicetestgeeks.com/ehbo-practice-test",
     "category": "Education",
     "keywords": "EHBO,EHBO Examen,practice test,exam prep",
     "country": "nl",
     "language": "nl",
     "createdDate": "2026-05-08",
-    "androidOnly": true
+    "ascAppId": "6778417240"
   },
   "ejpt-junior-penetration-tester": {
     "name": "eJPT - eLearnSecurity Junior Penetration Tester",
     "ascName": "eJPT Practice Test",
     "bundleId": "com.practicetestgeeks.ejptjuniorpenetrationtester",
     "ascBundleId": "com.practicetestgeeks.ejptjuniorpenetrationtester",
-    "url": "https://ios-ejpt-junior-penetration-tester.practicetestgeeks.com/ejpt-practice-test",
+    "url": "https://practicetestgeeks.com/ejpt-practice-test",
     "category": "Education",
     "keywords": "eJPT,eJPT,practice test,exam prep",
     "country": "us",
@@ -1165,20 +1166,20 @@
     "ascName": "EWP Practice Test",
     "bundleId": "com.practicetestgeeks.ewpelevatedworkplatformaustralia",
     "ascBundleId": "com.practicetestgeeks.ewpelevatedworkplatformaustralia",
-    "url": "https://ios-ewp-elevated-work-platform-australia.practicetestgeeks.com/ewp-licence-practice-test",
+    "url": "https://practicetestgeeks.com/ewp-licence-practice-test",
     "category": "Education",
     "keywords": "EWP,EWP Licence,practice test,exam prep",
     "country": "au",
     "language": "en",
     "createdDate": "2026-05-08",
-    "androidOnly": true
+    "ascAppId": "6778417757"
   },
   "f-03-fire-guard-f-03-practice-test": {
     "name": "F-03 - Fire Guard F-03 Test",
     "ascName": "F-03 Fire Guard Practice Test",
     "bundleId": "com.practicetestgeeks.f03fireguardf03practicetest",
     "ascBundleId": "com.practicetestgeeks.f03fireguardf03practicetest",
-    "url": "https://ios-f-03-fire-guard-f-03-practice-test.practicetestgeeks.com/f-03-test",
+    "url": "https://practicetestgeeks.com/f-03-test",
     "category": "Education",
     "keywords": "F-03,F,practice test,exam prep",
     "country": "us",
@@ -1191,86 +1192,86 @@
     "ascName": "Food Safety Practice Test",
     "bundleId": "com.practicetestgeeks.foodsafetysupervisoraustralia",
     "ascBundleId": "com.practicetestgeeks.foodsafetysupervisoraustralia",
-    "url": "https://ios-food-safety-supervisor-australia.practicetestgeeks.com/food-safety-supervisor-practice-test-australia",
+    "url": "https://practicetestgeeks.com/food-safety-supervisor-practice-test-australia",
     "category": "Education",
     "keywords": "FSS,Food Safety Supervisor Certificate Australia,practice test,exam prep",
     "country": "au",
     "language": "en",
     "createdDate": "2026-05-08",
-    "androidOnly": true
+    "ascAppId": "6778419280"
   },
   "hcpc-registration": {
     "name": "HCPC Registration Assessment",
     "ascName": "HCPC Practice Test",
     "bundleId": "com.practicetestgeeks.hcpcregistration",
     "ascBundleId": "com.practicetestgeeks.hcpcregistration",
-    "url": "https://ios-hcpc-registration.practicetestgeeks.com/hcpc-registration-practice-test",
+    "url": "https://practicetestgeeks.com/hcpc-registration-practice-test",
     "category": "Education",
     "keywords": "HCPC,HCPC Registration Assessment,practice test,exam prep",
     "country": "uk",
     "language": "en",
     "createdDate": "2026-05-08",
-    "androidOnly": true
+    "ascAppId": "6778419591"
   },
   "isc2-cc-cybersecurity": {
     "name": "ISC2 CC - Certified in Cybersecurity",
     "ascName": "CC Practice Test",
     "bundleId": "com.ptg2026.isc2cc",
     "ascBundleId": "com.ptg2026.isc2cc",
-    "url": "https://ios-isc2-cc-cybersecurity.practicetestgeeks.com/isc2-cc-practice-test",
+    "url": "https://practicetestgeeks.com/isc2-cc-practice-test",
     "category": "Education",
     "keywords": "CC,ISC2 CC,practice test,exam prep",
     "country": "us",
     "language": "en",
     "createdDate": "2026-05-08",
-    "androidOnly": true,
-    "skip_reason": "master page does not exist (redirects to wrong target)"
+    "skip_reason": "master page does not exist (redirects to wrong target)",
+    "ascAppId": "6778420097"
   },
   "mir-medico-residente-spain": {
-    "name": "MIR - M\u00e9dico Interno Residente",
+    "name": "MIR - Médico Interno Residente",
     "ascName": "MIR Practice Test",
     "bundleId": "com.practicetestgeeks.mirmedicoresidentespain",
     "ascBundleId": "com.practicetestgeeks.mirmedicoresidentespain",
-    "url": "https://ios-mir-medico-residente-spain.practicetestgeeks.com/mir-practice-test",
+    "url": "https://practicetestgeeks.com/mir-practice-test",
     "category": "Education",
     "keywords": "MIR,MIR,practice test,exam prep",
     "country": "es",
     "language": "es",
     "createdDate": "2026-05-08",
-    "androidOnly": true
+    "ascAppId": "6778420534"
   },
   "mjdf-part-1": {
     "name": "MJDF Part 1 - Membership of Joint Dental Faculties",
     "ascName": "MJDF Practice Test",
     "bundleId": "com.practicetestgeeks.mjdfpart1",
     "ascBundleId": "com.practicetestgeeks.mjdfpart1",
-    "url": "https://ios-mjdf-part-1.practicetestgeeks.com/mjdf-part-1-practice-test",
+    "url": "https://practicetestgeeks.com/mjdf-part-1-practice-test",
     "category": "Education",
     "keywords": "MJDF,MJDF Part 1,practice test,exam prep",
     "country": "uk",
     "language": "en",
     "createdDate": "2026-05-08",
-    "androidOnly": true
+    "ascAppId": "6778421131"
   },
   "naplan-australia": {
     "name": "NAPLAN - National Assessment Program Literacy and Numeracy",
     "ascName": "NAPLAN Practice Test",
     "bundleId": "com.practicetestgeeks.naplanaustralia",
     "ascBundleId": "com.practicetestgeeks.naplanaustralia",
-    "url": "https://ios-naplan-australia.practicetestgeeks.com/naplan-practice-test",
+    "url": "https://practicetestgeeks.com/naplan-practice-test",
     "category": "Education",
     "keywords": "NAPLAN,NAPLAN,practice test,exam prep",
     "country": "au",
     "language": "en",
     "createdDate": "2026-05-08",
-    "androidOnly": true
+    "ascAppId": "6778421697"
   },
   "ncma-national-certified-medical-assistant": {
     "name": "NCMA - National Certified Medical Assistant",
     "ascName": "NCMA Practice Test",
     "bundleId": "com.practicetestgeeks.ncmanationalcertifiedmedicalassistant",
     "ascBundleId": "com.practicetestgeeks.ncmanationalcertifiedmedicalassistant",
-    "url": "https://ios-ncma-national-certified-medical-assistant.practicetestgeeks.com/ncma-test",
+    "url": "https://practicetestgeeks.com/ncma-test",
     "category": "Education",
     "keywords": "NCMA,NCMA,practice test,exam prep",
     "country": "us",
@@ -1283,7 +1284,7 @@
     "ascName": "NEBOSH Practice Test",
     "bundleId": "com.practicetestgeeks.neboshconstructioncertificate",
     "ascBundleId": "com.practicetestgeeks.neboshconstructioncertificate",
-    "url": "https://ios-nebosh-construction-certificate.practicetestgeeks.com/nebosh-construction-certificate-practice-test",
+    "url": "https://practicetestgeeks.com/nebosh-construction-certificate-practice-test",
     "category": "Education",
     "keywords": "NEBOSH CC,NEBOSH,practice test,exam prep",
     "country": "uk",
@@ -1296,60 +1297,60 @@
     "ascName": "OSCP Practice Test",
     "bundleId": "com.ptg2026.oscp",
     "ascBundleId": "com.ptg2026.oscp",
-    "url": "https://ios-oscp-offensive-security.practicetestgeeks.com/oscp-practice-test",
+    "url": "https://practicetestgeeks.com/oscp-practice-test",
     "category": "Education",
     "keywords": "OSCP,OSCP Offensive Security Certified Professional Practice,practice test,exam prep",
     "country": "us",
     "language": "en",
     "createdDate": "2026-05-08",
-    "androidOnly": true,
-    "skip_reason": "master page does not exist (redirects to wrong target)"
+    "skip_reason": "master page does not exist (redirects to wrong target)",
+    "ascAppId": "6778422684"
   },
   "parcc": {
     "name": "PARCC - Partnership for Assessment of Readiness for College ",
     "ascName": "PARCC Practice Test",
     "bundleId": "com.practicetestgeeks.parcc",
     "ascBundleId": "com.practicetestgeeks.parcc",
-    "url": "https://ios-parcc.practicetestgeeks.com/parcc-practice-test-exam",
+    "url": "https://practicetestgeeks.com/parcc-practice-test-exam",
     "category": "Education",
     "keywords": "PARCC,PARCC,practice test,exam prep",
     "country": "us",
     "language": "en",
     "createdDate": "2026-05-08",
-    "androidOnly": true
+    "ascAppId": "6778423065"
   },
   "part-p-electrical": {
     "name": "Part P - Domestic Electrical Installation",
     "ascName": "Part P Practice Test",
     "bundleId": "com.practicetestgeeks.partpelectrical",
     "ascBundleId": "com.practicetestgeeks.partpelectrical",
-    "url": "https://ios-part-p-electrical.practicetestgeeks.com/part-p-practice-test",
+    "url": "https://practicetestgeeks.com/part-p-practice-test",
     "category": "Education",
     "keywords": "Part P,Part P,practice test,exam prep",
     "country": "uk",
     "language": "en",
     "createdDate": "2026-05-08",
-    "androidOnly": true
+    "ascAppId": "6778423424"
   },
   "permis-conduire-wallonie-belgium": {
-    "name": "Permis de Conduire Th\u00e9orique - Wallonie Belgique",
+    "name": "Permis de Conduire Théorique - Wallonie Belgique",
     "ascName": "Permis Wallonie Practice Test",
     "bundleId": "com.practicetestgeeks.permisconduirewalloniebelgium",
     "ascBundleId": "com.practicetestgeeks.permisconduirewalloniebelgium",
-    "url": "https://ios-permis-conduire-wallonie-belgium.practicetestgeeks.com/permis-conduire-wallonie-practice-test",
+    "url": "https://practicetestgeeks.com/permis-conduire-wallonie-practice-test",
     "category": "Education",
-    "keywords": "Permis B,Permis de Conduire Th\u00e9orique,practice test,exam prep",
+    "keywords": "Permis B,Permis de Conduire Théorique,practice test,exam prep",
     "country": "be",
     "language": "fr",
     "createdDate": "2026-05-08",
-    "androidOnly": true
+    "ascAppId": "6778423734"
   },
   "power-bi-pl-300": {
     "name": "PL-300 - Microsoft Power BI Data Analyst",
     "ascName": "PL-300 Practice Test",
     "bundleId": "com.practicetestgeeks.powerbipl300",
     "ascBundleId": "com.practicetestgeeks.powerbipl300",
-    "url": "https://ios-power-bi-pl-300.practicetestgeeks.com/pl-300-practice-test",
+    "url": "https://practicetestgeeks.com/pl-300-practice-test",
     "category": "Education",
     "keywords": "PL-300,PL,practice test,exam prep",
     "country": "us",
@@ -1363,7 +1364,7 @@
     "ascName": "PRINCE2 Practice Test",
     "bundleId": "com.ptg2026.prince2",
     "ascBundleId": "com.ptg2026.prince2",
-    "url": "https://ios-prince2-foundation.practicetestgeeks.com/prince2-foundation-practice-test",
+    "url": "https://practicetestgeeks.com/prince2-foundation-practice-test",
     "category": "Education",
     "keywords": "PRINCE2,PRINCE2 Foundation,practice test,exam prep",
     "country": "us",
@@ -1377,7 +1378,7 @@
     "ascName": "PRINCE2 Practitioner Practice ",
     "bundleId": "com.practicetestgeeks.prince2practitioner",
     "ascBundleId": "com.practicetestgeeks.prince2practitioner",
-    "url": "https://ios-prince2-practitioner.practicetestgeeks.com/prince2-practitioner-practice-test",
+    "url": "https://practicetestgeeks.com/prince2-practitioner-practice-test",
     "category": "Education",
     "keywords": "PRINCE2 Practitioner,PRINCE2 Practitioner,practice test,exam prep",
     "country": "us",
@@ -1391,7 +1392,7 @@
     "ascName": "RCG NSW Practice Test",
     "bundleId": "com.practicetestgeeks.rcgnswgambling",
     "ascBundleId": "com.practicetestgeeks.rcgnswgambling",
-    "url": "https://ios-rcg-nsw-gambling.practicetestgeeks.com/rcg-nsw-practice-test",
+    "url": "https://practicetestgeeks.com/rcg-nsw-practice-test",
     "category": "Education",
     "keywords": "RCG,RCG NSW,practice test,exam prep",
     "country": "au",
@@ -1404,7 +1405,7 @@
     "ascName": "RePL Practice Test",
     "bundleId": "com.practicetestgeeks.repldronelicenceaustralia",
     "ascBundleId": "com.practicetestgeeks.repldronelicenceaustralia",
-    "url": "https://ios-repl-drone-licence-australia.practicetestgeeks.com/repl-practice-test",
+    "url": "https://practicetestgeeks.com/repl-practice-test",
     "category": "Education",
     "keywords": "RePL,RePL,practice test,exam prep",
     "country": "au",
@@ -1417,7 +1418,7 @@
     "ascName": "Rigging Practice Test",
     "bundleId": "com.practicetestgeeks.rigginglicenceaustralia",
     "ascBundleId": "com.practicetestgeeks.rigginglicenceaustralia",
-    "url": "https://ios-rigging-licence-australia.practicetestgeeks.com/rigging-licence-practice-test",
+    "url": "https://practicetestgeeks.com/rigging-licence-practice-test",
     "category": "Education",
     "keywords": "RB,Basic Rigging Licence Australia,practice test,exam prep",
     "country": "au",
@@ -1430,7 +1431,7 @@
     "ascName": "RSA NSW Practice Test",
     "bundleId": "com.practicetestgeeks.rsansw",
     "ascBundleId": "com.practicetestgeeks.rsansw",
-    "url": "https://ios-rsa-nsw.practicetestgeeks.com/rsa-nsw-practice-test",
+    "url": "https://practicetestgeeks.com/rsa-nsw-practice-test",
     "category": "Education",
     "keywords": "RSA NSW,RSA NSW,practice test,exam prep",
     "country": "au",
@@ -1443,7 +1444,7 @@
     "ascName": "SA Practice Test",
     "bundleId": "com.practicetestgeeks.safeagilist6",
     "ascBundleId": "com.practicetestgeeks.safeagilist6",
-    "url": "https://ios-safe-agilist-6.practicetestgeeks.com/safe-agilist-practice-test",
+    "url": "https://practicetestgeeks.com/safe-agilist-practice-test",
     "category": "Education",
     "keywords": "SA,SAFe 6 Agilist,practice test,exam prep",
     "country": "us",
@@ -1457,7 +1458,7 @@
     "ascName": "CSA Practice Test",
     "bundleId": "com.ptg2026.servicenowcsa",
     "ascBundleId": "com.ptg2026.servicenowcsa",
-    "url": "https://ios-servicenow-csa.practicetestgeeks.com/servicenow-csa-practice-test",
+    "url": "https://practicetestgeeks.com/servicenow-csa-practice-test",
     "category": "Education",
     "keywords": "CSA,ServiceNow CSA,practice test,exam prep",
     "country": "us",
@@ -1471,7 +1472,7 @@
     "ascName": "SIA Door Practice Test",
     "bundleId": "com.practicetestgeeks.siadoorsupervisor",
     "ascBundleId": "com.practicetestgeeks.siadoorsupervisor",
-    "url": "https://ios-sia-door-supervisor.practicetestgeeks.com/sia-door-supervisor-practice-test",
+    "url": "https://practicetestgeeks.com/sia-door-supervisor-practice-test",
     "category": "Education",
     "keywords": "SIA Door,SIA Door Supervisor Licence,practice test,exam prep",
     "country": "uk",
@@ -1484,7 +1485,7 @@
     "ascName": "SNLE Practice Test",
     "bundleId": "com.practicetestgeeks.snlesaudinursinglicensing",
     "ascBundleId": "com.practicetestgeeks.snlesaudinursinglicensing",
-    "url": "https://ios-snle-saudi-nursing-licensing.practicetestgeeks.com/snle-practice-test",
+    "url": "https://practicetestgeeks.com/snle-practice-test",
     "category": "Education",
     "keywords": "SNLE,SNLE,practice test,exam prep",
     "country": "sa",
@@ -1497,7 +1498,7 @@
     "ascName": "SnowPro Core Practice Test",
     "bundleId": "com.practicetestgeeks.snowflakesnowprocore",
     "ascBundleId": "com.practicetestgeeks.snowflakesnowprocore",
-    "url": "https://ios-snowflake-snowpro-core.practicetestgeeks.com/snowpro-core-practice-test",
+    "url": "https://practicetestgeeks.com/snowpro-core-practice-test",
     "category": "Education",
     "keywords": "SnowPro Core,SnowPro Core Certification,practice test,exam prep",
     "country": "us",
@@ -1507,13 +1508,13 @@
     "skip_reason": "master page does not exist (redirects to wrong target)"
   },
   "sociale-hygiene-netherlands": {
-    "name": "Examen Sociale Hygi\u00ebne - SVH",
-    "ascName": "Sociale Hygi\u00ebne Practice Test",
+    "name": "Examen Sociale Hygiëne - SVH",
+    "ascName": "Sociale Hygiëne Practice Test",
     "bundleId": "com.practicetestgeeks.socialehygienenetherlands",
     "ascBundleId": "com.practicetestgeeks.socialehygienenetherlands",
-    "url": "https://ios-sociale-hygiene-netherlands.practicetestgeeks.com/sociale-hygiene-practice-test",
+    "url": "https://practicetestgeeks.com/sociale-hygiene-practice-test",
     "category": "Education",
-    "keywords": "Sociale Hygi\u00ebne,Examen Sociale Hygi\u00ebne,practice test,exam prep",
+    "keywords": "Sociale Hygiëne,Examen Sociale Hygiëne,practice test,exam prep",
     "country": "nl",
     "language": "nl",
     "createdDate": "2026-05-08",
@@ -1524,7 +1525,7 @@
     "ascName": "NT2 Practice Test",
     "bundleId": "com.practicetestgeeks.staatsexamennt2netherlands",
     "ascBundleId": "com.practicetestgeeks.staatsexamennt2netherlands",
-    "url": "https://ios-staatsexamen-nt2-netherlands.practicetestgeeks.com/staatsexamen-nt2-practice-test",
+    "url": "https://practicetestgeeks.com/staatsexamen-nt2-practice-test",
     "category": "Education",
     "keywords": "NT2,Staatsexamen NT2,practice test,exam prep",
     "country": "nl",
@@ -1537,7 +1538,7 @@
     "ascName": "Standard 11 Practice Test",
     "bundleId": "com.practicetestgeeks.standard11mininginduction",
     "ascBundleId": "com.practicetestgeeks.standard11mininginduction",
-    "url": "https://ios-standard-11-mining-induction.practicetestgeeks.com/standard-11-mining-practice-test",
+    "url": "https://practicetestgeeks.com/standard-11-mining-practice-test",
     "category": "Education",
     "keywords": "S11/GI,Standard 11 Mining Induction,practice test,exam prep",
     "country": "au",
@@ -1550,7 +1551,7 @@
     "ascName": "STEP Practice Test",
     "bundleId": "com.practicetestgeeks.stepenglishtestsaudi",
     "ascBundleId": "com.practicetestgeeks.stepenglishtestsaudi",
-    "url": "https://ios-step-english-test-saudi.practicetestgeeks.com/step-practice-test",
+    "url": "https://practicetestgeeks.com/step-practice-test",
     "category": "Education",
     "keywords": "STEP,STEP,practice test,exam prep",
     "country": "sa",
@@ -1563,7 +1564,7 @@
     "ascName": "Taxi Theorie Practice Test",
     "bundleId": "com.practicetestgeeks.taxitheorieexamennetherlands",
     "ascBundleId": "com.practicetestgeeks.taxitheorieexamennetherlands",
-    "url": "https://ios-taxi-theorie-examen-netherlands.practicetestgeeks.com/taxi-theorie-practice-test",
+    "url": "https://practicetestgeeks.com/taxi-theorie-practice-test",
     "category": "Education",
     "keywords": "Taxi Theorie,Taxi Theorie,practice test,exam prep",
     "country": "nl",
@@ -1576,7 +1577,7 @@
     "ascName": "TOGAF Practice Test",
     "bundleId": "com.ptg2026.togaf",
     "ascBundleId": "com.ptg2026.togaf",
-    "url": "https://ios-togaf-10-foundation.practicetestgeeks.com/togaf-foundation-practice-test",
+    "url": "https://practicetestgeeks.com/togaf-foundation-practice-test",
     "category": "Education",
     "keywords": "TOGAF,TOGAF 10 Foundation,practice test,exam prep",
     "country": "us",
@@ -1590,7 +1591,7 @@
     "ascName": "Vaarbewijs Practice Test",
     "bundleId": "com.practicetestgeeks.vaarbewijs1netherlands",
     "ascBundleId": "com.practicetestgeeks.vaarbewijs1netherlands",
-    "url": "https://ios-vaarbewijs-1-netherlands.practicetestgeeks.com/vaarbewijs-1-practice-test",
+    "url": "https://practicetestgeeks.com/vaarbewijs-1-practice-test",
     "category": "Education",
     "keywords": "Vaarbewijs 1,Vaarbewijs 1,practice test,exam prep",
     "country": "nl",
@@ -1603,7 +1604,7 @@
     "ascName": "VCA Basis Practice Test",
     "bundleId": "com.practicetestgeeks.vcabasisnetherlands",
     "ascBundleId": "com.practicetestgeeks.vcabasisnetherlands",
-    "url": "https://ios-vca-basis-netherlands.practicetestgeeks.com/b-vca-practice-test",
+    "url": "https://practicetestgeeks.com/b-vca-practice-test",
     "category": "Education",
     "keywords": "B-VCA,VCA Basis (B,practice test,exam prep",
     "country": "nl",
@@ -1616,7 +1617,7 @@
     "ascName": "VCA VOL Practice Test",
     "bundleId": "com.practicetestgeeks.vcavolnetherlands",
     "ascBundleId": "com.practicetestgeeks.vcavolnetherlands",
-    "url": "https://ios-vca-vol-netherlands.practicetestgeeks.com/vol-vca-practice-test",
+    "url": "https://practicetestgeeks.com/vol-vca-practice-test",
     "category": "Education",
     "keywords": "VOL-VCA,VCA VOL (VOL,practice test,exam prep",
     "country": "nl",
@@ -1629,7 +1630,7 @@
     "ascName": "Versant Practice Test",
     "bundleId": "com.practicetestgeeks.versant",
     "ascBundleId": "VersantPracticeTest",
-    "url": "https://ios-versant.practicetestgeeks.com/versant-practice-test-exam",
+    "url": "https://practicetestgeeks.com/versant-practice-test-exam/",
     "category": "Education",
     "keywords": "Versant, English proficiency, language test, fluency assessment"
   },
@@ -1638,7 +1639,7 @@
     "ascName": "ACS Practice Test",
     "bundleId": "com.practicetestgeeks.acstest",
     "ascBundleId": "ACSPracticeTest",
-    "url": "https://ios-acs-test.practicetestgeeks.com/acs-test",
+    "url": "https://practicetestgeeks.com/acs-test/",
     "category": "Education",
     "keywords": "ACS, certification, chemistry, exam prep"
   },
@@ -1647,7 +1648,7 @@
     "ascName": "LTO Practice Test",
     "bundleId": "com.practicetestgeeks.lto",
     "ascBundleId": "LTOPracticeTest",
-    "url": "https://ios-lto-exam-reviewer.practicetestgeeks.com/lto-exam-reviewer",
+    "url": "https://practicetestgeeks.com/lto-exam-reviewer/",
     "category": "Education",
     "keywords": "LTO, driver license, Philippines, exam reviewer"
   },
@@ -1656,7 +1657,7 @@
     "ascName": "Smart Serve Practice Test",
     "bundleId": "com.practicetestgeeks.smartserve",
     "ascBundleId": "SmartServePracticeTest",
-    "url": "https://ios-smart-serve-ontario.practicetestgeeks.com/smart-serve-test",
+    "url": "https://practicetestgeeks.com/smart-serve-test/",
     "category": "Education",
     "keywords": "Smart Serve, Ontario, alcohol server, certification"
   },
@@ -1665,14 +1666,14 @@
     "ascName": "TKT Practice Test",
     "bundleId": "com.practicetestgeeks.tkt",
     "ascBundleId": "TKTPracticeTest",
-    "url": "https://ios-tkt.practicetestgeeks.com/tkt-practice-test-exam",
+    "url": "https://practicetestgeeks.com/tkt-practice-test-exam/",
     "category": "Education",
     "keywords": "TKT, teaching knowledge, Cambridge, exam prep"
   },
   "uk-pcv-theory-test": {
     "name": "UK PCV Practice Test",
     "bundleId": "com.ptg2026.pcv",
-    "url": "https://ios-uk-pcv-theory-test.practicetestgeeks.com/uk-pcv-theory-test",
+    "url": "https://practicetestgeeks.com/uk-pcv-theory-test/",
     "category": "Education",
     "country": "gb",
     "keywords": "PCV, UK PCV theory, bus driver, practice test",
@@ -1682,7 +1683,7 @@
   "fctc-test": {
     "name": "FCTC Practice Test",
     "bundleId": "com.ptg2026.fctc",
-    "url": "https://ios-fctc-test.practicetestgeeks.com/fctc-test",
+    "url": "https://practicetestgeeks.com/fctc-test/",
     "category": "Education",
     "country": "us",
     "keywords": "FCTC, forklift, certification, practice test",
@@ -1692,7 +1693,7 @@
   "mlpao-medical-laboratory-professionals-association-of-ontario": {
     "name": "MLPAO Practice Test",
     "bundleId": "com.ptg2026.mlpao",
-    "url": "https://ios-mlpao-medical-laboratory-professionals-association-of-ontar.practicetestgeeks.com/mlpao-medical-laboratory-professionals-association-of-ontario",
+    "url": "https://practicetestgeeks.com/mlpao-medical-laboratory-professionals-association-of-ontario/",
     "category": "Education",
     "country": "ca",
     "keywords": "MLPAO, medical laboratory, Ontario, practice test",
@@ -1702,7 +1703,7 @@
   "security-industry-authority": {
     "name": "SIA Practice Test",
     "bundleId": "com.ptg2026.sia",
-    "url": "https://ios-security-industry-authority.practicetestgeeks.com/security-industry-authority",
+    "url": "https://practicetestgeeks.com/security-industry-authority/",
     "category": "Education",
     "country": "gb",
     "keywords": "SIA, security industry, door supervisor, practice test",
@@ -1712,7 +1713,7 @@
   "cscs-green-card": {
     "name": "CSCS Practice Test",
     "bundleId": "com.ptg2026.cscs",
-    "url": "https://ios-cscs-green-card.practicetestgeeks.com/cscs-green-card",
+    "url": "https://practicetestgeeks.com/cscs-green-card/",
     "category": "Education",
     "country": "gb",
     "keywords": "CSCS, construction, green card, health safety, practice test",
@@ -1722,7 +1723,7 @@
   "iosh-managing-safely": {
     "name": "IOSH Practice Test",
     "bundleId": "com.ptg2026.iosh",
-    "url": "https://ios-iosh-managing-safely.practicetestgeeks.com/iosh-managing-safely",
+    "url": "https://practicetestgeeks.com/iosh-managing-safely/",
     "category": "Education",
     "country": "gb",
     "keywords": "IOSH, managing safely, practice test",
@@ -1732,7 +1733,7 @@
   "nebosh-igc": {
     "name": "NEBOSH Practice Test",
     "bundleId": "com.ptg2026.nebosh",
-    "url": "https://ios-nebosh-igc.practicetestgeeks.com/nebosh-igc",
+    "url": "https://practicetestgeeks.com/nebosh-igc/",
     "category": "Education",
     "country": "gb",
     "keywords": "NEBOSH, IGC, health safety, practice test",
@@ -1742,7 +1743,7 @@
   "bee-bachelor-of-electrical-engineering": {
     "name": "BEE Practice Test",
     "bundleId": "com.ptg2026.bee",
-    "url": "https://ios-bee-bachelor-of-electrical-engineering.practicetestgeeks.com/bee-bachelor-of-electrical-engineering",
+    "url": "https://practicetestgeeks.com/bee-bachelor-of-electrical-engineering/",
     "category": "Education",
     "country": "us",
     "keywords": "BEE, electrical engineering, practice test",
@@ -1752,7 +1753,7 @@
   "bapsy-bachelor-of-arts-in-psychology": {
     "name": "BAPSY Practice Test",
     "bundleId": "com.ptg2026.bapsy",
-    "url": "https://ios-bapsy-bachelor-of-arts-in-psychology.practicetestgeeks.com/bapsy-bachelor-of-arts-in-psychology",
+    "url": "https://practicetestgeeks.com/bapsy-bachelor-of-arts-in-psychology/",
     "category": "Education",
     "country": "us",
     "keywords": "BAPSY, psychology, practice test",
@@ -1762,7 +1763,7 @@
   "usps-error-detection-test": {
     "name": "USPS Practice Test",
     "bundleId": "com.ptg2026.usps",
-    "url": "https://ios-usps-error-detection-test.practicetestgeeks.com/usps-error-detection-test",
+    "url": "https://practicetestgeeks.com/usps-error-detection-test/",
     "category": "Education",
     "country": "us",
     "keywords": "USPS, postal, error detection, practice test",
@@ -1772,7 +1773,7 @@
   "board-certified-psychometrist": {
     "name": "BCP Practice Test",
     "bundleId": "com.ptg2026.bcp",
-    "url": "https://ios-board-certified-psychometrist.practicetestgeeks.com/board-certified-psychometrist",
+    "url": "https://practicetestgeeks.com/board-certified-psychometrist/",
     "category": "Education",
     "country": "us",
     "ascName": "BCP Practice Test",
@@ -1781,7 +1782,7 @@
   "pellet-b-test": {
     "name": "PELLET B Practice Test",
     "bundleId": "com.ptg2026.pelletb",
-    "url": "https://ios-pellet-b-test.practicetestgeeks.com/pellet-b-test",
+    "url": "https://practicetestgeeks.com/pellet-b-test/",
     "category": "Education",
     "country": "us",
     "ascName": "PELLET B Practice Test",
@@ -1790,7 +1791,7 @@
   "caohc-council-for-accreditation-in-occupational-hearing-conservation": {
     "name": "CAOHC Practice Test",
     "bundleId": "com.ptg2026.caohc",
-    "url": "https://ios-caohc-council-for-accreditation-in-occupational-hearing-con.practicetestgeeks.com/caohc-council-for-accreditation-in-occupational-hearing-conservation",
+    "url": "https://practicetestgeeks.com/caohc-council-for-accreditation-in-occupational-hearing-conservation/",
     "category": "Education",
     "country": "us",
     "ascName": "CAOHC Practice Test",
@@ -1799,7 +1800,7 @@
   "a2l-a2l-low-gwp-flammable-refrigerant-safety-certification": {
     "name": "A2L Practice Test",
     "bundleId": "com.ptg2026.a2l",
-    "url": "https://ios-a2l-a2l-low-gwp-flammable-refrigerant-safety-certification.practicetestgeeks.com/a2l-a2l-low-gwp-flammable-refrigerant-safety-certification",
+    "url": "https://practicetestgeeks.com/a2l-a2l-low-gwp-flammable-refrigerant-safety-certification/",
     "category": "Education",
     "country": "us",
     "ascName": "A2L Practice Test",
@@ -1808,7 +1809,7 @@
   "afct-armed-forces-classification-test": {
     "name": "AFCT Practice Test",
     "bundleId": "com.ptg2026.afct",
-    "url": "https://ios-afct-armed-forces-classification-test.practicetestgeeks.com/afct-armed-forces-classification-test",
+    "url": "https://practicetestgeeks.com/afct-armed-forces-classification-test/",
     "category": "Education",
     "country": "us",
     "ascName": "AFCT Practice Test",
@@ -1817,7 +1818,7 @@
   "bms-bachelor-of-mortuary-science": {
     "name": "BMS Practice Test",
     "bundleId": "com.ptg2026.bms",
-    "url": "https://ios-bms-bachelor-of-mortuary-science.practicetestgeeks.com/bms-bachelor-of-mortuary-science",
+    "url": "https://practicetestgeeks.com/bms-bachelor-of-mortuary-science/",
     "category": "Education",
     "country": "us",
     "ascName": "BMS Practice Test",
@@ -1826,7 +1827,7 @@
   "cpsi-certified-playground-safety-inspector": {
     "name": "CPSI Practice Test",
     "bundleId": "com.ptg2026.cpsi",
-    "url": "https://ios-cpsi-certified-playground-safety-inspector.practicetestgeeks.com/cpsi-certified-playground-safety-inspector",
+    "url": "https://practicetestgeeks.com/cpsi-certified-playground-safety-inspector/",
     "category": "Education",
     "country": "us",
     "ascName": "CPSI Practice Test",
@@ -1835,7 +1836,7 @@
   "cisi-uae-frr": {
     "name": "CISI UAE FRR Practice Test",
     "bundleId": "com.ptg2026.cisiuae",
-    "url": "https://ios-cisi-uae-frr.practicetestgeeks.com/cisi-uae-frr",
+    "url": "https://practicetestgeeks.com/cisi-uae-frr/",
     "category": "Education",
     "country": "ae",
     "ascName": "CISI UAE FRR Practice Test",
@@ -1844,7 +1845,7 @@
   "certified-supply-chain-professional-cscp": {
     "name": "CSCP Practice Test",
     "bundleId": "com.ptg2026.cscp",
-    "url": "https://ios-certified-supply-chain-professional-cscp.practicetestgeeks.com/certified-supply-chain-professional-cscp",
+    "url": "https://practicetestgeeks.com/certified-supply-chain-professional-cscp/",
     "category": "Education",
     "country": "us",
     "ascName": "CSCP Practice Test",
@@ -1853,7 +1854,7 @@
   "certified-scrum-product-ownercspo-certification": {
     "name": "CSPO Practice Test",
     "bundleId": "com.ptg2026.cspo",
-    "url": "https://ios-certified-scrum-product-ownercspo-certification.practicetestgeeks.com/certified-scrum-product-ownercspo-certification",
+    "url": "https://practicetestgeeks.com/certified-scrum-product-ownercspo-certification/",
     "category": "Education",
     "country": "us",
     "ascName": "CSPO Practice Test",
@@ -1862,7 +1863,7 @@
   "hi-notary-hawaii-notary-exam": {
     "name": "HI Notary Practice Test",
     "bundleId": "com.ptg2026.hinotary",
-    "url": "https://ios-hi-notary-hawaii-notary-exam.practicetestgeeks.com/hi-notary-hawaii-notary-exam",
+    "url": "https://practicetestgeeks.com/hi-notary-hawaii-notary-exam/",
     "category": "Education",
     "country": "us",
     "ascName": "HI Notary Practice Test",
@@ -1871,7 +1872,7 @@
   "in-notary-indiana-notary-exam": {
     "name": "IN Notary Practice Test",
     "bundleId": "com.ptg2026.innotary",
-    "url": "https://ios-in-notary-indiana-notary-exam.practicetestgeeks.com/in-notary-indiana-notary-exam",
+    "url": "https://practicetestgeeks.com/in-notary-indiana-notary-exam/",
     "category": "Education",
     "country": "us",
     "ascName": "IN Notary Practice Test",
@@ -1880,7 +1881,7 @@
   "uk-lgv-theory-test": {
     "name": "UK LGV Practice Test",
     "bundleId": "com.ptg2026.uklgv",
-    "url": "https://ios-uk-lgv-theory-test.practicetestgeeks.com/uk-lgv-theory-test",
+    "url": "https://practicetestgeeks.com/uk-lgv-theory-test/",
     "category": "Education",
     "country": "gb",
     "ascName": "UK LGV Practice Test",
@@ -1889,7 +1890,7 @@
   "stsc-safety-trained-supervisor-construction": {
     "name": "STSC Practice Test",
     "bundleId": "com.ptg2026.stsc",
-    "url": "https://ios-stsc-safety-trained-supervisor-construction.practicetestgeeks.com/stsc-safety-trained-supervisor-construction",
+    "url": "https://practicetestgeeks.com/stsc-safety-trained-supervisor-construction/",
     "category": "Education",
     "country": "us",
     "ascName": "STSC Practice Test",
@@ -1898,7 +1899,7 @@
   "dkt": {
     "name": "DKT Practice Test",
     "bundleId": "com.ptg2026.dkt",
-    "url": "https://ios-dkt.practicetestgeeks.com/dkt",
+    "url": "https://practicetestgeeks.com/dkt/",
     "category": "Education",
     "country": "us",
     "ascName": "DKT Practice Test",
@@ -1907,7 +1908,7 @@
   "dcas-ambulance-dubai": {
     "name": "DCAS Practice Test",
     "bundleId": "com.ptg2026.dcas",
-    "url": "https://ios-dcas-ambulance-dubai.practicetestgeeks.com/dcas-ambulance-dubai",
+    "url": "https://practicetestgeeks.com/dcas-ambulance-dubai/",
     "category": "Education",
     "country": "ae",
     "ascName": "DCAS Practice Test",
@@ -1916,7 +1917,7 @@
   "oposiciones-guardia-civil": {
     "name": "Guardia Civil Practice Test",
     "bundleId": "com.ptg2026.guardia",
-    "url": "https://ios-oposiciones-guardia-civil.practicetestgeeks.com/oposiciones-guardia-civil",
+    "url": "https://practicetestgeeks.com/oposiciones-guardia-civil/",
     "category": "Education",
     "country": "es",
     "ascName": "Guardia Civil Practice Test",
@@ -1925,7 +1926,7 @@
   "concorso-infermieri-italy": {
     "name": "Concorso Infermieri",
     "bundleId": "com.ptg2026.infermieri2",
-    "url": "https://ios-concorso-infermieri-italy.practicetestgeeks.com/concorso-infermieri-italy",
+    "url": "https://practicetestgeeks.com/concorso-infermieri-italy/",
     "category": "Education",
     "country": "it",
     "ascName": "Concorso Infermieri",
@@ -1934,7 +1935,7 @@
   "concorso-oss-italy": {
     "name": "Concorso OSS",
     "bundleId": "com.ptg2026.oss",
-    "url": "https://ios-concorso-oss-italy.practicetestgeeks.com/concorso-oss-italy",
+    "url": "https://practicetestgeeks.com/concorso-oss-italy/",
     "category": "Education",
     "country": "it",
     "ascName": "Concorso OSS",
@@ -1943,7 +1944,7 @@
   "npte-pt-test": {
     "name": "NPTE PT Practice Test",
     "bundleId": "com.ptg2026.npte",
-    "url": "https://ios-npte-pt-test.practicetestgeeks.com/npte-pt-test",
+    "url": "https://practicetestgeeks.com/npte-pt-test/",
     "category": "Education",
     "country": "us",
     "ascName": "NPTE PT Practice Test",
@@ -1952,7 +1953,7 @@
   "canadian-citizenship": {
     "name": "Canadian Citizenship Test",
     "bundleId": "com.ptg2026.canadian",
-    "url": "https://ios-canadian-citizenship.practicetestgeeks.com/canadian-citizenship",
+    "url": "https://practicetestgeeks.com/canadian-citizenship/",
     "category": "Education",
     "country": "ca",
     "ascName": "Canadian Citizenship Test",
@@ -1961,7 +1962,7 @@
   "concorso-docenti-italy": {
     "name": "Concorso Docenti Italy",
     "bundleId": "com.ptg2026.docenti",
-    "url": "https://ios-concorso-docenti-italy.practicetestgeeks.com/concorso-docenti-italy",
+    "url": "https://practicetestgeeks.com/concorso-docenti-italy/",
     "category": "Education",
     "country": "it",
     "ascName": "Concorso Docenti Italy",
@@ -1970,7 +1971,7 @@
   "scfhs-saudi-prometric-nursing": {
     "name": "SCFHS Saudi Nursing",
     "bundleId": "com.ptg2026.scfhs",
-    "url": "https://ios-scfhs-saudi-prometric-nursing.practicetestgeeks.com/scfhs-saudi-prometric-nursing",
+    "url": "https://practicetestgeeks.com/scfhs-saudi-prometric-nursing/",
     "category": "Education",
     "country": "sa",
     "ascName": "SCFHS Saudi Nursing",
@@ -1979,7 +1980,7 @@
   "red-seal-welder-456a": {
     "name": "Red Seal Welder 456A",
     "bundleId": "com.ptg2026.welder456",
-    "url": "https://ios-red-seal-welder-456a.practicetestgeeks.com/red-seal-welder-456a",
+    "url": "https://practicetestgeeks.com/red-seal-welder-456a/",
     "category": "Education",
     "country": "ca",
     "ascName": "Red Seal Welder 456A",
@@ -1988,7 +1989,7 @@
   "cap-conductor-profesional-spain": {
     "name": "CAP Conductor Spain",
     "bundleId": "com.ptg2026.cap",
-    "url": "https://ios-cap-conductor-profesional-spain.practicetestgeeks.com/cap-conductor-profesional-spain",
+    "url": "https://practicetestgeeks.com/cap-conductor-profesional-spain/",
     "category": "Education",
     "country": "es",
     "ascName": "CAP Conductor Spain",
@@ -1997,7 +1998,7 @@
   "oposiciones-auxiliar-administrativo": {
     "name": "Auxiliar Admin Spain",
     "bundleId": "com.ptg2026.auxadmin",
-    "url": "https://ios-oposiciones-auxiliar-administrativo.practicetestgeeks.com/oposiciones-auxiliar-administrativo",
+    "url": "https://practicetestgeeks.com/oposiciones-auxiliar-administrativo/",
     "category": "Education",
     "country": "es",
     "ascName": "Auxiliar Admin Spain",
@@ -2006,7 +2007,7 @@
   "certified-administrative-professional-cap": {
     "name": "CAP Administrative Pro",
     "bundleId": "com.ptg2026.capadmin",
-    "url": "https://ios-certified-administrative-professional-cap.practicetestgeeks.com/certified-administrative-professional-cap",
+    "url": "https://practicetestgeeks.com/certified-administrative-professional-cap/",
     "category": "Education",
     "country": "us",
     "ascName": "CAP Administrative Pro",
@@ -2015,7 +2016,7 @@
   "acs-cenwat-central-heating": {
     "name": "ACS CENWAT Gas",
     "bundleId": "com.ptg2026.cenwat",
-    "url": "https://ios-acs-cenwat-central-heating.practicetestgeeks.com/acs-cenwat-central-heating",
+    "url": "https://practicetestgeeks.com/acs-cenwat-central-heating/",
     "category": "Education",
     "country": "gb",
     "ascName": "ACS CENWAT Gas",
@@ -2024,7 +2025,7 @@
   "irish-driver-theory-test-car": {
     "name": "Irish Driver Test",
     "bundleId": "com.ptg2026.irishdtt",
-    "url": "https://ios-irish-driver-theory-test-car.practicetestgeeks.com/irish-driver-theory-test-car",
+    "url": "https://practicetestgeeks.com/irish-driver-theory-test-car/",
     "category": "Education",
     "country": "ie",
     "ascName": "Irish Driver Test",
@@ -2033,7 +2034,7 @@
   "emsat-uae": {
     "name": "EmSAT UAE Practice",
     "bundleId": "com.ptg2026.emsat",
-    "url": "https://ios-emsat-uae.practicetestgeeks.com/emsat-uae",
+    "url": "https://practicetestgeeks.com/emsat-uae/",
     "category": "Education",
     "country": "ae",
     "ascName": "EmSAT UAE Practice",
@@ -2042,7 +2043,7 @@
   "gphc-registration-assessment": {
     "name": "GPhC Practice",
     "bundleId": "com.ptg2026.gphc",
-    "url": "https://ios-gphc-registration-assessment.practicetestgeeks.com/gphc-registration-assessment",
+    "url": "https://practicetestgeeks.com/gphc-registration-assessment/",
     "category": "Education",
     "country": "gb",
     "ascName": "GPhC Practice",
@@ -2051,7 +2052,7 @@
   "mbe-multistate-bar-exam": {
     "name": "MBE Bar Exam",
     "bundleId": "com.ptg2026.mbe",
-    "url": "https://ios-mbe-multistate-bar-exam.practicetestgeeks.com/mbe-multistate-bar-exam",
+    "url": "https://practicetestgeeks.com/mbe-multistate-bar-exam/",
     "category": "Education",
     "country": "us",
     "ascName": "MBE Bar Exam",
@@ -2060,7 +2061,7 @@
   "oposiciones-policia-nacional-spain": {
     "name": "Policia Nacional",
     "bundleId": "com.ptg2026.policianac",
-    "url": "https://ios-oposiciones-policia-nacional-spain.practicetestgeeks.com/oposiciones-policia-nacional-spain",
+    "url": "https://practicetestgeeks.com/oposiciones-policia-nacional-spain/",
     "category": "Education",
     "country": "es",
     "ascName": "Policia Nacional",
@@ -2069,7 +2070,7 @@
   "sat-subject-test-physics": {
     "name": "SAT Physics",
     "bundleId": "com.ptg2026.satphys",
-    "url": "https://ios-sat-subject-test-physics.practicetestgeeks.com/sat-subject-test-physics",
+    "url": "https://practicetestgeeks.com/sat-subject-test-physics/",
     "category": "Education",
     "country": "us",
     "ascName": "SAT Physics",
@@ -2078,7 +2079,7 @@
   "oposiciones-bombero-spain": {
     "name": "Bombero Spain",
     "bundleId": "com.ptg2026.bombero",
-    "url": "https://ios-oposiciones-bombero-spain.practicetestgeeks.com/oposiciones-bombero-spain",
+    "url": "https://practicetestgeeks.com/oposiciones-bombero-spain/",
     "category": "Education",
     "country": "es",
     "ascName": "Bombero Spain",
@@ -2087,7 +2088,7 @@
   "caribbean-cxc-csec-mathematics": {
     "name": "CXC CSEC Math",
     "bundleId": "com.ptg2026.csecmath",
-    "url": "https://ios-caribbean-cxc-csec-mathematics.practicetestgeeks.com/caribbean-cxc-csec-mathematics",
+    "url": "https://practicetestgeeks.com/caribbean-cxc-csec-mathematics/",
     "category": "Education",
     "country": "jm",
     "ascName": "CXC CSEC Math",
@@ -2096,7 +2097,7 @@
   "pmp-project-management-professional": {
     "name": "PMP Practice",
     "bundleId": "com.ptg2026.pmp",
-    "url": "https://ios-pmp-project-management-professional.practicetestgeeks.com/pmp-project-management-professional",
+    "url": "https://practicetestgeeks.com/pmp-project-management-professional/",
     "category": "Education",
     "country": "us",
     "ascName": "PMP Practice",
@@ -2105,7 +2106,7 @@
   "cscp-cisco-certified-network-associate": {
     "name": "CCNA Cisco",
     "bundleId": "com.ptg2026.ccna",
-    "url": "https://ios-cscp-cisco-certified-network-associate.practicetestgeeks.com/cscp-cisco-certified-network-associate",
+    "url": "https://practicetestgeeks.com/cscp-cisco-certified-network-associate/",
     "category": "Education",
     "country": "us",
     "ascName": "CCNA Cisco",
@@ -2114,7 +2115,7 @@
   "gcse-maths-foundation": {
     "name": "GCSE Maths Found",
     "bundleId": "com.ptg2026.gcsemathf",
-    "url": "https://ios-gcse-maths-foundation.practicetestgeeks.com/gcse-maths-foundation",
+    "url": "https://practicetestgeeks.com/gcse-maths-foundation/",
     "category": "Education",
     "country": "gb",
     "ascName": "GCSE Maths Found",
@@ -2123,7 +2124,7 @@
   "ielts-academic-reading": {
     "name": "IELTS Reading",
     "bundleId": "com.ptg2026.ieltsread",
-    "url": "https://ios-ielts-academic-reading.practicetestgeeks.com/ielts-academic-reading",
+    "url": "https://practicetestgeeks.com/ielts-academic-reading/",
     "category": "Education",
     "country": "us",
     "ascName": "IELTS Reading",
@@ -2132,7 +2133,7 @@
   "toefl-ibt-reading": {
     "name": "TOEFL Reading",
     "bundleId": "com.ptg2026.toeflread",
-    "url": "https://ios-toefl-ibt-reading.practicetestgeeks.com/toefl-ibt-reading",
+    "url": "https://practicetestgeeks.com/toefl-ibt-reading/",
     "category": "Education",
     "country": "us",
     "ascName": "TOEFL Reading",
@@ -2141,7 +2142,7 @@
   "fe-civil-pe-civil-engineering": {
     "name": "FE Civil",
     "bundleId": "com.ptg2026.fecivil",
-    "url": "https://ios-fe-civil-pe-civil-engineering.practicetestgeeks.com/fe-civil-pe-civil-engineering",
+    "url": "https://practicetestgeeks.com/fe-civil-pe-civil-engineering/",
     "category": "Education",
     "country": "us",
     "ascName": "FE Civil",
@@ -2150,7 +2151,7 @@
   "haad-rn-uae-nursing": {
     "name": "HAAD RN UAE",
     "bundleId": "com.ptg2026.haadrn",
-    "url": "https://ios-haad-rn-uae-nursing.practicetestgeeks.com/haad-rn-uae-nursing",
+    "url": "https://practicetestgeeks.com/haad-rn-uae-nursing/",
     "category": "Education",
     "country": "ae",
     "ascName": "HAAD RN UAE",
@@ -2159,7 +2160,7 @@
   "nasm-personal-trainer": {
     "name": "NASM Trainer",
     "bundleId": "com.ptg2026.nasm",
-    "url": "https://ios-nasm-personal-trainer.practicetestgeeks.com/nasm-personal-trainer",
+    "url": "https://practicetestgeeks.com/nasm-personal-trainer/",
     "category": "Education",
     "country": "us",
     "ascName": "NASM Trainer",
@@ -2168,7 +2169,7 @@
   "itil-practitioner": {
     "name": "ITIL Practice",
     "bundleId": "com.ptg2026.itil",
-    "url": "https://ios-itil-practitioner.practicetestgeeks.com/itil-practitioner",
+    "url": "https://practicetestgeeks.com/itil-practitioner/",
     "category": "Education",
     "country": "us",
     "ascName": "ITIL Practice",
@@ -2177,7 +2178,7 @@
   "lmsw-exam": {
     "name": "LMSW Exam",
     "bundleId": "com.ptg2026.lmsw",
-    "url": "https://ios-lmsw-exam.practicetestgeeks.com/lmsw-exam",
+    "url": "https://practicetestgeeks.com/lmsw-exam/",
     "category": "Education",
     "country": "us",
     "ascName": "LMSW Exam",
@@ -2186,7 +2187,7 @@
   "oposiciones-maestros": {
     "name": "Maestros Spain",
     "bundleId": "com.ptg2026.maestros",
-    "url": "https://ios-oposiciones-maestros.practicetestgeeks.com/oposiciones-maestros",
+    "url": "https://practicetestgeeks.com/oposiciones-maestros/",
     "category": "Education",
     "country": "es",
     "ascName": "Maestros Spain",
@@ -2195,7 +2196,7 @@
   "msw-master-of-social-work": {
     "name": "MSW Practice",
     "bundleId": "com.ptg2026.msw",
-    "url": "https://ios-msw-master-of-social-work.practicetestgeeks.com/msw-master-of-social-work",
+    "url": "https://practicetestgeeks.com/msw-master-of-social-work/",
     "category": "Education",
     "country": "us",
     "ascName": "MSW Practice",
@@ -2204,7 +2205,7 @@
   "nbdhe-test": {
     "name": "NBDHE",
     "bundleId": "com.ptg2026.nbdhe",
-    "url": "https://ios-nbdhe-test.practicetestgeeks.com/nbdhe-test",
+    "url": "https://practicetestgeeks.com/nbdhe-test/",
     "category": "Education",
     "country": "us",
     "ascName": "NBDHE",
@@ -2213,7 +2214,7 @@
   "singapore-gce-o-level": {
     "name": "Singapore O-Level",
     "bundleId": "com.ptg2026.sgol",
-    "url": "https://ios-singapore-gce-o-level.practicetestgeeks.com/singapore-gce-o-level",
+    "url": "https://practicetestgeeks.com/singapore-gce-o-level/",
     "category": "Education",
     "country": "sg",
     "ascName": "Singapore O-Level",
@@ -2222,7 +2223,7 @@
   "professional-in-human-resources-california-phrca": {
     "name": "PHRca HR",
     "bundleId": "com.ptg2026.phrca",
-    "url": "https://ios-professional-in-human-resources-california-phrca.practicetestgeeks.com/professional-in-human-resources-california-phrca",
+    "url": "https://practicetestgeeks.com/professional-in-human-resources-california-phrca/",
     "category": "Education",
     "country": "us",
     "ascName": "PHRca HR",
@@ -2231,7 +2232,7 @@
   "certified-pipefitter": {
     "name": "Pipefitter",
     "bundleId": "com.ptg2026.pipefitter",
-    "url": "https://ios-certified-pipefitter.practicetestgeeks.com/certified-pipefitter",
+    "url": "https://practicetestgeeks.com/certified-pipefitter/",
     "category": "Education",
     "country": "us",
     "ascName": "Pipefitter",
@@ -2240,7 +2241,7 @@
   "qts-qualified-teacher-status": {
     "name": "QTS Teacher UK",
     "bundleId": "com.ptg2026.qts",
-    "url": "https://ios-qts-qualified-teacher-status.practicetestgeeks.com/qts-qualified-teacher-status",
+    "url": "https://practicetestgeeks.com/qts-qualified-teacher-status/",
     "category": "Education",
     "country": "gb",
     "ascName": "QTS Teacher UK",
@@ -2249,7 +2250,7 @@
   "pmbok": {
     "name": "PMBOK",
     "bundleId": "com.ptg2026.pmbok",
-    "url": "https://ios-pmbok.practicetestgeeks.com/pmbok",
+    "url": "https://practicetestgeeks.com/pmbok/",
     "category": "Education",
     "country": "us",
     "ascName": "PMBOK",
@@ -2258,7 +2259,7 @@
   "rya-src-marine-radio": {
     "name": "RYA SRC",
     "bundleId": "com.ptg2026.ryasrc",
-    "url": "https://ios-rya-src-marine-radio.practicetestgeeks.com/rya-src-marine-radio",
+    "url": "https://practicetestgeeks.com/rya-src-marine-radio/",
     "category": "Education",
     "country": "gb",
     "ascName": "RYA SRC",
@@ -2267,7 +2268,7 @@
   "scfhs-saudi-prometric-pharmacist": {
     "name": "SCFHS Pharma",
     "bundleId": "com.ptg2026.scfhspharm",
-    "url": "https://ios-scfhs-saudi-prometric-pharmacist.practicetestgeeks.com/scfhs-saudi-prometric-pharmacist",
+    "url": "https://practicetestgeeks.com/scfhs-saudi-prometric-pharmacist/",
     "category": "Education",
     "country": "sa",
     "ascName": "SCFHS Pharma",
@@ -2276,7 +2277,7 @@
   "sia-close-protection": {
     "name": "SIA Close Protect",
     "bundleId": "com.ptg2026.siacp",
-    "url": "https://ios-sia-close-protection.practicetestgeeks.com/sia-close-protection",
+    "url": "https://practicetestgeeks.com/sia-close-protection/",
     "category": "Education",
     "country": "gb",
     "ascName": "SIA Close Protect",
@@ -2285,7 +2286,7 @@
   "sift-exam": {
     "name": "SIFT Army",
     "bundleId": "com.ptg2026.sift",
-    "url": "https://ios-sift-exam.practicetestgeeks.com/sift-exam",
+    "url": "https://practicetestgeeks.com/sift-exam/",
     "category": "Education",
     "country": "gb",
     "ascName": "SIFT Army",
@@ -2294,7 +2295,7 @@
   "sssts-site-supervisor": {
     "name": "SSSTS UK",
     "bundleId": "com.ptg2026.sssts",
-    "url": "https://ios-sssts-site-supervisor.practicetestgeeks.com/sssts-site-supervisor",
+    "url": "https://practicetestgeeks.com/sssts-site-supervisor/",
     "category": "Education",
     "country": "gb",
     "ascName": "SSSTS UK",
@@ -2303,7 +2304,7 @@
   "ncae-national-career-assessment-examination": {
     "name": "NCAE Philippines",
     "bundleId": "com.ptg2026.ncae",
-    "url": "https://ios-ncae-national-career-assessment-examination.practicetestgeeks.com/ncae-national-career-assessment-examination",
+    "url": "https://practicetestgeeks.com/ncae-national-career-assessment-examination/",
     "category": "Education",
     "country": "ph",
     "ascName": "NCAE Philippines",
@@ -2312,7 +2313,7 @@
   "citb-hse-managers": {
     "name": "CITB Managers",
     "bundleId": "com.ptg2026.citbmgr",
-    "url": "https://ios-citb-hse-managers.practicetestgeeks.com/citb-hse-managers",
+    "url": "https://practicetestgeeks.com/citb-hse-managers/",
     "category": "Education",
     "country": "gb",
     "ascName": "CITB Managers",
@@ -2321,7 +2322,7 @@
   "haccp-italia": {
     "name": "HACCP Italia",
     "bundleId": "com.ptg2026.haccp",
-    "url": "https://ios-haccp-italia.practicetestgeeks.com/haccp-italia",
+    "url": "https://practicetestgeeks.com/haccp-italia/",
     "category": "Education",
     "country": "it",
     "ascName": "HACCP Italia",
@@ -2330,7 +2331,7 @@
   "cspt-compounded-sterile-preparation-technician": {
     "name": "CSPT Sterile",
     "bundleId": "com.ptg2026.cspt",
-    "url": "https://ios-cspt-compounded-sterile-preparation-technician.practicetestgeeks.com/cspt-compounded-sterile-preparation-technician",
+    "url": "https://practicetestgeeks.com/cspt-compounded-sterile-preparation-technician/",
     "category": "Education",
     "country": "us",
     "ascName": "CSPT Sterile",
@@ -2339,7 +2340,7 @@
   "dc-district-of-columbia-insurance": {
     "name": "DC Insurance",
     "bundleId": "com.ptg2026.dcins",
-    "url": "https://ios-dc-district-of-columbia-insurance.practicetestgeeks.com/dc-district-of-columbia-insurance",
+    "url": "https://practicetestgeeks.com/dc-district-of-columbia-insurance/",
     "category": "Education",
     "country": "us",
     "ascName": "DC Insurance",
@@ -2348,7 +2349,7 @@
   "ftce-ese-ftce-exceptional-student-education-k-12": {
     "name": "FTCE ESE",
     "bundleId": "com.ptg2026.ftceese",
-    "url": "https://ios-ftce-ese-ftce-exceptional-student-education-k-12.practicetestgeeks.com/ftce-ese-ftce-exceptional-student-education-k-12",
+    "url": "https://practicetestgeeks.com/ftce-ese-ftce-exceptional-student-education-k-12/",
     "category": "Education",
     "country": "us",
     "ascName": "FTCE ESE",
@@ -2357,7 +2358,7 @@
   "iptpa-international-pickleball-teaching-professional-association": {
     "name": "IPTPA Pickleball",
     "bundleId": "com.ptg2026.iptpa",
-    "url": "https://ios-iptpa-international-pickleball-teaching-professional-associ.practicetestgeeks.com/iptpa-international-pickleball-teaching-professional-association",
+    "url": "https://practicetestgeeks.com/iptpa-international-pickleball-teaching-professional-association/",
     "category": "Education",
     "country": "us",
     "ascName": "IPTPA Pickleball",
@@ -2366,7 +2367,7 @@
   "pa-notary-pennsylvania-notary-exam": {
     "name": "PA Notary",
     "bundleId": "com.ptg2026.panotary",
-    "url": "https://ios-pa-notary-pennsylvania-notary-exam.practicetestgeeks.com/pa-notary-pennsylvania-notary-exam",
+    "url": "https://practicetestgeeks.com/pa-notary-pennsylvania-notary-exam/",
     "category": "Education",
     "country": "us",
     "ascName": "PA Notary",
@@ -2375,7 +2376,7 @@
   "aat-level-3-advanced": {
     "name": "AAT Level 3",
     "bundleId": "com.ptg2026.aat3",
-    "url": "https://ios-aat-level-3-advanced.practicetestgeeks.com/aat-level-3-advanced",
+    "url": "https://practicetestgeeks.com/aat-level-3-advanced/",
     "category": "Education",
     "country": "gb",
     "ascName": "AAT Level 3",
@@ -2384,7 +2385,7 @@
   "concorso-carabinieri-italy": {
     "name": "Carabinieri Italy",
     "bundleId": "com.ptg2026.carabinieri",
-    "url": "https://ios-concorso-carabinieri-italy.practicetestgeeks.com/concorso-carabinieri-italy",
+    "url": "https://practicetestgeeks.com/concorso-carabinieri-italy/",
     "category": "Education",
     "country": "it",
     "ascName": "Carabinieri Italy",
@@ -2393,7 +2394,7 @@
   "nca-foreign-lawyers-canada": {
     "name": "NCA Canada",
     "bundleId": "com.ptg2026.nca",
-    "url": "https://ios-nca-foreign-lawyers-canada.practicetestgeeks.com/nca-foreign-lawyers-canada",
+    "url": "https://practicetestgeeks.com/nca-foreign-lawyers-canada/",
     "category": "Education",
     "country": "ca",
     "ascName": "NCA Canada",
@@ -2402,7 +2403,7 @@
   "singapore-gce-n-level": {
     "name": "Singapore N-Level",
     "bundleId": "com.ptg2026.sgnl",
-    "url": "https://ios-singapore-gce-n-level.practicetestgeeks.com/singapore-gce-n-level",
+    "url": "https://practicetestgeeks.com/singapore-gce-n-level/",
     "category": "Education",
     "country": "sg",
     "ascName": "Singapore N-Level",
@@ -2411,7 +2412,7 @@
   "abat-applied-behavior-analysis-test": {
     "name": "ABAT Practice",
     "bundleId": "com.ptg2026.abat",
-    "url": "https://ios-abat-applied-behavior-analysis-test.practicetestgeeks.com/abat-applied-behavior-analysis-test",
+    "url": "https://practicetestgeeks.com/abat-applied-behavior-analysis-test/",
     "category": "Education",
     "country": "us",
     "ascName": "ABAT Practice",
@@ -2420,7 +2421,7 @@
   "acsp-apple-certified-support-professional": {
     "name": "ACSP Apple Pro",
     "bundleId": "com.ptg2026.acsp",
-    "url": "https://ios-acsp-apple-certified-support-professional.practicetestgeeks.com/acsp-apple-certified-support-professional",
+    "url": "https://practicetestgeeks.com/acsp-apple-certified-support-professional/",
     "category": "Education",
     "country": "us",
     "ascName": "ACSP Apple Pro",
@@ -2429,7 +2430,7 @@
   "afc-accredited-financial-counselor": {
     "name": "AFC Counselor",
     "bundleId": "com.ptg2026.afc",
-    "url": "https://ios-afc-accredited-financial-counselor.practicetestgeeks.com/afc-accredited-financial-counselor",
+    "url": "https://practicetestgeeks.com/afc-accredited-financial-counselor/",
     "category": "Education",
     "country": "us",
     "ascName": "AFC Counselor",
@@ -2438,7 +2439,7 @@
   "apcat-alberta-police-cognitive-ability-test": {
     "name": "APCAT Alberta",
     "bundleId": "com.ptg2026.apcat",
-    "url": "https://ios-apcat-alberta-police-cognitive-ability-test.practicetestgeeks.com/apcat-alberta-police-cognitive-ability-test",
+    "url": "https://practicetestgeeks.com/apcat-alberta-police-cognitive-ability-test/",
     "category": "Education",
     "country": "ca",
     "ascName": "APCAT Alberta",
@@ -2447,7 +2448,7 @@
   "asbog-exam": {
     "name": "ASBOG Geo",
     "bundleId": "com.ptg2026.asbog",
-    "url": "https://ios-asbog-exam.practicetestgeeks.com/asbog-exam",
+    "url": "https://practicetestgeeks.com/asbog-exam/",
     "category": "Education",
     "country": "us",
     "ascName": "ASBOG Geo",
@@ -2456,7 +2457,7 @@
   "asp-associate-safety-professional": {
     "name": "ASP Safety",
     "bundleId": "com.ptg2026.asp",
-    "url": "https://ios-asp-associate-safety-professional.practicetestgeeks.com/asp-associate-safety-professional",
+    "url": "https://practicetestgeeks.com/asp-associate-safety-professional/",
     "category": "Education",
     "country": "us",
     "ascName": "ASP Safety",
@@ -2465,7 +2466,7 @@
   "avop-airside-vehicle-operators-permit": {
     "name": "AVOP Airside",
     "bundleId": "com.ptg2026.avop",
-    "url": "https://ios-avop-airside-vehicle-operators-permit.practicetestgeeks.com/avop-airside-vehicle-operators-permit",
+    "url": "https://practicetestgeeks.com/avop-airside-vehicle-operators-permit/",
     "category": "Education",
     "country": "ca",
     "ascName": "AVOP Airside",
@@ -2474,7 +2475,7 @@
   "bmst-basic-math-and-science-test": {
     "name": "BMST Math/Sci",
     "bundleId": "com.ptg2026.bmst",
-    "url": "https://ios-bmst-basic-math-and-science-test.practicetestgeeks.com/bmst-basic-math-and-science-test",
+    "url": "https://practicetestgeeks.com/bmst-basic-math-and-science-test/",
     "category": "Education",
     "country": "us",
     "ascName": "BMST Math/Sci",
@@ -2483,7 +2484,7 @@
   "bscc-board-of-state-and-community-corrections": {
     "name": "BSCC Corrections",
     "bundleId": "com.ptg2026.bscc",
-    "url": "https://ios-bscc-board-of-state-and-community-corrections.practicetestgeeks.com/bscc-board-of-state-and-community-corrections",
+    "url": "https://practicetestgeeks.com/bscc-board-of-state-and-community-corrections/",
     "category": "Education",
     "country": "us",
     "ascName": "BSCC Corrections",
@@ -2492,7 +2493,7 @@
   "calt-certified-academic-language-therapist": {
     "name": "CALT Therapist",
     "bundleId": "com.ptg2026.calt",
-    "url": "https://ios-calt-certified-academic-language-therapist.practicetestgeeks.com/calt-certified-academic-language-therapist",
+    "url": "https://practicetestgeeks.com/calt-certified-academic-language-therapist/",
     "category": "Education",
     "country": "us",
     "ascName": "CALT Therapist",
@@ -2501,7 +2502,7 @@
   "camrt-canadian-association-of-medical-radiation-technologists": {
     "name": "CAMRT Canada",
     "bundleId": "com.ptg2026.camrt",
-    "url": "https://ios-camrt-canadian-association-of-medical-radiation-technologis.practicetestgeeks.com/camrt-canadian-association-of-medical-radiation-technologists",
+    "url": "https://practicetestgeeks.com/camrt-canadian-association-of-medical-radiation-technologists/",
     "category": "Education",
     "country": "ca",
     "ascName": "CAMRT Canada",
@@ -2510,7 +2511,7 @@
   "ccds-certified-clinical-documentation-specialist": {
     "name": "CCDS Clinical",
     "bundleId": "com.ptg2026.ccds",
-    "url": "https://ios-ccds-certified-clinical-documentation-specialist.practicetestgeeks.com/ccds-certified-clinical-documentation-specialist",
+    "url": "https://practicetestgeeks.com/ccds-certified-clinical-documentation-specialist/",
     "category": "Education",
     "country": "us",
     "ascName": "CCDS Clinical",
@@ -2519,7 +2520,7 @@
   "cchi-certification-commission-for-healthcare-interpreters": {
     "name": "CCHI Interpreter",
     "bundleId": "com.ptg2026.cchi",
-    "url": "https://ios-cchi-certification-commission-for-healthcare-interpreters.practicetestgeeks.com/cchi-certification-commission-for-healthcare-interpreters",
+    "url": "https://practicetestgeeks.com/cchi-certification-commission-for-healthcare-interpreters/",
     "category": "Education",
     "country": "us",
     "ascName": "CCHI Interpreter",
@@ -2528,7 +2529,7 @@
   "cemap-certificate-in-mortgage-advice-and-practice": {
     "name": "CeMAP UK",
     "bundleId": "com.ptg2026.cemap",
-    "url": "https://ios-cemap-certificate-in-mortgage-advice-and-practice.practicetestgeeks.com/cemap-certificate-in-mortgage-advice-and-practice",
+    "url": "https://practicetestgeeks.com/cemap-certificate-in-mortgage-advice-and-practice/",
     "category": "Education",
     "country": "gb",
     "ascName": "CeMAP UK",
@@ -2537,7 +2538,7 @@
   "cils-b1-cittadinanza-italy": {
     "name": "CILS B1 Italy",
     "bundleId": "com.ptg2026.cilsb1",
-    "url": "https://ios-cils-b1-cittadinanza-italy.practicetestgeeks.com/cils-b1-cittadinanza-italy",
+    "url": "https://practicetestgeeks.com/cils-b1-cittadinanza-italy/",
     "category": "Education",
     "country": "it",
     "ascName": "CILS B1 Italy",
@@ -2546,7 +2547,7 @@
   "cit-certified-irrigation-technician": {
     "name": "CIT Irrigation",
     "bundleId": "com.ptg2026.cit",
-    "url": "https://ios-cit-certified-irrigation-technician.practicetestgeeks.com/cit-certified-irrigation-technician",
+    "url": "https://practicetestgeeks.com/cit-certified-irrigation-technician/",
     "category": "Education",
     "country": "us",
     "ascName": "CIT Irrigation",
@@ -2555,7 +2556,7 @@
   "cmrp-exam": {
     "name": "CMRP",
     "bundleId": "com.ptg2026.cmrp",
-    "url": "https://ios-cmrp-exam.practicetestgeeks.com/cmrp-exam",
+    "url": "https://practicetestgeeks.com/cmrp-exam/",
     "category": "Education",
     "country": "us",
     "ascName": "CMRP",
@@ -2564,7 +2565,7 @@
   "cpacc": {
     "name": "CPACC",
     "bundleId": "com.ptg2026.cpacc",
-    "url": "https://ios-cpacc.practicetestgeeks.com/cpacc",
+    "url": "https://practicetestgeeks.com/cpacc/",
     "category": "Education",
     "country": "us",
     "ascName": "CPACC",
@@ -2573,7 +2574,7 @@
   "cpcs-certified-provider-credentialing-specialist": {
     "name": "CPCS Credentialing",
     "bundleId": "com.ptg2026.cpcs",
-    "url": "https://ios-cpcs-certified-provider-credentialing-specialist.practicetestgeeks.com/cpcs-certified-provider-credentialing-specialist",
+    "url": "https://practicetestgeeks.com/cpcs-certified-provider-credentialing-specialist/",
     "category": "Education",
     "country": "us",
     "ascName": "CPCS Credentialing",
@@ -2582,7 +2583,7 @@
   "cprp-certified-park-and-recreation-professional": {
     "name": "CPRP Park Rec",
     "bundleId": "com.ptg2026.cprp",
-    "url": "https://ios-cprp-certified-park-and-recreation-professional.practicetestgeeks.com/cprp-certified-park-and-recreation-professional",
+    "url": "https://practicetestgeeks.com/cprp-certified-park-and-recreation-professional/",
     "category": "Education",
     "country": "us",
     "ascName": "CPRP Park Rec",
@@ -2591,7 +2592,7 @@
   "crat-certified-rhythm-analysis-technician": {
     "name": "CRAT Rhythm",
     "bundleId": "com.ptg2026.crat",
-    "url": "https://ios-crat-certified-rhythm-analysis-technician.practicetestgeeks.com/crat-certified-rhythm-analysis-technician",
+    "url": "https://practicetestgeeks.com/crat-certified-rhythm-analysis-technician/",
     "category": "Education",
     "country": "us",
     "ascName": "CRAT Rhythm",
@@ -2600,7 +2601,7 @@
   "crc-certified-risk-adjustment-coder": {
     "name": "CRC Risk Coder",
     "bundleId": "com.ptg2026.crc",
-    "url": "https://ios-crc-certified-risk-adjustment-coder.practicetestgeeks.com/crc-certified-risk-adjustment-coder",
+    "url": "https://practicetestgeeks.com/crc-certified-risk-adjustment-coder/",
     "category": "Education",
     "country": "us",
     "ascName": "CRC Risk Coder",
@@ -2609,7 +2610,7 @@
   "crcr-certified-revenue-cycle-representative-program": {
     "name": "CRCR Revenue Cycle",
     "bundleId": "com.ptg2026.crcr",
-    "url": "https://ios-crcr-certified-revenue-cycle-representative-program.practicetestgeeks.com/crcr-certified-revenue-cycle-representative-program",
+    "url": "https://practicetestgeeks.com/crcr-certified-revenue-cycle-representative-program/",
     "category": "Education",
     "country": "us",
     "ascName": "CRCR Revenue Cycle",
@@ -2618,7 +2619,7 @@
   "cscu-certified-secure-computer-user": {
     "name": "CSCU Secure User",
     "bundleId": "com.ptg2026.cscu",
-    "url": "https://ios-cscu-certified-secure-computer-user.practicetestgeeks.com/cscu-certified-secure-computer-user",
+    "url": "https://practicetestgeeks.com/cscu-certified-secure-computer-user/",
     "category": "Education",
     "country": "us",
     "ascName": "CSCU Secure User",
@@ -2627,7 +2628,7 @@
   "csr-board-certified-specialist-in-renal-nutrition": {
     "name": "CSR Renal Nutrition",
     "bundleId": "com.ptg2026.csr",
-    "url": "https://ios-csr-board-certified-specialist-in-renal-nutrition.practicetestgeeks.com/csr-board-certified-specialist-in-renal-nutrition",
+    "url": "https://practicetestgeeks.com/csr-board-certified-specialist-in-renal-nutrition/",
     "category": "Education",
     "country": "us",
     "ascName": "CSR Renal Nutrition",
@@ -2636,7 +2637,7 @@
   "dbia-design-build-institute-of-america-certification": {
     "name": "DBIA Design-Build",
     "bundleId": "com.ptg2026.dbia",
-    "url": "https://ios-dbia-design-build-institute-of-america-certification.practicetestgeeks.com/dbia-design-build-institute-of-america-certification",
+    "url": "https://practicetestgeeks.com/dbia-design-build-institute-of-america-certification/",
     "category": "Education",
     "country": "us",
     "ascName": "DBIA Design-Build",
@@ -2645,7 +2646,7 @@
   "eeg-electroencephalography": {
     "name": "EEG Electroencephalo",
     "bundleId": "com.ptg2026.eeg",
-    "url": "https://ios-eeg-electroencephalography.practicetestgeeks.com/eeg-electroencephalography",
+    "url": "https://practicetestgeeks.com/eeg-electroencephalography/",
     "category": "Education",
     "country": "us",
     "ascName": "EEG Electroencephalo",
@@ -2654,7 +2655,7 @@
   "f-01-f-01-fireguard-practice-test": {
     "name": "F-01 Fireguard NYC",
     "bundleId": "com.ptg2026.f01",
-    "url": "https://ios-f-01-f-01-fireguard-practice-test.practicetestgeeks.com/f-01-f-01-fireguard-practice-test",
+    "url": "https://practicetestgeeks.com/f-01-f-01-fireguard-practice-test/",
     "category": "Education",
     "country": "us",
     "ascName": "F-01 Fireguard NYC",
@@ -2663,7 +2664,7 @@
   "ficep-financial-counseling-certification-program": {
     "name": "FiCEP Counseling",
     "bundleId": "com.ptg2026.ficep",
-    "url": "https://ios-ficep-financial-counseling-certification-program.practicetestgeeks.com/ficep-financial-counseling-certification-program",
+    "url": "https://practicetestgeeks.com/ficep-financial-counseling-certification-program/",
     "category": "Education",
     "country": "us",
     "ascName": "FiCEP Counseling",
@@ -2672,7 +2673,7 @@
   "fmp-facility-management-professional": {
     "name": "FMP Facility Mgmt",
     "bundleId": "com.ptg2026.fmp",
-    "url": "https://ios-fmp-facility-management-professional.practicetestgeeks.com/fmp-facility-management-professional",
+    "url": "https://practicetestgeeks.com/fmp-facility-management-professional/",
     "category": "Education",
     "country": "us",
     "ascName": "FMP Facility Mgmt",
@@ -2681,7 +2682,7 @@
   "g3-gas-technician-level-3-certification": {
     "name": "G3 Gas Technician",
     "bundleId": "com.ptg2026.g3",
-    "url": "https://ios-g3-gas-technician-level-3-certification.practicetestgeeks.com/g3-gas-technician-level-3-certification",
+    "url": "https://practicetestgeeks.com/g3-gas-technician-level-3-certification/",
     "category": "Education",
     "country": "us",
     "ascName": "G3 Gas Technician",
@@ -2690,7 +2691,7 @@
   "ged-certified-general-educational-development-teacher": {
     "name": "GED Teacher Cert",
     "bundleId": "com.ptg2026.gedt",
-    "url": "https://ios-ged-certified-general-educational-development-teacher.practicetestgeeks.com/ged-certified-general-educational-development-teacher",
+    "url": "https://practicetestgeeks.com/ged-certified-general-educational-development-teacher/",
     "category": "Education",
     "country": "us",
     "ascName": "GED Teacher Cert",
@@ -2699,7 +2700,7 @@
   "global-professional-in-human-resources-gphr": {
     "name": "GPHR Global HR",
     "bundleId": "com.ptg2026.gphr",
-    "url": "https://ios-global-professional-in-human-resources-gphr.practicetestgeeks.com/global-professional-in-human-resources-gphr",
+    "url": "https://practicetestgeeks.com/global-professional-in-human-resources-gphr/",
     "category": "Education",
     "country": "us",
     "ascName": "GPHR Global HR",
@@ -2708,7 +2709,7 @@
   "hca-health-care-assistant-certification": {
     "name": "HCA Health Care Asst",
     "bundleId": "com.ptg2026.hca",
-    "url": "https://ios-hca-health-care-assistant-certification.practicetestgeeks.com/hca-health-care-assistant-certification",
+    "url": "https://practicetestgeeks.com/hca-health-care-assistant-certification/",
     "category": "Education",
     "country": "us",
     "ascName": "HCA Health Care Asst",
@@ -2717,7 +2718,7 @@
   "ibclc-certification-exam": {
     "name": "IBCLC Lactation",
     "bundleId": "com.ptg2026.ibclc",
-    "url": "https://ios-ibclc-certification-exam.practicetestgeeks.com/ibclc-certification-exam",
+    "url": "https://practicetestgeeks.com/ibclc-certification-exam/",
     "category": "Education",
     "country": "us",
     "ascName": "IBCLC Lactation",
@@ -2726,7 +2727,7 @@
   "imc-investment-management": {
     "name": "IMC Investment Mgmt",
     "bundleId": "com.ptg2026.imc",
-    "url": "https://ios-imc-investment-management.practicetestgeeks.com/imc-investment-management",
+    "url": "https://practicetestgeeks.com/imc-investment-management/",
     "category": "Education",
     "country": "us",
     "ascName": "IMC Investment Mgmt",
@@ -2735,7 +2736,7 @@
   "nata-boc-test": {
     "name": "NATA-BOC Athletic Tr",
     "bundleId": "com.ptg2026.nataboc",
-    "url": "https://ios-nata-boc-test.practicetestgeeks.com/nata-boc-test",
+    "url": "https://practicetestgeeks.com/nata-boc-test/",
     "category": "Education",
     "country": "us",
     "ascName": "NATA-BOC Athletic Tr",
@@ -2744,7 +2745,7 @@
   "ncct-national-certified-phlebotomy-technician-exam": {
     "name": "NCCT Phlebotomy",
     "bundleId": "com.ptg2026.ncct",
-    "url": "https://ios-ncct-national-certified-phlebotomy-technician-exam.practicetestgeeks.com/ncct-national-certified-phlebotomy-technician-exam",
+    "url": "https://practicetestgeeks.com/ncct-national-certified-phlebotomy-technician-exam/",
     "category": "Education",
     "country": "us",
     "ascName": "NCCT Phlebotomy",
@@ -2753,7 +2754,7 @@
   "nctrc-test": {
     "name": "NCTRC Therap Rec",
     "bundleId": "com.ptg2026.nctrc",
-    "url": "https://ios-nctrc-test.practicetestgeeks.com/nctrc-test",
+    "url": "https://practicetestgeeks.com/nctrc-test/",
     "category": "Education",
     "country": "us",
     "ascName": "NCTRC Therap Rec",
@@ -2762,7 +2763,7 @@
   "nebosh-igc-gulf": {
     "name": "NEBOSH IGC Gulf",
     "bundleId": "com.ptg2026.neboshg",
-    "url": "https://ios-nebosh-igc-gulf.practicetestgeeks.com/nebosh-igc-gulf",
+    "url": "https://practicetestgeeks.com/nebosh-igc-gulf/",
     "category": "Education",
     "country": "us",
     "ascName": "NEBOSH IGC Gulf",
@@ -2771,7 +2772,7 @@
   "nj-notary-new-jersey-notary-exam": {
     "name": "NJ Notary",
     "bundleId": "com.ptg2026.njnotary",
-    "url": "https://ios-nj-notary-new-jersey-notary-exam.practicetestgeeks.com/nj-notary-new-jersey-notary-exam",
+    "url": "https://practicetestgeeks.com/nj-notary-new-jersey-notary-exam/",
     "category": "Education",
     "country": "us",
     "ascName": "NJ Notary",
@@ -2780,7 +2781,7 @@
   "nocti-national-occupational-competency-testing-institute": {
     "name": "NOCTI Occ Comp",
     "bundleId": "com.ptg2026.nocti",
-    "url": "https://ios-nocti-national-occupational-competency-testing-institute.practicetestgeeks.com/nocti-national-occupational-competency-testing-institute",
+    "url": "https://practicetestgeeks.com/nocti-national-occupational-competency-testing-institute/",
     "category": "Education",
     "country": "us",
     "ascName": "NOCTI Occ Comp",
@@ -2789,7 +2790,7 @@
   "nrp-neonatal-resuscitation-program": {
     "name": "NRP Neonatal Resus",
     "bundleId": "com.ptg2026.nrp",
-    "url": "https://ios-nrp-neonatal-resuscitation-program.practicetestgeeks.com/nrp-neonatal-resuscitation-program",
+    "url": "https://practicetestgeeks.com/nrp-neonatal-resuscitation-program/",
     "category": "Education",
     "country": "us",
     "ascName": "NRP Neonatal Resus",
@@ -2798,7 +2799,7 @@
   "nts-national-testing-service": {
     "name": "NTS Test Service",
     "bundleId": "com.ptg2026.nts",
-    "url": "https://ios-nts-national-testing-service.practicetestgeeks.com/nts-national-testing-service",
+    "url": "https://practicetestgeeks.com/nts-national-testing-service/",
     "category": "Education",
     "country": "us",
     "ascName": "NTS Test Service",
@@ -2807,7 +2808,7 @@
   "nwco-nuisance-wildlife-control-operator": {
     "name": "NWCO Wildlife",
     "bundleId": "com.ptg2026.nwco",
-    "url": "https://ios-nwco-nuisance-wildlife-control-operator.practicetestgeeks.com/nwco-nuisance-wildlife-control-operator",
+    "url": "https://practicetestgeeks.com/nwco-nuisance-wildlife-control-operator/",
     "category": "Education",
     "country": "us",
     "ascName": "NWCO Wildlife",
@@ -2816,7 +2817,7 @@
   "oar-test": {
     "name": "OAR Officer Aptitude",
     "bundleId": "com.ptg2026.oar",
-    "url": "https://ios-oar-test.practicetestgeeks.com/oar-test",
+    "url": "https://practicetestgeeks.com/oar-test/",
     "category": "Education",
     "country": "us",
     "ascName": "OAR Officer Aptitude",
@@ -2825,7 +2826,7 @@
   "oh-notary-ohio-notary-exam": {
     "name": "OH Notary",
     "bundleId": "com.ptg2026.ohnotary",
-    "url": "https://ios-oh-notary-ohio-notary-exam.practicetestgeeks.com/oh-notary-ohio-notary-exam",
+    "url": "https://practicetestgeeks.com/oh-notary-ohio-notary-exam/",
     "category": "Education",
     "country": "us",
     "ascName": "OH Notary",
@@ -2834,7 +2835,7 @@
   "olere-oklahoma-legal-and-ethical-responsibilities-exam": {
     "name": "OLERE Oklahoma",
     "bundleId": "com.ptg2026.olere",
-    "url": "https://ios-olere-oklahoma-legal-and-ethical-responsibilities-exam.practicetestgeeks.com/olere-oklahoma-legal-and-ethical-responsibilities-exam",
+    "url": "https://practicetestgeeks.com/olere-oklahoma-legal-and-ethical-responsibilities-exam/",
     "category": "Education",
     "country": "us",
     "ascName": "OLERE Oklahoma",
@@ -2843,7 +2844,7 @@
   "oopt-oxford-online-placement-test": {
     "name": "OOPT Oxford English",
     "bundleId": "com.ptg2026.oopt",
-    "url": "https://ios-oopt-oxford-online-placement-test.practicetestgeeks.com/oopt-oxford-online-placement-test",
+    "url": "https://practicetestgeeks.com/oopt-oxford-online-placement-test/",
     "category": "Education",
     "country": "us",
     "ascName": "OOPT Oxford English",
@@ -2852,7 +2853,7 @@
   "opota-ohio-peace-officer-training-academy": {
     "name": "OPOTA Ohio Police",
     "bundleId": "com.ptg2026.opota",
-    "url": "https://ios-opota-ohio-peace-officer-training-academy.practicetestgeeks.com/opota-ohio-peace-officer-training-academy",
+    "url": "https://practicetestgeeks.com/opota-ohio-peace-officer-training-academy/",
     "category": "Education",
     "country": "us",
     "ascName": "OPOTA Ohio Police",
@@ -2861,7 +2862,7 @@
   "ore-part-1-dental": {
     "name": "ORE Part 1 Dental",
     "bundleId": "com.ptg2026.ore1",
-    "url": "https://ios-ore-part-1-dental.practicetestgeeks.com/ore-part-1-dental",
+    "url": "https://practicetestgeeks.com/ore-part-1-dental/",
     "category": "Education",
     "country": "us",
     "ascName": "ORE Part 1 Dental",
@@ -2870,7 +2871,7 @@
   "osha-safety-certificate": {
     "name": "OSHA Safety Cert",
     "bundleId": "com.ptg2026.osha",
-    "url": "https://ios-osha-safety-certificate.practicetestgeeks.com/osha-safety-certificate",
+    "url": "https://practicetestgeeks.com/osha-safety-certificate/",
     "category": "Education",
     "country": "us",
     "ascName": "OSHA Safety Cert",
@@ -2879,7 +2880,7 @@
   "osslt-ontario-secondary-school-literacy-test": {
     "name": "OSSLT Ontario",
     "bundleId": "com.ptg2026.osslt",
-    "url": "https://ios-osslt-ontario-secondary-school-literacy-test.practicetestgeeks.com/osslt-ontario-secondary-school-literacy-test",
+    "url": "https://practicetestgeeks.com/osslt-ontario-secondary-school-literacy-test/",
     "category": "Education",
     "country": "us",
     "ascName": "OSSLT Ontario",
@@ -2888,7 +2889,7 @@
   "patient-care-technician-test": {
     "name": "PCT Patient Care",
     "bundleId": "com.ptg2026.pct",
-    "url": "https://ios-patient-care-technician-test.practicetestgeeks.com/patient-care-technician-test",
+    "url": "https://practicetestgeeks.com/patient-care-technician-test/",
     "category": "Education",
     "country": "us",
     "ascName": "PCT Patient Care",
@@ -2897,7 +2898,7 @@
   "phtls": {
     "name": "PHTLS Pre-Hospital",
     "bundleId": "com.ptg2026.phtls",
-    "url": "https://ios-phtls.practicetestgeeks.com/phtls",
+    "url": "https://practicetestgeeks.com/phtls/",
     "category": "Education",
     "country": "us",
     "ascName": "PHTLS Pre-Hospital",
@@ -2906,7 +2907,7 @@
   "psa-professional-sports-authenticator": {
     "name": "PSA Sports Auth",
     "bundleId": "com.ptg2026.psa",
-    "url": "https://ios-psa-professional-sports-authenticator.practicetestgeeks.com/psa-professional-sports-authenticator",
+    "url": "https://practicetestgeeks.com/psa-professional-sports-authenticator/",
     "category": "Education",
     "country": "us",
     "ascName": "PSA Sports Auth",
@@ -2915,7 +2916,7 @@
   "snhd-southern-nevada-health-district": {
     "name": "SNHD Food Safety",
     "bundleId": "com.ptg2026.snhd",
-    "url": "https://ios-snhd-southern-nevada-health-district.practicetestgeeks.com/snhd-southern-nevada-health-district",
+    "url": "https://practicetestgeeks.com/snhd-southern-nevada-health-district/",
     "category": "Education",
     "country": "us",
     "ascName": "SNHD Food Safety",
@@ -2924,7 +2925,7 @@
   "tn-lle-tennessee-limited-licensed-electrician": {
     "name": "TN LLE Electrician",
     "bundleId": "com.ptg2026.tnlle",
-    "url": "https://ios-tn-lle-tennessee-limited-licensed-electrician.practicetestgeeks.com/tn-lle-tennessee-limited-licensed-electrician",
+    "url": "https://practicetestgeeks.com/tn-lle-tennessee-limited-licensed-electrician/",
     "category": "Education",
     "country": "us",
     "ascName": "TN LLE Electrician",
@@ -2933,7 +2934,7 @@
   "tx-notary-texas-notary-exam": {
     "name": "TX Notary Texas",
     "bundleId": "com.ptg2026.txnotary",
-    "url": "https://ios-tx-notary-texas-notary-exam.practicetestgeeks.com/tx-notary-texas-notary-exam",
+    "url": "https://practicetestgeeks.com/tx-notary-texas-notary-exam/",
     "category": "Education",
     "country": "us",
     "ascName": "TX Notary Texas",
@@ -2942,7 +2943,7 @@
   "usa-hire-assessment": {
     "name": "USA Hire Assessment",
     "bundleId": "com.ptg2026.usahire",
-    "url": "https://ios-usa-hire-assessment.practicetestgeeks.com/usa-hire-assessment",
+    "url": "https://practicetestgeeks.com/usa-hire-assessment/",
     "category": "Education",
     "country": "us",
     "ascName": "USA Hire Assessment",
@@ -2951,7 +2952,7 @@
   "ccba-certification-of-capability-in-business-analysis": {
     "name": "CCBA Business Anal",
     "bundleId": "com.ptg2026.ccba",
-    "url": "https://ios-ccba-certification-of-capability-in-business-analysis.practicetestgeeks.com/ccba-certification-of-capability-in-business-analysis",
+    "url": "https://practicetestgeeks.com/ccba-certification-of-capability-in-business-analysis/",
     "category": "Education",
     "country": "us",
     "ascName": "CCBA Business Anal",
@@ -2960,7 +2961,7 @@
   "cpcs-construction-plant": {
     "name": "CPCS Construction",
     "bundleId": "com.ptg2026.cpcsplant",
-    "url": "https://ios-cpcs-construction-plant.practicetestgeeks.com/cpcs-construction-plant",
+    "url": "https://practicetestgeeks.com/cpcs-construction-plant/",
     "category": "Education",
     "country": "us",
     "ascName": "CPCS Construction",
@@ -2969,7 +2970,7 @@
   "singapore-gce-a-level": {
     "name": "A-Level Singapore",
     "bundleId": "com.ptg2026.sgalevel",
-    "url": "https://ios-singapore-gce-a-level.practicetestgeeks.com/singapore-gce-a-level",
+    "url": "https://practicetestgeeks.com/singapore-gce-a-level/",
     "category": "Education",
     "country": "us",
     "ascName": "A-Level Singapore",
@@ -2978,7 +2979,7 @@
   "chbt-certified-hemodialysis-bio-medical-technician": {
     "name": "CHBT Hemodialysis",
     "bundleId": "com.ptg2026.chbt",
-    "url": "https://ios-chbt-certified-hemodialysis-bio-medical-technician.practicetestgeeks.com/chbt-certified-hemodialysis-bio-medical-technician",
+    "url": "https://practicetestgeeks.com/chbt-certified-hemodialysis-bio-medical-technician/",
     "category": "Education",
     "country": "us",
     "ascName": "CHBT Hemodialysis",
@@ -2987,7 +2988,7 @@
   "dssa-diplomatic-security-special-agent": {
     "name": "DSSA Diplomatic",
     "bundleId": "com.ptg2026.dssa",
-    "url": "https://ios-dssa-diplomatic-security-special-agent.practicetestgeeks.com/dssa-diplomatic-security-special-agent",
+    "url": "https://practicetestgeeks.com/dssa-diplomatic-security-special-agent/",
     "category": "Education",
     "country": "us",
     "ascName": "DSSA Diplomatic",
@@ -2996,7 +2997,7 @@
   "irish-driver-theory-test-truck-bus": {
     "name": "Irish DTT HGV",
     "bundleId": "com.ptg2026.dtthgv",
-    "url": "https://ios-irish-driver-theory-test-truck-bus.practicetestgeeks.com/irish-driver-theory-test-truck-bus",
+    "url": "https://practicetestgeeks.com/irish-driver-theory-test-truck-bus/",
     "category": "Education",
     "country": "ie",
     "ascName": "Irish DTT HGV",
@@ -3005,7 +3006,7 @@
   "lpc-licensed-professional-counselor": {
     "name": "LPC Counselor",
     "bundleId": "com.ptg2026.lpc",
-    "url": "https://ios-lpc-licensed-professional-counselor.practicetestgeeks.com/lpc-licensed-professional-counselor",
+    "url": "https://practicetestgeeks.com/lpc-licensed-professional-counselor/",
     "category": "Education",
     "country": "us",
     "ascName": "LPC Counselor",
@@ -3014,7 +3015,7 @@
   "mfds-part-1": {
     "name": "MFDS Part 1 Dental",
     "bundleId": "com.ptg2026.mfds",
-    "url": "https://ios-mfds-part-1.practicetestgeeks.com/mfds-part-1",
+    "url": "https://practicetestgeeks.com/mfds-part-1/",
     "category": "Education",
     "country": "gb",
     "ascName": "MFDS Part 1 Dental",
@@ -3023,7 +3024,7 @@
   "nedp-national-external-diploma-program": {
     "name": "NEDP Adult Diploma",
     "bundleId": "com.ptg2026.nedp",
-    "url": "https://ios-nedp-national-external-diploma-program.practicetestgeeks.com/nedp-national-external-diploma-program",
+    "url": "https://practicetestgeeks.com/nedp-national-external-diploma-program/",
     "category": "Education",
     "country": "us",
     "ascName": "NEDP Adult Diploma",
@@ -3032,7 +3033,7 @@
   "sre-site-reliability-engineering-foundation-certification": {
     "name": "SRE Site Reliab",
     "bundleId": "com.ptg2026.sre",
-    "url": "https://ios-sre-site-reliability-engineering-foundation-certification.practicetestgeeks.com/sre-site-reliability-engineering-foundation-certification",
+    "url": "https://practicetestgeeks.com/sre-site-reliability-engineering-foundation-certification/",
     "category": "Education",
     "country": "us",
     "ascName": "SRE Site Reliab",
@@ -3041,7 +3042,7 @@
   "tps-texas-private-security-certification": {
     "name": "TPS Texas Security",
     "bundleId": "com.ptg2026.tps",
-    "url": "https://ios-tps-texas-private-security-certification.practicetestgeeks.com/tps-texas-private-security-certification",
+    "url": "https://practicetestgeeks.com/tps-texas-private-security-certification/",
     "category": "Education",
     "country": "us",
     "ascName": "TPS Texas Security",
@@ -3050,7 +3051,7 @@
   "mtel-massachusetts-tests-for-educator-licensure": {
     "name": "MTEL Massachusetts",
     "bundleId": "com.ptg2026.mtel",
-    "url": "https://ios-mtel-massachusetts-tests-for-educator-licensure.practicetestgeeks.com/mtel-massachusetts-tests-for-educator-licensure",
+    "url": "https://practicetestgeeks.com/mtel-massachusetts-tests-for-educator-licensure/",
     "category": "Education",
     "country": "us",
     "ascName": "MTEL Massachusetts",
@@ -3059,7 +3060,7 @@
   "nursing-acceleration-challenge-exam-nace-i-pn-rn": {
     "name": "NACE Nursing",
     "bundleId": "com.ptg2026.nace",
-    "url": "https://ios-nursing-acceleration-challenge-exam-nace-i-pn-rn.practicetestgeeks.com/nursing-acceleration-challenge-exam-nace-i-pn-rn",
+    "url": "https://practicetestgeeks.com/nursing-acceleration-challenge-exam-nace-i-pn-rn/",
     "category": "Education",
     "country": "us",
     "ascName": "NACE Nursing",
@@ -3068,7 +3069,7 @@
   "ndaeb-national-dental-assisting-examination-board": {
     "name": "NDAEB Dental",
     "bundleId": "com.ptg2026.ndaeb",
-    "url": "https://ios-ndaeb-national-dental-assisting-examination-board.practicetestgeeks.com/ndaeb-national-dental-assisting-examination-board",
+    "url": "https://practicetestgeeks.com/ndaeb-national-dental-assisting-examination-board/",
     "category": "Education",
     "country": "ca",
     "ascName": "NDAEB Dental",
@@ -3077,7 +3078,7 @@
   "ntn-national-testing-network": {
     "name": "NTN Public Safety",
     "bundleId": "com.ptg2026.ntn",
-    "url": "https://ios-ntn-national-testing-network.practicetestgeeks.com/ntn-national-testing-network",
+    "url": "https://practicetestgeeks.com/ntn-national-testing-network/",
     "category": "Education",
     "country": "us",
     "ascName": "NTN Public Safety",
@@ -3086,7 +3087,7 @@
   "rcfe-residential-care-facility-for-the-elderly": {
     "name": "RCFE Elder Care",
     "bundleId": "com.ptg2026.rcfe",
-    "url": "https://ios-rcfe-residential-care-facility-for-the-elderly.practicetestgeeks.com/rcfe-residential-care-facility-for-the-elderly",
+    "url": "https://practicetestgeeks.com/rcfe-residential-care-facility-for-the-elderly/",
     "category": "Education",
     "country": "us",
     "ascName": "RCFE Elder Care",
@@ -3095,7 +3096,7 @@
   "rega-real-estate-saudi": {
     "name": "REGA Saudi RE",
     "bundleId": "com.ptg2026.rega",
-    "url": "https://ios-rega-real-estate-saudi.practicetestgeeks.com/rega-real-estate-saudi",
+    "url": "https://practicetestgeeks.com/rega-real-estate-saudi/",
     "category": "Education",
     "country": "sa",
     "ascName": "REGA Saudi RE",
@@ -3104,7 +3105,7 @@
   "boma-building-owners-managers-association": {
     "name": "BOMA Building",
     "bundleId": "com.ptg2026.boma",
-    "url": "https://ios-boma-building-owners-managers-association.practicetestgeeks.com/boma-building-owners-managers-association",
+    "url": "https://practicetestgeeks.com/boma-building-owners-managers-association/",
     "category": "Education",
     "country": "us",
     "ascName": "BOMA Building",
@@ -3113,7 +3114,7 @@
   "iab-interactive-advertising-bureau": {
     "name": "IAB Digital Ads",
     "bundleId": "com.ptg2026.iab",
-    "url": "https://ios-iab-interactive-advertising-bureau.practicetestgeeks.com/iab-interactive-advertising-bureau",
+    "url": "https://practicetestgeeks.com/iab-interactive-advertising-bureau/",
     "category": "Education",
     "country": "us",
     "ascName": "IAB Digital Ads",
@@ -3122,7 +3123,7 @@
   "idc-certified-instructor-development-course-trainer": {
     "name": "IDC Dive Instr",
     "bundleId": "com.ptg2026.idc",
-    "url": "https://ios-idc-certified-instructor-development-course-trainer.practicetestgeeks.com/idc-certified-instructor-development-course-trainer",
+    "url": "https://practicetestgeeks.com/idc-certified-instructor-development-course-trainer/",
     "category": "Education",
     "country": "us",
     "ascName": "IDC Dive Instr",
@@ -3131,7 +3132,7 @@
   "ieo-international-english-olympiad": {
     "name": "IEO English Olymp",
     "bundleId": "com.ptg2026.ieo",
-    "url": "https://ios-ieo-international-english-olympiad.practicetestgeeks.com/ieo-international-english-olympiad",
+    "url": "https://practicetestgeeks.com/ieo-international-english-olympiad/",
     "category": "Education",
     "country": "in",
     "ascName": "IEO English Olymp",
@@ -3140,7 +3141,7 @@
   "lote-language-other-than-english": {
     "name": "LOTE Language",
     "bundleId": "com.ptg2026.lote",
-    "url": "https://ios-lote-language-other-than-english.practicetestgeeks.com/lote-language-other-than-english",
+    "url": "https://practicetestgeeks.com/lote-language-other-than-english/",
     "category": "Education",
     "country": "us",
     "ascName": "LOTE Language",
@@ -3149,7 +3150,7 @@
   "ncmhce-test": {
     "name": "NCMHCE Counselor",
     "bundleId": "com.ptg2026.ncmhce",
-    "url": "https://ios-ncmhce-test.practicetestgeeks.com/ncmhce-test",
+    "url": "https://practicetestgeeks.com/ncmhce-test/",
     "category": "Education",
     "country": "us",
     "ascName": "NCMHCE Counselor",
@@ -3158,7 +3159,7 @@
   "nwsa-national-wireless-safety-alliance": {
     "name": "NWSA Wireless",
     "bundleId": "com.ptg2026.nwsa",
-    "url": "https://ios-nwsa-national-wireless-safety-alliance.practicetestgeeks.com/nwsa-national-wireless-safety-alliance",
+    "url": "https://practicetestgeeks.com/nwsa-national-wireless-safety-alliance/",
     "category": "Education",
     "country": "us",
     "ascName": "NWSA Wireless",
@@ -3167,7 +3168,7 @@
   "oupv-operator-uninspected-passenger-vessel": {
     "name": "OUPV Captain",
     "bundleId": "com.ptg2026.oupv",
-    "url": "https://ios-oupv-operator-uninspected-passenger-vessel.practicetestgeeks.com/oupv-operator-uninspected-passenger-vessel",
+    "url": "https://practicetestgeeks.com/oupv-operator-uninspected-passenger-vessel/",
     "category": "Education",
     "country": "us",
     "ascName": "OUPV Captain",
@@ -3176,7 +3177,7 @@
   "ria-registered-investment-advisor": {
     "name": "RIA Investment",
     "bundleId": "com.ptg2026.ria",
-    "url": "https://ios-ria-registered-investment-advisor.practicetestgeeks.com/ria-registered-investment-advisor",
+    "url": "https://practicetestgeeks.com/ria-registered-investment-advisor/",
     "category": "Education",
     "country": "us",
     "ascName": "RIA Investment",
@@ -3185,7 +3186,7 @@
   "soce-state-officer-certification-examination": {
     "name": "SOCE State Officer",
     "bundleId": "com.ptg2026.soce",
-    "url": "https://ios-soce-state-officer-certification-examination.practicetestgeeks.com/soce-state-officer-certification-examination",
+    "url": "https://practicetestgeeks.com/soce-state-officer-certification-examination/",
     "category": "Education",
     "country": "us",
     "ascName": "SOCE State Officer",
@@ -3194,7 +3195,7 @@
   "ut-notary-utah-notary-exam": {
     "name": "UT Notary",
     "bundleId": "com.ptg2026.utnotary",
-    "url": "https://ios-ut-notary-utah-notary-exam.practicetestgeeks.com/ut-notary-utah-notary-exam",
+    "url": "https://practicetestgeeks.com/ut-notary-utah-notary-exam/",
     "category": "Education",
     "country": "us",
     "ascName": "UT Notary",
@@ -3203,7 +3204,7 @@
   "boki-2-japan": {
     "name": "Boki 2 Accounting",
     "bundleId": "com.ptg2026.boki2",
-    "url": "https://ios-boki-2-japan.practicetestgeeks.com/boki-2-japan",
+    "url": "https://practicetestgeeks.com/boki-2-japan/",
     "category": "Education",
     "country": "jp",
     "ascName": "Boki 2 Accounting",
@@ -3212,7 +3213,7 @@
   "bcia-biofeedback-certification-international-alliance": {
     "name": "BCIA Biofeedback",
     "bundleId": "com.ptg2026.bcia",
-    "url": "https://ios-bcia-biofeedback-certification-international-alliance.practicetestgeeks.com/bcia-biofeedback-certification-international-alliance",
+    "url": "https://practicetestgeeks.com/bcia-biofeedback-certification-international-alliance/",
     "category": "Education",
     "country": "us",
     "ascName": "BCIA Biofeedback",
@@ -3221,7 +3222,7 @@
   "fmla-certified-family-and-medical-leave-act-administrator": {
     "name": "FMLA Admin",
     "bundleId": "com.ptg2026.fmla",
-    "url": "https://ios-fmla-certified-family-and-medical-leave-act-administrator.practicetestgeeks.com/fmla-certified-family-and-medical-leave-act-administrator",
+    "url": "https://practicetestgeeks.com/fmla-certified-family-and-medical-leave-act-administrator/",
     "category": "Education",
     "country": "us",
     "ascName": "FMLA Admin",
@@ -3230,7 +3231,7 @@
   "mca-certificate-competency": {
     "name": "MCA Marine CoC",
     "bundleId": "com.ptg2026.mcacoc",
-    "url": "https://ios-mca-certificate-competency.practicetestgeeks.com/mca-certificate-competency",
+    "url": "https://practicetestgeeks.com/mca-certificate-competency/",
     "category": "Education",
     "country": "gb",
     "ascName": "MCA Marine CoC",
@@ -3239,7 +3240,7 @@
   "or-notary-oregon-notary-exam": {
     "name": "OR Notary",
     "bundleId": "com.ptg2026.ornotary",
-    "url": "https://ios-or-notary-oregon-notary-exam.practicetestgeeks.com/or-notary-oregon-notary-exam",
+    "url": "https://practicetestgeeks.com/or-notary-oregon-notary-exam/",
     "category": "Education",
     "country": "us",
     "ascName": "OR Notary",
@@ -3248,7 +3249,7 @@
   "rrb-ntpc": {
     "name": "RRB NTPC India",
     "bundleId": "com.ptg2026.rrbntpc",
-    "url": "https://ios-rrb-ntpc.practicetestgeeks.com/rrb-ntpc",
+    "url": "https://practicetestgeeks.com/rrb-ntpc/",
     "category": "Education",
     "country": "in",
     "ascName": "RRB NTPC India",
@@ -3257,7 +3258,7 @@
   "red-seal-plumber-306a": {
     "name": "Red Seal Plumber",
     "bundleId": "com.ptg2026.rs306a",
-    "url": "https://ios-red-seal-plumber-306a.practicetestgeeks.com/red-seal-plumber-306a",
+    "url": "https://practicetestgeeks.com/red-seal-plumber-306a/",
     "category": "Education",
     "country": "ca",
     "ascName": "Red Seal Plumber",
@@ -3266,7 +3267,7 @@
   "red-seal-sheet-metal-308a": {
     "name": "Red Seal Sheet Metal",
     "bundleId": "com.ptg2026.rs308a",
-    "url": "https://ios-red-seal-sheet-metal-308a.practicetestgeeks.com/red-seal-sheet-metal-308a",
+    "url": "https://practicetestgeeks.com/red-seal-sheet-metal-308a/",
     "category": "Education",
     "country": "ca",
     "ascName": "Red Seal Sheet Metal",
@@ -3275,7 +3276,7 @@
   "red-seal-electrician-309a": {
     "name": "Red Seal Electrician",
     "bundleId": "com.ptg2026.rs309a",
-    "url": "https://ios-red-seal-electrician-309a.practicetestgeeks.com/red-seal-electrician-309a",
+    "url": "https://practicetestgeeks.com/red-seal-electrician-309a/",
     "category": "Education",
     "country": "ca",
     "ascName": "Red Seal Electrician",
@@ -3284,7 +3285,7 @@
   "red-seal-auto-tech-310s": {
     "name": "Red Seal Auto Tech",
     "bundleId": "com.ptg2026.rs310s",
-    "url": "https://ios-red-seal-auto-tech-310s.practicetestgeeks.com/red-seal-auto-tech-310s",
+    "url": "https://practicetestgeeks.com/red-seal-auto-tech-310s/",
     "category": "Education",
     "country": "ca",
     "ascName": "Red Seal Auto Tech",
@@ -3293,7 +3294,7 @@
   "red-seal-hairstylist-332a": {
     "name": "Red Seal Hairstylist",
     "bundleId": "com.ptg2026.rs332a",
-    "url": "https://ios-red-seal-hairstylist-332a.practicetestgeeks.com/red-seal-hairstylist-332a",
+    "url": "https://practicetestgeeks.com/red-seal-hairstylist-332a/",
     "category": "Education",
     "country": "ca",
     "ascName": "Red Seal Hairstylist",
@@ -3302,7 +3303,7 @@
   "red-seal-millwright-433a": {
     "name": "Red Seal Millwright",
     "bundleId": "com.ptg2026.rs433a",
-    "url": "https://ios-red-seal-millwright-433a.practicetestgeeks.com/red-seal-millwright-433a",
+    "url": "https://practicetestgeeks.com/red-seal-millwright-433a/",
     "category": "Education",
     "country": "ca",
     "ascName": "Red Seal Millwright",
@@ -3311,7 +3312,7 @@
   "association-of-american-medical-colleges-aamc": {
     "name": "AAMC Medical",
     "bundleId": "com.ptg2026.aamc",
-    "url": "https://ios-association-of-american-medical-colleges-aamc.practicetestgeeks.com/association-of-american-medical-colleges-aamc",
+    "url": "https://practicetestgeeks.com/association-of-american-medical-colleges-aamc/",
     "category": "Education",
     "country": "us",
     "ascName": "AAMC Medical",
@@ -3320,7 +3321,7 @@
   "aat-level-2-foundation": {
     "name": "AAT Level 2",
     "bundleId": "com.ptg2026.aatl2",
-    "url": "https://ios-aat-level-2-foundation.practicetestgeeks.com/aat-level-2-foundation",
+    "url": "https://practicetestgeeks.com/aat-level-2-foundation/",
     "category": "Education",
     "country": "gb",
     "ascName": "AAT Level 2",
@@ -3329,7 +3330,7 @@
   "concours-adjoint-administratif-france": {
     "name": "Adjoint Admin FR",
     "bundleId": "com.ptg2026.cadjadm",
-    "url": "https://ios-concours-adjoint-administratif-france.practicetestgeeks.com/concours-adjoint-administratif-france",
+    "url": "https://practicetestgeeks.com/concours-adjoint-administratif-france/",
     "category": "Education",
     "country": "fr",
     "ascName": "Adjoint Admin FR",
@@ -3338,7 +3339,7 @@
   "aocnp-exam": {
     "name": "AOCNP Oncology",
     "bundleId": "com.ptg2026.aocnp",
-    "url": "https://ios-aocnp-exam.practicetestgeeks.com/aocnp-exam",
+    "url": "https://practicetestgeeks.com/aocnp-exam/",
     "category": "Education",
     "country": "us",
     "ascName": "AOCNP Oncology",
@@ -3347,7 +3348,7 @@
   "apea-advanced-practice-education-associates": {
     "name": "APEA NP Education",
     "bundleId": "com.ptg2026.apea",
-    "url": "https://ios-apea-advanced-practice-education-associates.practicetestgeeks.com/apea-advanced-practice-education-associates",
+    "url": "https://practicetestgeeks.com/apea-advanced-practice-education-associates/",
     "category": "Education",
     "country": "us",
     "ascName": "APEA NP Education",
@@ -3356,7 +3357,7 @@
   "concours-atsem-france": {
     "name": "ATSEM France",
     "bundleId": "com.ptg2026.atsem",
-    "url": "https://ios-concours-atsem-france.practicetestgeeks.com/concours-atsem-france",
+    "url": "https://practicetestgeeks.com/concours-atsem-france/",
     "category": "Education",
     "country": "fr",
     "ascName": "ATSEM France",
@@ -3365,7 +3366,7 @@
   "baccalaureat-france": {
     "name": "BAC France",
     "bundleId": "com.ptg2026.bacfr",
-    "url": "https://ios-baccalaureat-france.practicetestgeeks.com/baccalaureat-france",
+    "url": "https://practicetestgeeks.com/baccalaureat-france/",
     "category": "Education",
     "country": "fr",
     "ascName": "BAC France",
@@ -3374,7 +3375,7 @@
   "singapore-bizsafe": {
     "name": "bizSAFE SG",
     "bundleId": "com.ptg2026.bizsafe",
-    "url": "https://ios-singapore-bizsafe.practicetestgeeks.com/singapore-bizsafe",
+    "url": "https://practicetestgeeks.com/singapore-bizsafe/",
     "category": "Education",
     "country": "sg",
     "ascName": "bizSAFE SG",
@@ -3383,7 +3384,7 @@
   "bts-france": {
     "name": "BTS France",
     "bundleId": "com.ptg2026.btsfr",
-    "url": "https://ios-bts-france.practicetestgeeks.com/bts-france",
+    "url": "https://practicetestgeeks.com/bts-france/",
     "category": "Education",
     "country": "fr",
     "ascName": "BTS France",
@@ -3392,7 +3393,7 @@
   "singapore-btt": {
     "name": "BTT Singapore",
     "bundleId": "com.ptg2026.btt",
-    "url": "https://ios-singapore-btt.practicetestgeeks.com/singapore-btt",
+    "url": "https://practicetestgeeks.com/singapore-btt/",
     "category": "Education",
     "country": "sg",
     "ascName": "BTT Singapore",
@@ -3401,7 +3402,7 @@
   "caces-r489-france": {
     "name": "CACES R489",
     "bundleId": "com.ptg2026.caces",
-    "url": "https://ios-caces-r489-france.practicetestgeeks.com/caces-r489-france",
+    "url": "https://practicetestgeeks.com/caces-r489-france/",
     "category": "Education",
     "country": "fr",
     "ascName": "CACES R489",
@@ -3410,7 +3411,7 @@
   "cbr-theorie-examen-auto-netherlands": {
     "name": "CBR Auto NL",
     "bundleId": "com.ptg2026.cbrauto",
-    "url": "https://ios-cbr-theorie-examen-auto-netherlands.practicetestgeeks.com/cbr-theorie-examen-auto-netherlands",
+    "url": "https://practicetestgeeks.com/cbr-theorie-examen-auto-netherlands/",
     "category": "Education",
     "country": "nl",
     "ascName": "CBR Auto NL",
@@ -3419,7 +3420,7 @@
   "certified-cardiographic-technician-cct-exam": {
     "name": "CCT Cardio Tech",
     "bundleId": "com.ptg2026.cct",
-    "url": "https://ios-certified-cardiographic-technician-cct-exam.practicetestgeeks.com/certified-cardiographic-technician-cct-exam",
+    "url": "https://practicetestgeeks.com/certified-cardiographic-technician-cct-exam/",
     "category": "Education",
     "country": "us",
     "ascName": "CCT Cardio Tech",
@@ -3428,7 +3429,7 @@
   "chfm-test": {
     "name": "CHFM Health Fac",
     "bundleId": "com.ptg2026.chfm",
-    "url": "https://ios-chfm-test.practicetestgeeks.com/chfm-test",
+    "url": "https://practicetestgeeks.com/chfm-test/",
     "category": "Education",
     "country": "us",
     "ascName": "CHFM Health Fac",
@@ -3437,7 +3438,7 @@
   "cii-r01-financial-services": {
     "name": "CII R01 UK Fin",
     "bundleId": "com.ptg2026.ciir01",
-    "url": "https://ios-cii-r01-financial-services.practicetestgeeks.com/cii-r01-financial-services",
+    "url": "https://practicetestgeeks.com/cii-r01-financial-services/",
     "category": "Education",
     "country": "gb",
     "ascName": "CII R01 UK Fin",
@@ -3446,7 +3447,7 @@
   "alberta-class-7-driving": {
     "name": "Alberta Class 7",
     "bundleId": "com.ptg2026.ab7",
-    "url": "https://ios-alberta-class-7-driving.practicetestgeeks.com/alberta-class-7-driving",
+    "url": "https://practicetestgeeks.com/alberta-class-7-driving/",
     "category": "Education",
     "country": "ca",
     "ascName": "Alberta Class 7",
@@ -3455,7 +3456,7 @@
   "singapore-cmfas": {
     "name": "CMFAS Singapore",
     "bundleId": "com.ptg2026.cmfas",
-    "url": "https://ios-singapore-cmfas.practicetestgeeks.com/singapore-cmfas",
+    "url": "https://practicetestgeeks.com/singapore-cmfas/",
     "category": "Education",
     "country": "sg",
     "ascName": "CMFAS Singapore",
@@ -3464,7 +3465,7 @@
   "code-de-la-route-france": {
     "name": "Code Route FR",
     "bundleId": "com.ptg2026.coderoute",
-    "url": "https://ios-code-de-la-route-france.practicetestgeeks.com/code-de-la-route-france",
+    "url": "https://practicetestgeeks.com/code-de-la-route-france/",
     "category": "Education",
     "country": "fr",
     "ascName": "Code Route FR",
@@ -3473,7 +3474,7 @@
   "cpa-cfe-canada": {
     "name": "CPA CFE Canada",
     "bundleId": "com.ptg2026.cpacfe",
-    "url": "https://ios-cpa-cfe-canada.practicetestgeeks.com/cpa-cfe-canada",
+    "url": "https://practicetestgeeks.com/cpa-cfe-canada/",
     "category": "Education",
     "country": "ca",
     "ascName": "CPA CFE Canada",
@@ -3482,7 +3483,7 @@
   "cphon-exam": {
     "name": "CPHON Peds Onc",
     "bundleId": "com.ptg2026.cphon",
-    "url": "https://ios-cphon-exam.practicetestgeeks.com/cphon-exam",
+    "url": "https://practicetestgeeks.com/cphon-exam/",
     "category": "Education",
     "country": "us",
     "ascName": "CPHON Peds Onc",
@@ -3491,7 +3492,7 @@
   "certified-professional-in-learning-and-performance-cplp": {
     "name": "CPLP Talent Dev",
     "bundleId": "com.ptg2026.cplp",
-    "url": "https://ios-certified-professional-in-learning-and-performance-cplp.practicetestgeeks.com/certified-professional-in-learning-and-performance-cplp",
+    "url": "https://practicetestgeeks.com/certified-professional-in-learning-and-performance-cplp/",
     "category": "Education",
     "country": "us",
     "ascName": "CPLP Talent Dev",
@@ -3500,7 +3501,7 @@
   "crpe-professeur-ecoles-france": {
     "name": "CRPE France",
     "bundleId": "com.ptg2026.crpe",
-    "url": "https://ios-crpe-professeur-ecoles-france.practicetestgeeks.com/crpe-professeur-ecoles-france",
+    "url": "https://practicetestgeeks.com/crpe-professeur-ecoles-france/",
     "category": "Education",
     "country": "fr",
     "ascName": "CRPE France",
@@ -3509,7 +3510,7 @@
   "danb-infection-control-exam": {
     "name": "DANB Infection",
     "bundleId": "com.ptg2026.danb",
-    "url": "https://ios-danb-infection-control-exam.practicetestgeeks.com/danb-infection-control-exam",
+    "url": "https://practicetestgeeks.com/danb-infection-control-exam/",
     "category": "Education",
     "country": "us",
     "ascName": "DANB Infection",
@@ -3518,7 +3519,7 @@
   "dcg-comptabilite-france": {
     "name": "DCG France",
     "bundleId": "com.ptg2026.dcg",
-    "url": "https://ios-dcg-comptabilite-france.practicetestgeeks.com/dcg-comptabilite-france",
+    "url": "https://practicetestgeeks.com/dcg-comptabilite-france/",
     "category": "Education",
     "country": "fr",
     "ascName": "DCG France",
@@ -3527,7 +3528,7 @@
   "delf-france": {
     "name": "DELF France Lang",
     "bundleId": "com.ptg2026.delf",
-    "url": "https://ios-delf-france.practicetestgeeks.com/delf-france",
+    "url": "https://practicetestgeeks.com/delf-france/",
     "category": "Education",
     "country": "fr",
     "ascName": "DELF France Lang",
@@ -3536,7 +3537,7 @@
   "code-moto-etm-france": {
     "name": "ETM Moto France",
     "bundleId": "com.ptg2026.etm",
-    "url": "https://ios-code-moto-etm-france.practicetestgeeks.com/code-moto-etm-france",
+    "url": "https://practicetestgeeks.com/code-moto-etm-france/",
     "category": "Education",
     "country": "fr",
     "ascName": "ETM Moto France",
@@ -3545,7 +3546,7 @@
   "f89-fire-and-life-safety-director": {
     "name": "F89 NYC Fire Dir",
     "bundleId": "com.ptg2026.f89",
-    "url": "https://ios-f89-fire-and-life-safety-director.practicetestgeeks.com/f89-fire-and-life-safety-director",
+    "url": "https://practicetestgeeks.com/f89-fire-and-life-safety-director/",
     "category": "Education",
     "country": "us",
     "ascName": "F89 NYC Fire Dir",
@@ -3554,7 +3555,7 @@
   "fdleflorida-department-of-law-enforcement": {
     "name": "FDLE Florida",
     "bundleId": "com.ptg2026.fdle",
-    "url": "https://ios-fdleflorida-department-of-law-enforcement.practicetestgeeks.com/fdleflorida-department-of-law-enforcement",
+    "url": "https://practicetestgeeks.com/fdleflorida-department-of-law-enforcement/",
     "category": "Education",
     "country": "us",
     "ascName": "FDLE Florida",
@@ -3563,7 +3564,7 @@
   "bc-foodsafe-level-1": {
     "name": "BC FOODSAFE",
     "bundleId": "com.ptg2026.bcfs",
-    "url": "https://ios-bc-foodsafe-level-1.practicetestgeeks.com/bc-foodsafe-level-1",
+    "url": "https://practicetestgeeks.com/bc-foodsafe-level-1/",
     "category": "Education",
     "country": "ca",
     "ascName": "BC FOODSAFE",
@@ -3572,7 +3573,7 @@
   "fp-2-japan": {
     "name": "FP2 Japan",
     "bundleId": "com.ptg2026.fp2",
-    "url": "https://ios-fp-2-japan.practicetestgeeks.com/fp-2-japan",
+    "url": "https://practicetestgeeks.com/fp-2-japan/",
     "category": "Education",
     "country": "jp",
     "ascName": "FP2 Japan",
@@ -3581,7 +3582,7 @@
   "concours-gardien-paix-france": {
     "name": "Gardien Paix FR",
     "bundleId": "com.ptg2026.gardien",
-    "url": "https://ios-concours-gardien-paix-france.practicetestgeeks.com/concours-gardien-paix-france",
+    "url": "https://practicetestgeeks.com/concours-gardien-paix-france/",
     "category": "Education",
     "country": "fr",
     "ascName": "Gardien Paix FR",
@@ -3590,25 +3591,25 @@
   "concours-gendarmerie-france": {
     "name": "Gendarmerie FR",
     "bundleId": "com.ptg2026.gend",
-    "url": "https://ios-concours-gendarmerie-france.practicetestgeeks.com/concours-gendarmerie-france",
+    "url": "https://practicetestgeeks.com/concours-gendarmerie-france/",
     "category": "Education",
     "country": "fr",
     "ascName": "Gendarmerie FR",
     "ascBundleId": "com.ptg2026.gend"
   },
   "habilitation-electrique-france": {
-    "name": "Habilitation \u00c9lec",
+    "name": "Habilitation Élec",
     "bundleId": "com.ptg2026.habilelec",
-    "url": "https://ios-habilitation-electrique-france.practicetestgeeks.com/habilitation-electrique-france",
+    "url": "https://practicetestgeeks.com/habilitation-electrique-france/",
     "category": "Education",
     "country": "fr",
-    "ascName": "Habilitation \u00c9lec",
+    "ascName": "Habilitation Élec",
     "ascBundleId": "com.ptg2026.habilelec"
   },
   "hud-certified-housing-and-urban-development-inspector": {
     "name": "HUD Housing Insp",
     "bundleId": "com.ptg2026.hud",
-    "url": "https://ios-hud-certified-housing-and-urban-development-inspector.practicetestgeeks.com/hud-certified-housing-and-urban-development-inspector",
+    "url": "https://practicetestgeeks.com/hud-certified-housing-and-urban-development-inspector/",
     "category": "Education",
     "country": "us",
     "ascName": "HUD Housing Insp",
@@ -3617,7 +3618,7 @@
   "ic3-digital-literacy-certification": {
     "name": "IC3 Digital Lit",
     "bundleId": "com.ptg2026.ic3",
-    "url": "https://ios-ic3-digital-literacy-certification.practicetestgeeks.com/ic3-digital-literacy-certification",
+    "url": "https://practicetestgeeks.com/ic3-digital-literacy-certification/",
     "category": "Education",
     "country": "us",
     "ascName": "IC3 Digital Lit",
@@ -3626,7 +3627,7 @@
   "ikm-international-knowledge-measurement": {
     "name": "IKM Skill Assess",
     "bundleId": "com.ptg2026.ikm",
-    "url": "https://ios-ikm-international-knowledge-measurement.practicetestgeeks.com/ikm-international-knowledge-measurement",
+    "url": "https://practicetestgeeks.com/ikm-international-knowledge-measurement/",
     "category": "Education",
     "country": "us",
     "ascName": "IKM Skill Assess",
@@ -3635,7 +3636,7 @@
   "inburgeringsexamen-netherlands": {
     "name": "Inburgering NL",
     "bundleId": "com.ptg2026.inburger",
-    "url": "https://ios-inburgeringsexamen-netherlands.practicetestgeeks.com/inburgeringsexamen-netherlands",
+    "url": "https://practicetestgeeks.com/inburgeringsexamen-netherlands/",
     "category": "Education",
     "country": "nl",
     "ascName": "Inburgering NL",
@@ -3644,7 +3645,7 @@
   "ipat-irish-police-aptitude": {
     "name": "IPAT Irish Police",
     "bundleId": "com.ptg2026.ipat",
-    "url": "https://ios-ipat-irish-police-aptitude.practicetestgeeks.com/ipat-irish-police-aptitude",
+    "url": "https://practicetestgeeks.com/ipat-irish-police-aptitude/",
     "category": "Education",
     "country": "ie",
     "ascName": "IPAT Irish Police",
@@ -3653,7 +3654,7 @@
   "itls-international-trauma-life-support": {
     "name": "ITLS Trauma",
     "bundleId": "com.ptg2026.itls",
-    "url": "https://ios-itls-international-trauma-life-support.practicetestgeeks.com/itls-international-trauma-life-support",
+    "url": "https://practicetestgeeks.com/itls-international-trauma-life-support/",
     "category": "Education",
     "country": "us",
     "ascName": "ITLS Trauma",
@@ -3662,7 +3663,7 @@
   "la-notary-louisiana-notary-exam": {
     "name": "LA Notary",
     "bundleId": "com.ptg2026.lanotary",
-    "url": "https://ios-la-notary-louisiana-notary-exam.practicetestgeeks.com/la-notary-louisiana-notary-exam",
+    "url": "https://practicetestgeeks.com/la-notary-louisiana-notary-exam/",
     "category": "Education",
     "country": "us",
     "ascName": "LA Notary",
@@ -3671,7 +3672,7 @@
   "lcq-new-zealand": {
     "name": "LCQ NZ Liquor",
     "bundleId": "com.ptg2026.lcq",
-    "url": "https://ios-lcq-new-zealand.practicetestgeeks.com/lcq-new-zealand",
+    "url": "https://practicetestgeeks.com/lcq-new-zealand/",
     "category": "Education",
     "country": "nz",
     "ascName": "LCQ NZ Liquor",
@@ -3680,7 +3681,7 @@
   "mnt-certified-medical-nail-technician": {
     "name": "MNT Nail Tech",
     "bundleId": "com.ptg2026.mnt",
-    "url": "https://ios-mnt-certified-medical-nail-technician.practicetestgeeks.com/mnt-certified-medical-nail-technician",
+    "url": "https://practicetestgeeks.com/mnt-certified-medical-nail-technician/",
     "category": "Education",
     "country": "us",
     "ascName": "MNT Nail Tech",
@@ -3689,7 +3690,7 @@
   "mo-notary-missouri-notary-exam": {
     "name": "MO Notary",
     "bundleId": "com.ptg2026.monotary",
-    "url": "https://ios-mo-notary-missouri-notary-exam.practicetestgeeks.com/mo-notary-missouri-notary-exam",
+    "url": "https://practicetestgeeks.com/mo-notary-missouri-notary-exam/",
     "category": "Education",
     "country": "us",
     "ascName": "MO Notary",
@@ -3698,7 +3699,7 @@
   "nbcmi-national-board-of-certification-for-medical-interpreters": {
     "name": "NBCMI Med Interp",
     "bundleId": "com.ptg2026.nbcmi",
-    "url": "https://ios-nbcmi-national-board-of-certification-for-medical-interpret.practicetestgeeks.com/nbcmi-national-board-of-certification-for-medical-interpreters",
+    "url": "https://practicetestgeeks.com/nbcmi-national-board-of-certification-for-medical-interpreters/",
     "category": "Education",
     "country": "us",
     "ascName": "NBCMI Med Interp",
@@ -3707,7 +3708,7 @@
   "nc-notary-north-carolina-notary-exam": {
     "name": "NC Notary",
     "bundleId": "com.ptg2026.ncnotary",
-    "url": "https://ios-nc-notary-north-carolina-notary-exam.practicetestgeeks.com/nc-notary-north-carolina-notary-exam",
+    "url": "https://practicetestgeeks.com/nc-notary-north-carolina-notary-exam/",
     "category": "Education",
     "country": "us",
     "ascName": "NC Notary",
@@ -3716,7 +3717,7 @@
   "nex-nursing-entrance-exam": {
     "name": "NEX Nursing Entry",
     "bundleId": "com.ptg2026.nex",
-    "url": "https://ios-nex-nursing-entrance-exam.practicetestgeeks.com/nex-nursing-entrance-exam",
+    "url": "https://practicetestgeeks.com/nex-nursing-entrance-exam/",
     "category": "Education",
     "country": "us",
     "ascName": "NEX Nursing Entry",
@@ -3725,7 +3726,7 @@
   "nmc-cbt-nursing-and-midwifery-council-computer-based-test": {
     "name": "NMC CBT UK",
     "bundleId": "com.ptg2026.nmccbt",
-    "url": "https://ios-nmc-cbt-nursing-and-midwifery-council-computer-based-test.practicetestgeeks.com/nmc-cbt-nursing-and-midwifery-council-computer-based-test",
+    "url": "https://practicetestgeeks.com/nmc-cbt-nursing-and-midwifery-council-computer-based-test/",
     "category": "Education",
     "country": "gb",
     "ascName": "NMC CBT UK",
@@ -3734,7 +3735,7 @@
   "nppe-national-professional-practice-examination": {
     "name": "NPPE Engineer CA",
     "bundleId": "com.ptg2026.nppe",
-    "url": "https://ios-nppe-national-professional-practice-examination.practicetestgeeks.com/nppe-national-professional-practice-examination",
+    "url": "https://practicetestgeeks.com/nppe-national-professional-practice-examination/",
     "category": "Education",
     "country": "ca",
     "ascName": "NPPE Engineer CA",
@@ -3743,7 +3744,7 @@
   "oftec-oil-heating": {
     "name": "OFTEC Oil Heat UK",
     "bundleId": "com.ptg2026.oftec",
-    "url": "https://ios-oftec-oil-heating.practicetestgeeks.com/oftec-oil-heating",
+    "url": "https://practicetestgeeks.com/oftec-oil-heating/",
     "category": "Education",
     "country": "gb",
     "ascName": "OFTEC Oil Heat UK",
@@ -3752,7 +3753,7 @@
   "ontario-real-estate-orea": {
     "name": "OREA Ontario RE",
     "bundleId": "com.ptg2026.orea",
-    "url": "https://ios-ontario-real-estate-orea.practicetestgeeks.com/ontario-real-estate-orea",
+    "url": "https://practicetestgeeks.com/ontario-real-estate-orea/",
     "category": "Education",
     "country": "ca",
     "ascName": "OREA Ontario RE",
@@ -3761,7 +3762,7 @@
   "nyc-civil-service-exam": {
     "name": "NYC Civil Service",
     "bundleId": "com.ptg2026.nyc",
-    "url": "https://ios-nyc-civil-service-exam.practicetestgeeks.com/nyc-civil-service-exam",
+    "url": "https://practicetestgeeks.com/nyc-civil-service-exam/",
     "category": "Education",
     "country": "us",
     "ascName": "NYC Civil Service",
@@ -3770,7 +3771,7 @@
   "pasma-tower-scaffold": {
     "name": "PASMA Scaffold UK",
     "bundleId": "com.ptg2026.pasma",
-    "url": "https://ios-pasma-tower-scaffold.practicetestgeeks.com/pasma-tower-scaffold",
+    "url": "https://practicetestgeeks.com/pasma-tower-scaffold/",
     "category": "Education",
     "country": "gb",
     "ascName": "PASMA Scaffold UK",
@@ -3779,7 +3780,7 @@
   "quiz-patente-a-italy": {
     "name": "Patente A Italia",
     "bundleId": "com.ptg2026.patentea",
-    "url": "https://ios-quiz-patente-a-italy.practicetestgeeks.com/quiz-patente-a-italy",
+    "url": "https://practicetestgeeks.com/quiz-patente-a-italy/",
     "category": "Education",
     "country": "it",
     "ascName": "Patente A Italia",
@@ -3788,7 +3789,7 @@
   "quiz-patente-am-italy": {
     "name": "Patente AM Italia",
     "bundleId": "com.ptg2026.patenteam",
-    "url": "https://ios-quiz-patente-am-italy.practicetestgeeks.com/quiz-patente-am-italy",
+    "url": "https://practicetestgeeks.com/quiz-patente-am-italy/",
     "category": "Education",
     "country": "it",
     "ascName": "Patente AM Italia",
@@ -3797,7 +3798,7 @@
   "quiz-patente-b-italy": {
     "name": "Patente B Italia",
     "bundleId": "com.ptg2026.patenteb",
-    "url": "https://ios-quiz-patente-b-italy.practicetestgeeks.com/quiz-patente-b-italy",
+    "url": "https://practicetestgeeks.com/quiz-patente-b-italy/",
     "category": "Education",
     "country": "it",
     "ascName": "Patente B Italia",
@@ -3806,25 +3807,25 @@
   "permis-bateau-cotier-france": {
     "name": "Permis Bateau FR",
     "bundleId": "com.ptg2026.permisbat",
-    "url": "https://ios-permis-bateau-cotier-france.practicetestgeeks.com/permis-bateau-cotier-france",
+    "url": "https://practicetestgeeks.com/permis-bateau-cotier-france/",
     "category": "Education",
     "country": "fr",
     "ascName": "Permis Bateau FR",
     "ascBundleId": "com.ptg2026.permisbat"
   },
   "dgt-permiso-b-spain": {
-    "name": "Permiso B Espa\u00f1a",
+    "name": "Permiso B España",
     "bundleId": "com.ptg2026.permisob",
-    "url": "https://ios-dgt-permiso-b-spain.practicetestgeeks.com/dgt-permiso-b-spain",
+    "url": "https://practicetestgeeks.com/dgt-permiso-b-spain/",
     "category": "Education",
     "country": "es",
-    "ascName": "Permiso B Espa\u00f1a",
+    "ascName": "Permiso B España",
     "ascBundleId": "com.ptg2026.permisob"
   },
   "concorso-polizia-stato-italy": {
     "name": "Concorso Polizia IT",
     "bundleId": "com.ptg2026.polizia",
-    "url": "https://ios-concorso-polizia-stato-italy.practicetestgeeks.com/concorso-polizia-stato-italy",
+    "url": "https://practicetestgeeks.com/concorso-polizia-stato-italy/",
     "category": "Education",
     "country": "it",
     "ascName": "Concorso Polizia IT",
@@ -3833,7 +3834,7 @@
   "proserve-alberta": {
     "name": "ProServe Alberta CA",
     "bundleId": "com.ptg2026.proserve",
-    "url": "https://ios-proserve-alberta.practicetestgeeks.com/proserve-alberta",
+    "url": "https://practicetestgeeks.com/proserve-alberta/",
     "category": "Education",
     "country": "ca",
     "ascName": "ProServe Alberta CA",
