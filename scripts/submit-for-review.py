@@ -120,6 +120,11 @@ def wait_for_screenshots_ready(token, version_id, max_wait=600):
             for sc in screenshots["data"]:
                 delivery = sc["attributes"].get("assetDeliveryState", {})
                 state = delivery.get("state", "COMPLETE") if delivery else "COMPLETE"
+                if state == "FAILED":
+                    # Failed screenshots block submission — return False to signal re-upload needed
+                    errors = delivery.get("errors", [])
+                    print(f"  ⚠ Screenshot FAILED: {sc['id'][:8]}... errors={errors}")
+                    return False
                 if state not in ("COMPLETE",):
                     all_ready = False
                     break
