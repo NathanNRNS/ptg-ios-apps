@@ -113,6 +113,7 @@ def submit_for_review(token, app_id, version_id):
             elif state in ("WAITING_FOR_REVIEW", "IN_REVIEW", "COMPLETE"):
                 return True, f"already-{state.lower()}"
 
+    needs_item = True
     if not submission_id:
         # Create a new reviewSubmission
         resp = asc_request(token, "POST", "/v1/reviewSubmissions", {
@@ -125,7 +126,13 @@ def submit_for_review(token, app_id, version_id):
         if not resp or not resp.get("data"):
             return False, "create reviewSubmission failed"
         submission_id = resp["data"]["id"]
+    else:
+        # Check if the existing submission already has items
+        items_resp = asc_request(token, "GET", f"/v1/reviewSubmissions/{submission_id}/items")
+        if items_resp and items_resp.get("data") and len(items_resp["data"]) > 0:
+            needs_item = False
 
+    if needs_item:
         # Add reviewSubmissionItem for the version
         resp2 = asc_request(token, "POST", "/v1/reviewSubmissionItems", {
             "data": {
