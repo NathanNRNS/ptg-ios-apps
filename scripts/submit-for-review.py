@@ -69,7 +69,7 @@ def get_editable_version(token, app_id):
 def attach_build_to_version(token, app_id, version_id):
     """Find the latest valid build and link it to the App Store Version. Returns build_id or None."""
     builds = asc_request(token, "GET",
-        f"/v1/builds?filter[app]={app_id}&filter[processingState]=VALID&sort=-uploadedDate&limit=1")
+        f"/v1/builds?filter[app]={app_id}&filter[processingState]=VALID&filter[expired]=false&sort=-uploadedDate&limit=1")
     if not builds or not builds.get("data"):
         print(f"  No valid builds found")
         return None
