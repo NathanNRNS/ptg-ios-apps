@@ -99,11 +99,11 @@ def set_export_compliance(token, build_id):
     return True
 
 def wait_for_screenshots_ready(token, version_id, max_wait=600):
-    """Poll until all screenshots have deliveryStatus=COMPLETE. Returns True when ready."""
+    """Poll until all screenshots have assetDeliveryState.state=COMPLETE."""
     locs = asc_request(token, "GET",
         f"/v1/appStoreVersions/{version_id}/appStoreVersionLocalizations?filter[locale]=en-US")
     if not locs or not locs.get("data"):
-        return True  # no localizations, proceed anyway
+        return True
     loc_id = locs["data"][0]["id"]
     sc_sets = asc_request(token, "GET",
         f"/v1/appStoreVersionLocalizations/{loc_id}/appScreenshotSets")
@@ -114,12 +114,13 @@ def wait_for_screenshots_ready(token, version_id, max_wait=600):
         all_ready = True
         for sc_set in sc_sets["data"]:
             screenshots = asc_request(token, "GET",
-                f"/v1/appScreenshotSets/{sc_set['id']}/appScreenshots?limit=10")
+                f"/v1/appScreenshotSets/{sc_set['id']}/appScreenshots?limit=20")
             if not screenshots or not screenshots.get("data"):
                 continue
             for sc in screenshots["data"]:
-                status = sc["attributes"].get("deliveryStatus", "COMPLETE")
-                if status not in ("COMPLETE",):
+                delivery = sc["attributes"].get("assetDeliveryState", {})
+                state = delivery.get("state", "COMPLETE") if delivery else "COMPLETE"
+                if state not in ("COMPLETE",):
                     all_ready = False
                     break
             if not all_ready:
