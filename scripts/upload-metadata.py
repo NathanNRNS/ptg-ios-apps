@@ -101,13 +101,51 @@ def get_or_create_version_localization(token, app_id, locale="en-US"):
         return version_id, create["data"]["id"]
     return version_id, None
 
-def get_or_create_screenshot_set(token, version_loc_id, display_type="APP_IPHONE_65"):
-    # Check existing sets
+def detect_display_type(img_path):
+    """Map PNG dimensions to the correct ASC screenshotDisplayType."""
+    import struct
+    data = open(img_path, 'rb').read(24)
+    w = struct.unpack('>I', data[16:20])[0]
+    h = struct.unpack('>I', data[20:24])[0]
+    landscape = w > h
+    if landscape: w, h = h, w  # normalize to portrait
+    mapping = {
+        (1290, 2796): "APP_IPHONE_67",  # iPhone 14/15/16 Pro Max
+        (1284, 2778): "APP_IPHONE_65",  # iPhone 12/13 Pro Max
+        (1242, 2688): "APP_IPHONE_65",  # iPhone XS Max
+        (1125, 2436): "APP_IPHONE_58",  # iPhone X/XS
+        (828,  1792): "APP_IPHONE_61",  # iPhone XR/11
+        (1242, 2208): "APP_IPHONE_55",  # iPhone 6/7/8 Plus
+        (750,  1334): "APP_IPHONE_47",  # iPhone 6/7/8
+    }
+    dtype = mapping.get((w, h))
+    if not dtype:
+        # Default: use 6.7" for anything large-ish
+        dtype = "APP_IPHONE_67" if h >= 2700 else "APP_IPHONE_65"
+    return dtype if not landscape else dtype  # TODO landscape support
+
+def delete_all_screenshot_sets(token, version_loc_id):
+    """Delete all existing screenshot sets so we can re-upload with correct type."""
+    sets = asc_request(token, "GET",
+        f"/v1/appStoreVersionLocalizations/{version_loc_id}/appScreenshotSets")
+    if not sets or not sets.get("data"):
+        return
+    for s in sets["data"]:
+        set_id = s["id"]
+        # Delete individual screenshots first
+        sc_list = asc_request(token, "GET", f"/v1/appScreenshotSets/{set_id}/appScreenshots")
+        if sc_list and sc_list.get("data"):
+            for sc in sc_list["data"]:
+                asc_request(token, "DELETE", f"/v1/appScreenshots/{sc['id']}")
+        # Then delete the set
+        asc_request(token, "DELETE", f"/v1/appScreenshotSets/{set_id}")
+    print(f"  Cleared {len(sets['data'])} screenshot set(s)")
+
+def get_or_create_screenshot_set(token, version_loc_id, display_type):
     sets = asc_request(token, "GET",
         f"/v1/appStoreVersionLocalizations/{version_loc_id}/appScreenshotSets?filter[screenshotDisplayType]={display_type}")
     if sets and sets.get("data"):
         return sets["data"][0]["id"]
-    # Create new set
     resp = asc_request(token, "POST", "/v1/appScreenshotSets", {
         "data": {"type": "appScreenshotSets",
                  "attributes": {"screenshotDisplayType": display_type},
@@ -118,9 +156,13 @@ def get_or_create_screenshot_set(token, version_loc_id, display_type="APP_IPHONE
         return resp["data"]["id"]
     return None
 
-def upload_screenshot(token, version_loc_id, img_path, display_type="APP_IPHONE_65"):
+def upload_screenshot(token, version_loc_id, img_path, display_type=None):
     img = Path(img_path)
     size = img.stat().st_size
+
+    # Auto-detect display type from image dimensions
+    if not display_type:
+        display_type = detect_display_type(str(img_path))
 
     # Get/create screenshot set for this display type
     set_id = get_or_create_screenshot_set(token, version_loc_id, display_type)
@@ -307,20 +349,14 @@ def process_app(token, slug, app_data):
         set_version_metadata(token, version_loc_id, description, meta["keywords"],
                              "Initial release.")
 
-        # 3. Screenshots — check via appScreenshotSets
+        # 3. Screenshots — always clear and re-upload to fix any wrong-dimension sets
         sc_dir = ROOT / "screenshots" / slug
         if sc_dir.exists():
-            existing_sets = asc_request(token, "GET",
-                f"/v1/appStoreVersionLocalizations/{version_loc_id}/appScreenshotSets")
-            has_screenshots = (existing_sets and existing_sets.get("data") and
-                               any(s.get("attributes", {}).get("screenshotCount", 0) > 0
-                                   for s in existing_sets["data"]))
-            if has_screenshots:
-                print(f"  Screenshots already exist, skipping")
-            else:
-                sc_files = sorted(sc_dir.glob("*.png"))[:3]
+            sc_files = sorted(sc_dir.glob("*.png"))[:3]
+            if sc_files:
+                delete_all_screenshot_sets(token, version_loc_id)
                 for sc_path in sc_files:
-                    ok = upload_screenshot(token, version_loc_id, sc_path, "APP_IPHONE_65")
+                    ok = upload_screenshot(token, version_loc_id, str(sc_path))
                     print(f"  Screenshot {sc_path.name}: {'✓' if ok else '✗'}")
 
     print(f"  [{slug}] Done")
