@@ -35,7 +35,7 @@ def make_jwt(key_id, issuer_id, private_key_pem):
     ).rstrip(b'=').decode()
     return f"{header}.{payload}.{raw_sig}"
 
-def asc_request(token, method, path, body=None, content_type="application/json"):
+def asc_request(token, method, path, body=None, content_type="application/json", _retry=0):
     url = f"https://api.appstoreconnect.apple.com{path}"
     data = json.dumps(body).encode() if body else None
     req = urllib.request.Request(url, data=data, method=method, headers={
@@ -47,6 +47,11 @@ def asc_request(token, method, path, body=None, content_type="application/json")
             raw = r.read()
             return json.loads(raw) if raw else {}
     except urllib.error.HTTPError as e:
+        if e.code == 429 and _retry < 3:
+            wait = 30 * (2 ** _retry)
+            print(f"  Rate limited — waiting {wait}s...")
+            time.sleep(wait)
+            return asc_request(token, method, path, body, content_type, _retry + 1)
         body_str = e.read().decode()[:500]
         print(f"  HTTP {e.code} on {method} {path}: {body_str}")
         return None
@@ -212,12 +217,15 @@ def upload_screenshot(token, version_loc_id, img_path, display_type=None):
             print(f"  Upload chunk failed: {ex}")
             return False
 
-    # Commit
+    # Commit — must succeed for screenshot to count
     md5 = __import__("hashlib").md5(img_data).hexdigest()
-    asc_request(token, "PATCH", f"/v1/appScreenshots/{sc_id}", {
+    commit = asc_request(token, "PATCH", f"/v1/appScreenshots/{sc_id}", {
         "data": {"type": "appScreenshots", "id": sc_id,
                  "attributes": {"uploaded": True, "sourceFileChecksum": md5}}
     })
+    if commit is None:
+        print(f"  Commit failed for {img.name}")
+        return False
     return True
 
 def set_app_info(token, app_id, name, subtitle, locale="en-US"):
@@ -373,6 +381,7 @@ def process_app(token, slug, app_data):
                     print(f"  Screenshot {sc_path.name}: {'✓' if ok else '✗'}")
 
     print(f"  [{slug}] Done")
+    time.sleep(1)  # avoid rate limiting across 100 apps
 
 def main():
     key_id     = os.environ.get("ASC_KEY_ID", "")

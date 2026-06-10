@@ -37,7 +37,7 @@ def make_jwt(key_id, issuer_id, private_key_pem):
     ).rstrip(b'=').decode()
     return f"{header}.{payload}.{raw_sig}"
 
-def asc_request(token, method, path, body=None):
+def asc_request(token, method, path, body=None, _retry=0):
     url = f"https://api.appstoreconnect.apple.com{path}"
     data = json.dumps(body).encode() if body else None
     req = urllib.request.Request(url, data=data, method=method, headers={
@@ -49,6 +49,11 @@ def asc_request(token, method, path, body=None):
             raw = r.read()
             return json.loads(raw) if raw else {}
     except urllib.error.HTTPError as e:
+        if e.code == 429 and _retry < 3:
+            wait = 30 * (2 ** _retry)
+            print(f"  Rate limited — waiting {wait}s...")
+            time.sleep(wait)
+            return asc_request(token, method, path, body, _retry + 1)
         body_str = e.read().decode()[:800]
         print(f"  HTTP {e.code} {method} {path}: {body_str}")
         return None
