@@ -4,13 +4,8 @@ on:
   workflow_dispatch:
     inputs:
       apps:
-        description: 'Comma-separated slugs, "all", "batch2"…"batch4", or "unbuilt" (auto-detects)'
-        required: true
-        default: 'unbuilt'
-  workflow_call:
-    inputs:
-      apps:
-        type: string
+        description: 'Slugs csv, all/batch2/batch3/batch4/unbuilt'
+        required: false
         default: 'unbuilt'
 
 jobs:
@@ -23,7 +18,7 @@ jobs:
       - name: Build app matrix
         id: set-matrix
         run: |
-          INPUT="${{ inputs.apps || github.event.inputs.apps }}"
+          INPUT="${{ github.event.inputs.apps || 'unbuilt' }}"
           if [ "$INPUT" = "unbuilt" ]; then
             # Auto-detect: all apps with ascAppId not yet in TestFlight (version in PREPARE_FOR_SUBMISSION)
             # We build all registered apps — the build is idempotent (new version number each time)
