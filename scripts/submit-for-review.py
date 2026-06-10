@@ -98,6 +98,40 @@ def set_export_compliance(token, build_id):
     })
     return True
 
+def wait_for_screenshots_ready(token, version_id, max_wait=600):
+    """Poll until all screenshots have deliveryStatus=COMPLETE. Returns True when ready."""
+    locs = asc_request(token, "GET",
+        f"/v1/appStoreVersions/{version_id}/appStoreVersionLocalizations?filter[locale]=en-US")
+    if not locs or not locs.get("data"):
+        return True  # no localizations, proceed anyway
+    loc_id = locs["data"][0]["id"]
+    sc_sets = asc_request(token, "GET",
+        f"/v1/appStoreVersionLocalizations/{loc_id}/appScreenshotSets")
+    if not sc_sets or not sc_sets.get("data"):
+        return True
+    waited = 0
+    while waited < max_wait:
+        all_ready = True
+        for sc_set in sc_sets["data"]:
+            screenshots = asc_request(token, "GET",
+                f"/v1/appScreenshotSets/{sc_set['id']}/appScreenshots?limit=10")
+            if not screenshots or not screenshots.get("data"):
+                continue
+            for sc in screenshots["data"]:
+                status = sc["attributes"].get("deliveryStatus", "COMPLETE")
+                if status not in ("COMPLETE",):
+                    all_ready = False
+                    break
+            if not all_ready:
+                break
+        if all_ready:
+            return True
+        print(f"  Screenshots processing, waiting 30s... ({waited}s elapsed)")
+        time.sleep(30)
+        waited += 30
+    print(f"  ⚠ Screenshots not ready after {max_wait}s, proceeding anyway")
+    return False
+
 def submit_for_review(token, app_id, version_id):
     """Use reviewSubmissions API. Reuses existing READY_FOR_REVIEW submission if one exists."""
     # Check for existing submissions first — reuse to avoid 5-slot concurrency limit
@@ -229,6 +263,9 @@ def process_app(creds, slug, app_data):
 
     # Mark build as not using non-exempt encryption
     set_export_compliance(token, build_id)
+
+    # Wait for screenshots to finish processing before submitting
+    wait_for_screenshots_ready(token, version_id)
 
     # Submit for review
     ok, info = submit_for_review(token, app_id, version_id)
