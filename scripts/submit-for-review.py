@@ -121,32 +121,71 @@ def submit_for_review(token, app_id, version_id):
         return False, "patch submitted=true failed"
     return True, submission_id
 
+def validate_app_ready(token, app_id, version_id, slug):
+    """Check icon, description, screenshots. Returns (ready, issues[])."""
+    issues = []
+
+    # Check version localization for description + name
+    locs = asc_request(token, "GET",
+        f"/v1/appStoreVersions/{version_id}/appStoreVersionLocalizations?filter[locale]=en-US")
+    if not locs or not locs.get("data"):
+        issues.append("no en-US localization")
+    else:
+        attrs = locs["data"][0].get("attributes", {})
+        desc = attrs.get("description") or ""
+        if len(desc) < 50:
+            issues.append(f"description too short ({len(desc)} chars)")
+
+        # Check screenshots
+        loc_id = locs["data"][0]["id"]
+        sc_sets = asc_request(token, "GET",
+            f"/v1/appStoreVersionLocalizations/{loc_id}/appScreenshotSets")
+        has_screenshots = (sc_sets and sc_sets.get("data") and
+            any(s.get("attributes", {}).get("screenshotCount", 0) > 0
+                for s in sc_sets["data"]))
+        if not has_screenshots:
+            issues.append("no screenshots")
+
+    # Check app info for name (icon comes from IPA, no separate API check)
+    info = asc_request(token, "GET", f"/v1/apps/{app_id}/appInfos")
+    if not info or not info.get("data"):
+        issues.append("no appInfo")
+
+    return len(issues) == 0, issues
+
 def process_app(token, slug, app_data):
     app_id = app_data.get("ascAppId")
     if not app_id:
-        print(f"  [{slug}] No ascAppId, skipping")
         return
 
     print(f"\n[{slug}] app_id={app_id}")
 
     version_id, state = get_editable_version(token, app_id)
     if not version_id:
-        print(f"  [{slug}] No editable version found (may already be submitted or live)")
+        print(f"  No editable version (already submitted or live)")
         return
 
     print(f"  State: {state}")
 
-    if state == "WAITING_FOR_REVIEW":
-        print(f"  Already submitted, skipping")
+    if state in ("WAITING_FOR_REVIEW", "IN_REVIEW", "PENDING_DEVELOPER_RELEASE", "READY_FOR_SALE"):
+        print(f"  Already in review or live, skipping")
         return
 
-    # Set export compliance (new API: appEncryptionDeclarations)
-    ok = set_export_compliance(token, app_id)
-    print(f"  Export compliance: {'attempted' if ok else 'skipped'}")
+    # Validate before submitting
+    ready, issues = validate_app_ready(token, app_id, version_id, slug)
+    if not ready:
+        print(f"  ⚠ Not ready: {', '.join(issues)} — skipping submit")
+        return
 
-    # Submit for review (new API: reviewSubmissions)
+    # Set export compliance
+    set_export_compliance(token, app_id)
+
+    # Submit for review
     ok, info = submit_for_review(token, app_id, version_id)
-    print(f"  Submit for review: {'✓ submission_id=' + info if ok else '✗ ' + info}")
+    if ok:
+        print(f"  ✅ Submitted for review (submission_id={info})")
+    else:
+        print(f"  ❌ Submit failed: {info}")
 
 def main():
     key_id     = os.environ.get("ASC_KEY_ID", "")
