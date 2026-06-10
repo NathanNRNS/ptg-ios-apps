@@ -174,7 +174,9 @@ def validate_app_ready(token, app_id, version_id, slug):
 
     return len(issues) == 0, issues
 
-def process_app(token, slug, app_data):
+def process_app(creds, slug, app_data):
+    key_id, issuer_id, private_key = creds
+    token = make_jwt(key_id, issuer_id, private_key)  # fresh token per app (avoids 20-min expiry)
     app_id = app_data.get("ascAppId")
     if not app_id:
         return
@@ -223,13 +225,12 @@ def main():
         print("Missing ASC env vars")
         sys.exit(1)
 
-    token = make_jwt(key_id, issuer_id, private_key)
+    creds = (key_id, issuer_id, private_key)
     apps = json.loads((ROOT / "apps.json").read_text())
 
     slugs_arg = [s for s in sys.argv[1:] if s not in ("--all", "--new-only")]
 
     if "--all" in sys.argv or "--new-only" in sys.argv or not sys.argv[1:]:
-        # All apps that have an ascAppId registered
         target_slugs = [k for k, v in apps.items() if v.get("ascAppId")]
         print(f"Targeting all {len(target_slugs)} registered apps")
     else:
@@ -239,7 +240,7 @@ def main():
         if slug not in apps:
             print(f"Unknown slug: {slug}")
             continue
-        process_app(token, slug, apps[slug])
+        process_app(creds, slug, apps[slug])
 
 if __name__ == "__main__":
     main()

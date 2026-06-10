@@ -346,7 +346,9 @@ def get_meta(slug, app_data):
         "keywords": f"{words},practice test,exam prep,study guide,test preparation",
     }
 
-def process_app(token, slug, app_data):
+def process_app(creds, slug, app_data):
+    key_id, issuer_id, private_key = creds
+    token = make_jwt(key_id, issuer_id, private_key)  # fresh token per app (avoids 20-min expiry)
     app_id = app_data.get("ascAppId")
     if not app_id:
         print(f"  [{slug}] No ascAppId, skipping")
@@ -392,7 +394,7 @@ def main():
         print("Missing ASC env vars")
         sys.exit(1)
 
-    token = make_jwt(key_id, issuer_id, private_key)
+    creds = (key_id, issuer_id, private_key)
     apps = json.loads((ROOT / "apps.json").read_text())
 
     slugs_arg = sys.argv[1:] if sys.argv[1:] else []
@@ -406,7 +408,7 @@ def main():
         if slug not in apps:
             print(f"Unknown slug: {slug}")
             continue
-        process_app(token, slug, apps[slug])
+        process_app(creds, slug, apps[slug])
 
 if __name__ == "__main__":
     main()
