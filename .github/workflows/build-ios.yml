@@ -20,14 +20,7 @@ jobs:
         run: |
           INPUT="${{ github.event.inputs.apps || 'unbuilt' }}"
           if [ "$INPUT" = "unbuilt" ]; then
-            # Auto-detect: all apps with ascAppId not yet in TestFlight (version in PREPARE_FOR_SUBMISSION)
-            # We build all registered apps — the build is idempotent (new version number each time)
-            SLUGS=$(python3 -c "
-import json
-apps = json.load(open('apps.json'))
-slugs = [k for k,v in apps.items() if v.get('ascAppId')]
-print(json.dumps(slugs))
-")
+            SLUGS=$(python3 -c "import json,sys; a=json.load(open('apps.json')); print(json.dumps([k for k,v in a.items() if v.get('ascAppId')]))")
           elif [ "$INPUT" = "all" ]; then
             SLUGS='["reading","bluebook-sat","mensa","cefr","nbt","bartender","ielts","police-officer","ap-us-history","celpip","alcpt","truck-dispatcher","amcat","ibew-aptitude","amc-mcq","bar-exam","ucat","millwright","bls","smart-serve","air-brake"]'
           elif [ "$INPUT" = "batch2" ]; then
