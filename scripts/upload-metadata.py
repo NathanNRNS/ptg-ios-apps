@@ -43,7 +43,7 @@ def asc_request(token, method, path, body=None, content_type="application/json",
         "Content-Type": content_type,
     })
     try:
-        with urllib.request.urlopen(req, timeout=30) as r:
+        with urllib.request.urlopen(req, timeout=60) as r:
             raw = r.read()
             return json.loads(raw) if raw else {}
     except urllib.error.HTTPError as e:
@@ -54,6 +54,14 @@ def asc_request(token, method, path, body=None, content_type="application/json",
             return asc_request(token, method, path, body, content_type, _retry + 1)
         body_str = e.read().decode()[:500]
         print(f"  HTTP {e.code} on {method} {path}: {body_str}")
+        return None
+    except Exception as e:
+        if _retry < 2:
+            wait = 30 * (_retry + 1)
+            print(f"  Network error ({type(e).__name__}) — retrying in {wait}s...")
+            time.sleep(wait)
+            return asc_request(token, method, path, body, content_type, _retry + 1)
+        print(f"  Network error after retries: {e}")
         return None
 
 def get_or_create_localization(token, app_id, locale="en-US"):
@@ -141,25 +149,52 @@ def detect_display_type(img_path):
 def delete_all_screenshot_sets(token, version_loc_id):
     """Delete all existing screenshot sets so we can re-upload with correct type."""
     sets = asc_request(token, "GET",
-        f"/v1/appStoreVersionLocalizations/{version_loc_id}/appScreenshotSets")
+        f"/v1/appStoreVersionLocalizations/{version_loc_id}/appScreenshotSets?limit=40")
     if not sets or not sets.get("data"):
+        print(f"  No screenshot sets found to clear")
         return
+    print(f"  Found {len(sets['data'])} screenshot set(s) to clear")
     for s in sets["data"]:
         set_id = s["id"]
-        # Delete individual screenshots first
-        sc_list = asc_request(token, "GET", f"/v1/appScreenshotSets/{set_id}/appScreenshots")
+        dtype = s["attributes"].get("screenshotDisplayType", "?")
+        # Delete all screenshots first (regardless of state)
+        sc_list = asc_request(token, "GET", f"/v1/appScreenshotSets/{set_id}/appScreenshots?limit=40")
         if sc_list and sc_list.get("data"):
             for sc in sc_list["data"]:
-                asc_request(token, "DELETE", f"/v1/appScreenshots/{sc['id']}")
-        # Then delete the set
-        asc_request(token, "DELETE", f"/v1/appScreenshotSets/{set_id}")
-    print(f"  Cleared {len(sets['data'])} screenshot set(s)")
+                sc_state = (sc.get("attributes", {}).get("assetDeliveryState") or {}).get("state", "?")
+                r = asc_request(token, "DELETE", f"/v1/appScreenshots/{sc['id']}")
+                if r is None:
+                    print(f"    ⚠ Screenshot {sc['id'][:8]} (state={sc_state}) delete failed")
+        # Delete the set
+        r = asc_request(token, "DELETE", f"/v1/appScreenshotSets/{set_id}")
+        if r is None:
+            print(f"    ⚠ Set {dtype} delete failed, retrying in 5s...")
+            time.sleep(5)
+            r2 = asc_request(token, "DELETE", f"/v1/appScreenshotSets/{set_id}")
+            if r2 is None:
+                print(f"    ❌ Set {dtype} still not deleted — FAILED screenshots may remain")
+            else:
+                print(f"    Cleared set {dtype} (on retry)")
+        else:
+            print(f"    Cleared set {dtype}")
+    time.sleep(3)  # Let Apple process deletions before we create new sets
 
 def get_or_create_screenshot_set(token, version_loc_id, display_type):
+    # NOTE: Apple's filter[screenshotDisplayType] is broken — it returns all sets regardless of type.
+    # Always validate the returned set's actual screenshotDisplayType attribute.
     sets = asc_request(token, "GET",
         f"/v1/appStoreVersionLocalizations/{version_loc_id}/appScreenshotSets?filter[screenshotDisplayType]={display_type}")
     if sets and sets.get("data"):
-        return sets["data"][0]["id"]
+        for s in sets["data"]:
+            if s["attributes"].get("screenshotDisplayType") == display_type:
+                set_id = s["id"]
+                # Delete any existing screenshots so we don't accumulate duplicates
+                sc_list = asc_request(token, "GET", f"/v1/appScreenshotSets/{set_id}/appScreenshots?limit=40")
+                if sc_list and sc_list.get("data"):
+                    for sc in sc_list["data"]:
+                        asc_request(token, "DELETE", f"/v1/appScreenshots/{sc['id']}")
+                return set_id
+        # Filter returned wrong type (Apple API bug) — fall through to create new set
     resp = asc_request(token, "POST", "/v1/appScreenshotSets", {
         "data": {"type": "appScreenshotSets",
                  "attributes": {"screenshotDisplayType": display_type},
@@ -212,7 +247,7 @@ def upload_screenshot(token, version_loc_id, img_path, display_type=None):
         upload_req = urllib.request.Request(op["url"], data=chunk, method=op["method"],
                                            headers=req_headers)
         try:
-            urllib.request.urlopen(upload_req, timeout=60)
+            urllib.request.urlopen(upload_req, timeout=120)
         except Exception as ex:
             print(f"  Upload chunk failed: {ex}")
             return False

@@ -45,7 +45,7 @@ def asc_request(token, method, path, body=None, _retry=0):
         "Content-Type": "application/json",
     })
     try:
-        with urllib.request.urlopen(req, timeout=30) as r:
+        with urllib.request.urlopen(req, timeout=60) as r:
             raw = r.read()
             return json.loads(raw) if raw else {}
     except urllib.error.HTTPError as e:
@@ -56,6 +56,14 @@ def asc_request(token, method, path, body=None, _retry=0):
             return asc_request(token, method, path, body, _retry + 1)
         body_str = e.read().decode()[:800]
         print(f"  HTTP {e.code} {method} {path}: {body_str}")
+        return None
+    except Exception as e:
+        if _retry < 2:
+            wait = 30 * (_retry + 1)
+            print(f"  Network error ({type(e).__name__}) — retrying in {wait}s...")
+            time.sleep(wait)
+            return asc_request(token, method, path, body, _retry + 1)
+        print(f"  Network error after retries: {e}")
         return None
 
 def get_editable_version(token, app_id):
@@ -106,7 +114,7 @@ def wait_for_screenshots_ready(token, version_id, max_wait=600):
         return True
     loc_id = locs["data"][0]["id"]
     sc_sets = asc_request(token, "GET",
-        f"/v1/appStoreVersionLocalizations/{loc_id}/appScreenshotSets")
+        f"/v1/appStoreVersionLocalizations/{loc_id}/appScreenshotSets?limit=40")
     if not sc_sets or not sc_sets.get("data"):
         return True
     waited = 0
@@ -271,7 +279,10 @@ def process_app(creds, slug, app_data):
     set_export_compliance(token, build_id)
 
     # Wait for screenshots to finish processing before submitting
-    wait_for_screenshots_ready(token, version_id)
+    sc_ready = wait_for_screenshots_ready(token, version_id)
+    if not sc_ready:
+        print(f"  ⚠ FAILED screenshots detected — skipping submit, re-run upload-metadata first")
+        return
 
     # Submit for review
     ok, info = submit_for_review(token, app_id, version_id)
