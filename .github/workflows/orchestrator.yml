@@ -35,13 +35,4 @@ jobs:
 
       - name: Report status
         run: |
-          echo "=== Apps in apps.json ==="
-          python3 -c "
-import json
-apps = json.load(open('apps.json'))
-with_id = sum(1 for v in apps.values() if v.get('ascAppId'))
-without = len(apps) - with_id
-print(f'Registered (have ascAppId): {with_id}')
-print(f'Need registration: {without}')
-print(f'Total: {len(apps)}')
-"
+          python3 -c "import json; a=json.load(open('apps.json')); w=sum(1 for v in a.values() if v.get('ascAppId')); print(f'Registered: {w}/{len(a)} | Need registration: {len(a)-w}')"
