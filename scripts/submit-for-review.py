@@ -61,6 +61,28 @@ def get_editable_version(token, app_id):
         return resp["data"][0]["id"], resp["data"][0]["attributes"]["appStoreState"]
     return None, None
 
+def attach_build_to_version(token, app_id, version_id):
+    """Find the latest valid build (including expired) and link it to the App Store Version."""
+    # Don't filter by expired — expired builds still work for App Store submission
+    builds = asc_request(token, "GET",
+        f"/v1/builds?filter[app]={app_id}&filter[processingState]=VALID&sort=-uploadedDate&limit=1")
+    if not builds or not builds.get("data"):
+        print(f"  No valid builds found")
+        return False
+    build_id = builds["data"][0]["id"]
+    build_ver = builds["data"][0]["attributes"].get("version", "?")
+    resp = asc_request(token, "PATCH", f"/v1/appStoreVersions/{version_id}", {
+        "data": {
+            "type": "appStoreVersions",
+            "id": version_id,
+            "relationships": {"build": {"data": {"type": "builds", "id": build_id}}}
+        }
+    })
+    if resp is not None:
+        print(f"  Attached build {build_ver} ({build_id})")
+        return True
+    return False
+
 def set_export_compliance(token, app_id):
     # New API (2024+): export compliance is now an appEncryptionDeclaration resource
     # Create one tagged for the app — usesEncryption=False covers standard WebView apps
@@ -136,13 +158,18 @@ def validate_app_ready(token, app_id, version_id, slug):
         if len(desc) < 50:
             issues.append(f"description too short ({len(desc)} chars)")
 
-        # Check screenshots
+        # Check screenshots — screenshotCount is unreliable; check actual screenshot objects
         loc_id = locs["data"][0]["id"]
         sc_sets = asc_request(token, "GET",
             f"/v1/appStoreVersionLocalizations/{loc_id}/appScreenshotSets")
-        has_screenshots = (sc_sets and sc_sets.get("data") and
-            any(s.get("attributes", {}).get("screenshotCount", 0) > 0
-                for s in sc_sets["data"]))
+        has_screenshots = False
+        if sc_sets and sc_sets.get("data"):
+            for sc_set in sc_sets["data"]:
+                screenshots = asc_request(token, "GET",
+                    f"/v1/appScreenshotSets/{sc_set['id']}/appScreenshots?limit=1")
+                if screenshots and screenshots.get("data") and len(screenshots["data"]) > 0:
+                    has_screenshots = True
+                    break
         if not has_screenshots:
             issues.append("no screenshots")
 
@@ -175,6 +202,11 @@ def process_app(token, slug, app_data):
     ready, issues = validate_app_ready(token, app_id, version_id, slug)
     if not ready:
         print(f"  ⚠ Not ready: {', '.join(issues)} — skipping submit")
+        return
+
+    # Attach build to version (required before submit)
+    if not attach_build_to_version(token, app_id, version_id):
+        print(f"  ⚠ Could not attach build — skipping submit")
         return
 
     # Set export compliance
