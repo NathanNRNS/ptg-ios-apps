@@ -68,6 +68,9 @@ jobs:
           npx cap add ios 2>/dev/null || true
           npx cap sync ios
 
+      - name: Install Python deps for icon generation
+        run: pip3 install --break-system-packages pillow
+
       - name: Generate icons (Python — reliable replacement for @capacitor/assets)
         run: |
           mkdir -p resources
