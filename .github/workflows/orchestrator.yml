@@ -1,0 +1,47 @@
+name: Daily iOS Pipeline Orchestrator
+
+on:
+  schedule:
+    - cron: '0 7 * * *'   # 7 AM UTC daily
+  workflow_dispatch: {}    # manual trigger any time
+
+jobs:
+  orchestrate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install cryptography pillow
+
+      - name: Upload metadata for all registered apps
+        run: python3 scripts/upload-metadata.py --all
+        env:
+          ASC_KEY_ID:      ${{ secrets.ASC_KEY_ID }}
+          ASC_ISSUER_ID:   ${{ secrets.ASC_ISSUER_ID }}
+          ASC_PRIVATE_KEY: ${{ secrets.ASC_PRIVATE_KEY }}
+
+      - name: Submit all eligible apps for App Store review
+        run: python3 scripts/submit-for-review.py --all
+        env:
+          ASC_KEY_ID:      ${{ secrets.ASC_KEY_ID }}
+          ASC_ISSUER_ID:   ${{ secrets.ASC_ISSUER_ID }}
+          ASC_PRIVATE_KEY: ${{ secrets.ASC_PRIVATE_KEY }}
+
+      - name: Report status
+        run: |
+          echo "=== Apps in apps.json ==="
+          python3 -c "
+import json
+apps = json.load(open('apps.json'))
+with_id = sum(1 for v in apps.values() if v.get('ascAppId'))
+without = len(apps) - with_id
+print(f'Registered (have ascAppId): {with_id}')
+print(f'Need registration: {without}')
+print(f'Total: {len(apps)}')
+"

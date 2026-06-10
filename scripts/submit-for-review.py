@@ -18,12 +18,7 @@ except ImportError:
     print("pip install cryptography")
     sys.exit(1)
 
-NEW_APPS = [
-    "reading","bluebook-sat","mensa","cefr","nbt","bartender","ielts",
-    "police-officer","ap-us-history","celpip","alcpt","truck-dispatcher",
-    "amcat","ibew-aptitude","amc-mcq","bar-exam","ucat","millwright",
-    "bls","smart-serve","air-brake"
-]
+NEW_APPS = []  # kept for backwards compat — now unused; --all is the default
 
 def make_jwt(key_id, issuer_id, private_key_pem):
     header = base64.urlsafe_b64encode(
@@ -166,12 +161,11 @@ def main():
     apps = json.loads((ROOT / "apps.json").read_text())
 
     slugs_arg = [s for s in sys.argv[1:] if s not in ("--all", "--new-only")]
-    new_only = "--new-only" in sys.argv
 
-    if "--all" in sys.argv or not sys.argv[1:]:
-        target_slugs = list(apps.keys())
-    elif new_only:
-        target_slugs = NEW_APPS
+    if "--all" in sys.argv or "--new-only" in sys.argv or not sys.argv[1:]:
+        # All apps that have an ascAppId registered
+        target_slugs = [k for k, v in apps.items() if v.get("ascAppId")]
+        print(f"Targeting all {len(target_slugs)} registered apps")
     else:
         target_slugs = slugs_arg
 

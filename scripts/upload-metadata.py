@@ -275,6 +275,18 @@ Whether you're a first-time test-taker or brushing up before your exam, our {nam
 
 Download now and start practicing for free!"""
 
+def get_meta(slug, app_data):
+    """Return metadata for any app — use APP_META if available, else derive from name."""
+    if slug in APP_META:
+        return APP_META[slug]
+    name = app_data.get("ascName") or app_data.get("name", slug.replace("-", " ").title())
+    # Extract keywords from slug
+    words = slug.replace("-", " ")
+    return {
+        "subtitle": "Practice Test & Exam Prep",
+        "keywords": f"{words},practice test,exam prep,study guide,test preparation",
+    }
+
 def process_app(token, slug, app_data):
     app_id = app_data.get("ascAppId")
     if not app_id:
@@ -282,7 +294,7 @@ def process_app(token, slug, app_data):
         return
 
     print(f"\n[{slug}] Processing app ID {app_id}")
-    meta = APP_META.get(slug, {"subtitle": "Practice Test Prep", "keywords": "practice test,exam prep"})
+    meta = get_meta(slug, app_data)
     display_name = app_data.get("ascName") or app_data.get("name", slug)
     description = DESCRIPTION_TEMPLATE.format(name=display_name)
 
@@ -327,7 +339,8 @@ def main():
 
     slugs_arg = sys.argv[1:] if sys.argv[1:] else []
     if "--all" in slugs_arg or not slugs_arg:
-        target_slugs = list(apps.keys())
+        target_slugs = [k for k, v in apps.items() if v.get("ascAppId")]
+        print(f"Uploading metadata for {len(target_slugs)} registered apps")
     else:
         target_slugs = [s for s in slugs_arg if s != "--all"]
 
