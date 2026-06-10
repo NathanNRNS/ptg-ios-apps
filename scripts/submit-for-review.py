@@ -99,33 +99,47 @@ def set_export_compliance(token, build_id):
     return True
 
 def submit_for_review(token, app_id, version_id):
-    """New API (2024+): use reviewSubmissions instead of appStoreVersionSubmissions."""
-    # Step 1: Create reviewSubmission for the app+platform
-    resp = asc_request(token, "POST", "/v1/reviewSubmissions", {
-        "data": {
-            "type": "reviewSubmissions",
-            "attributes": {"platform": "IOS"},
-            "relationships": {"app": {"data": {"type": "apps", "id": app_id}}}
-        }
-    })
-    if not resp or not resp.get("data"):
-        return False, "create reviewSubmission failed"
-    submission_id = resp["data"]["id"]
+    """Use reviewSubmissions API. Reuses existing READY_FOR_REVIEW submission if one exists."""
+    # Check for existing submissions first — reuse to avoid 5-slot concurrency limit
+    existing = asc_request(token, "GET", f"/v1/reviewSubmissions?filter[app]={app_id}&filter[platform]=IOS")
+    submission_id = None
+    if existing and existing.get("data"):
+        for sub in existing["data"]:
+            state = sub["attributes"].get("state", "")
+            if state in ("READY_FOR_REVIEW",):
+                submission_id = sub["id"]
+                print(f"  Reusing existing submission {submission_id[:8]}...")
+                break
+            elif state in ("WAITING_FOR_REVIEW", "IN_REVIEW", "COMPLETE"):
+                return True, f"already-{state.lower()}"
 
-    # Step 2: Add reviewSubmissionItem for the version
-    resp2 = asc_request(token, "POST", "/v1/reviewSubmissionItems", {
-        "data": {
-            "type": "reviewSubmissionItems",
-            "relationships": {
-                "reviewSubmission": {"data": {"type": "reviewSubmissions", "id": submission_id}},
-                "appStoreVersion": {"data": {"type": "appStoreVersions", "id": version_id}}
+    if not submission_id:
+        # Create a new reviewSubmission
+        resp = asc_request(token, "POST", "/v1/reviewSubmissions", {
+            "data": {
+                "type": "reviewSubmissions",
+                "attributes": {"platform": "IOS"},
+                "relationships": {"app": {"data": {"type": "apps", "id": app_id}}}
             }
-        }
-    })
-    if not resp2 or not resp2.get("data"):
-        return False, "add reviewSubmissionItem failed"
+        })
+        if not resp or not resp.get("data"):
+            return False, "create reviewSubmission failed"
+        submission_id = resp["data"]["id"]
 
-    # Step 3: Submit the reviewSubmission (set submitted=true)
+        # Add reviewSubmissionItem for the version
+        resp2 = asc_request(token, "POST", "/v1/reviewSubmissionItems", {
+            "data": {
+                "type": "reviewSubmissionItems",
+                "relationships": {
+                    "reviewSubmission": {"data": {"type": "reviewSubmissions", "id": submission_id}},
+                    "appStoreVersion": {"data": {"type": "appStoreVersions", "id": version_id}}
+                }
+            }
+        })
+        if not resp2 or not resp2.get("data"):
+            return False, "add reviewSubmissionItem failed"
+
+    # Submit (set submitted=true)
     resp3 = asc_request(token, "PATCH", f"/v1/reviewSubmissions/{submission_id}", {
         "data": {
             "type": "reviewSubmissions",
