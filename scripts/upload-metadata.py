@@ -240,18 +240,20 @@ def set_app_info(token, app_id, name, subtitle, locale="en-US"):
     })
     print(f"  App info updated: name={name[:30]}")
 
-def set_version_metadata(token, version_loc_id, description, keywords, whats_new):
-    asc_request(token, "PATCH", f"/v1/appStoreVersionLocalizations/{version_loc_id}", {
+def set_version_metadata(token, version_loc_id, description, keywords):
+    resp = asc_request(token, "PATCH", f"/v1/appStoreVersionLocalizations/{version_loc_id}", {
         "data": {"type": "appStoreVersionLocalizations", "id": version_loc_id,
                  "attributes": {
                      "description": description[:4000],
                      "keywords": keywords[:100],
-                     "whatsNew": whats_new[:4000],
                      "supportUrl": "https://practicetestgeeks.com/contact-us",
                      "marketingUrl": "https://practicetestgeeks.com",
                  }}
     })
-    print(f"  Version metadata set")
+    if resp is None:
+        print(f"  ⚠ Version metadata PATCH failed")
+    else:
+        print(f"  Version metadata set")
 
 APP_META = {
     "reading":         {"subtitle": "Reading Skills Practice",    "keywords": "reading comprehension,practice test,reading skills,exam prep,passages"},
@@ -365,8 +367,7 @@ def process_app(creds, slug, app_data):
     # 2. Version metadata (description + keywords)
     _, version_loc_id = get_or_create_version_localization(token, app_id)
     if version_loc_id:
-        set_version_metadata(token, version_loc_id, description, meta["keywords"],
-                             "Initial release.")
+        set_version_metadata(token, version_loc_id, description, meta["keywords"])
 
         # 3. Screenshots — always clear and re-upload (iPhone + iPad)
         sc_dir = ROOT / "screenshots" / slug
