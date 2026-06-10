@@ -62,13 +62,12 @@ def get_editable_version(token, app_id):
     return None, None
 
 def attach_build_to_version(token, app_id, version_id):
-    """Find the latest valid build (including expired) and link it to the App Store Version."""
-    # Don't filter by expired — expired builds still work for App Store submission
+    """Find the latest valid build and link it to the App Store Version. Returns build_id or None."""
     builds = asc_request(token, "GET",
         f"/v1/builds?filter[app]={app_id}&filter[processingState]=VALID&sort=-uploadedDate&limit=1")
     if not builds or not builds.get("data"):
         print(f"  No valid builds found")
-        return False
+        return None
     build_id = builds["data"][0]["id"]
     build_ver = builds["data"][0]["attributes"].get("version", "?")
     resp = asc_request(token, "PATCH", f"/v1/appStoreVersions/{version_id}", {
@@ -80,28 +79,18 @@ def attach_build_to_version(token, app_id, version_id):
     })
     if resp is not None:
         print(f"  Attached build {build_ver} ({build_id})")
-        return True
-    return False
+        return build_id
+    return None
 
-def set_export_compliance(token, app_id):
-    # New API (2024+): export compliance is now an appEncryptionDeclaration resource
-    # Create one tagged for the app — usesEncryption=False covers standard WebView apps
-    resp = asc_request(token, "POST", "/v1/appEncryptionDeclarations", {
+def set_export_compliance(token, build_id):
+    """Mark build as not using non-exempt encryption — required before App Store review."""
+    asc_request(token, "PATCH", f"/v1/builds/{build_id}", {
         "data": {
-            "type": "appEncryptionDeclarations",
-            "attributes": {
-                "appEncryptionDeclarationState": "APPROVED",
-                "usesEncryption": False,
-                "exempt": True,
-                "containsThirdPartyCryptography": False,
-                "containsProprietaryCryptography": False,
-                "availableOnFrenchStore": True,
-                "platform": "IOS"
-            },
-            "relationships": {"app": {"data": {"type": "apps", "id": app_id}}}
+            "type": "builds",
+            "id": build_id,
+            "attributes": {"usesNonExemptEncryption": False}
         }
     })
-    # If creation 409s (already exists), that's fine
     return True
 
 def submit_for_review(token, app_id, version_id):
@@ -205,12 +194,13 @@ def process_app(token, slug, app_data):
         return
 
     # Attach build to version (required before submit)
-    if not attach_build_to_version(token, app_id, version_id):
+    build_id = attach_build_to_version(token, app_id, version_id)
+    if not build_id:
         print(f"  ⚠ Could not attach build — skipping submit")
         return
 
-    # Set export compliance
-    set_export_compliance(token, app_id)
+    # Mark build as not using non-exempt encryption
+    set_export_compliance(token, build_id)
 
     # Submit for review
     ok, info = submit_for_review(token, app_id, version_id)
