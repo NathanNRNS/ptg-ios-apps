@@ -68,7 +68,10 @@ def get_or_create_localization(token, app_id, locale="en-US"):
     resp = asc_request(token, "GET", f"/v1/apps/{app_id}/appInfos")
     if not resp or not resp.get("data"):
         return None, None
-    info_id = resp["data"][0]["id"]
+    # Prefer editable appInfo (PREPARE_FOR_SUBMISSION etc.) over READY_FOR_SALE
+    editable = {"PREPARE_FOR_SUBMISSION", "DEVELOPER_REJECTED", "REJECTED", "METADATA_REJECTED"}
+    info = next((i for i in resp["data"] if i.get("attributes", {}).get("appStoreState") in editable), resp["data"][0])
+    info_id = info["id"]
 
     locs = asc_request(token, "GET", f"/v1/appInfos/{info_id}/appInfoLocalizations?filter[locale]={locale}")
     if locs and locs.get("data"):
@@ -275,6 +278,86 @@ def set_app_info(token, app_id, name, subtitle, locale="en-US"):
     })
     print(f"  App info updated: name={name[:30]}")
 
+REVIEW_CONTACT = {
+    "contactFirstName": "Ben", "contactLastName": "Wallenberg",
+    "contactPhone": "+12125550100", "contactEmail": "elearningcont@gmail.com",
+}
+
+def set_age_rating_and_rights(token, app_id, info_id, version_id):
+    """Set age rating declaration, content rights, primary category, and review details."""
+    # Age rating declaration — patch ALL appInfos (Apple links the version to one of them;
+    # we don't know which, so patch all to ensure the right one is set).
+    ard_attrs = {
+        "alcoholTobaccoOrDrugUseOrReferences": "NONE",
+        "contests": "NONE",
+        "gamblingSimulated": "NONE",
+        "gunsOrOtherWeapons": "NONE",
+        "horrorOrFearThemes": "NONE",
+        "koreaAgeRatingOverride": "NONE",
+        "matureOrSuggestiveThemes": "NONE",
+        "medicalOrTreatmentInformation": "NONE",
+        "profanityOrCrudeHumor": "NONE",
+        "sexualContentGraphicAndNudity": "NONE",
+        "sexualContentOrNudity": "NONE",
+        "violenceCartoonOrFantasy": "NONE",
+        "violenceRealistic": "NONE",
+        "violenceRealisticProlongedGraphicOrSadistic": "NONE",
+        "ageRatingOverride": "NONE",
+        "advertising": False,
+        "ageAssurance": False,
+        "gambling": False,
+        "healthOrWellnessTopics": False,
+        "lootBox": False,
+        "messagingAndChat": False,
+        "parentalControls": False,
+        "unrestrictedWebAccess": False,
+        "userGeneratedContent": False,
+    }
+    all_infos = asc_request(token, "GET", f"/v1/apps/{app_id}/appInfos")
+    if all_infos and all_infos.get("data"):
+        for ai in all_infos["data"]:
+            ard = asc_request(token, "GET", f"/v1/appInfos/{ai['id']}/ageRatingDeclaration")
+            if ard and ard.get("data") and ard["data"].get("id"):
+                ard_id = ard["data"]["id"]
+                asc_request(token, "PATCH", f"/v1/ageRatingDeclarations/{ard_id}", {
+                    "data": {"type": "ageRatingDeclarations", "id": ard_id, "attributes": ard_attrs}
+                })
+    print(f"  Age rating set")
+
+    # Content rights declaration — on app resource, not appInfo
+    asc_request(token, "PATCH", f"/v1/apps/{app_id}", {
+        "data": {"type": "apps", "id": app_id, "attributes": {
+            "contentRightsDeclaration": "DOES_NOT_USE_THIRD_PARTY_CONTENT"
+        }}
+    })
+    print(f"  Content rights set")
+
+    # Primary category — set to EDUCATION if missing
+    cat_resp = asc_request(token, "GET", f"/v1/appInfos/{info_id}/primaryCategory")
+    if not cat_resp or not cat_resp.get("data"):
+        asc_request(token, "PATCH", f"/v1/appInfos/{info_id}", {
+            "data": {"type": "appInfos", "id": info_id,
+                     "relationships": {"primaryCategory": {"data": {"type": "appCategories", "id": "EDUCATION"}}}}
+        })
+        print(f"  Primary category set to EDUCATION")
+
+    # App Store Review Details — always include all contact fields + demoAccountRequired=False
+    review_notes = "No demo account required. App provides educational practice tests accessible without login."
+    rd_attrs = {**REVIEW_CONTACT, "demoAccountRequired": False, "demoAccountName": None,
+                "demoAccountPassword": None, "notes": review_notes}
+    existing = asc_request(token, "GET", f"/v1/appStoreVersions/{version_id}/appStoreReviewDetail")
+    if existing and existing.get("data"):
+        rd_id = existing["data"]["id"]
+        asc_request(token, "PATCH", f"/v1/appStoreReviewDetails/{rd_id}", {
+            "data": {"type": "appStoreReviewDetails", "id": rd_id, "attributes": rd_attrs}
+        })
+    else:
+        asc_request(token, "POST", "/v1/appStoreReviewDetails", {
+            "data": {"type": "appStoreReviewDetails", "attributes": rd_attrs,
+                     "relationships": {"appStoreVersion": {"data": {"type": "appStoreVersions", "id": version_id}}}}
+        })
+    print(f"  Review details set")
+
 def set_version_metadata(token, version_loc_id, description, keywords):
     resp = asc_request(token, "PATCH", f"/v1/appStoreVersionLocalizations/{version_loc_id}", {
         "data": {"type": "appStoreVersionLocalizations", "id": version_loc_id,
@@ -397,14 +480,19 @@ def process_app(creds, slug, app_data):
     description = DESCRIPTION_TEMPLATE.format(name=display_name)
 
     # 1. App info (name + subtitle)
+    info_id, _ = get_or_create_localization(token, app_id)
     set_app_info(token, app_id, display_name, meta["subtitle"])
 
     # 2. Version metadata (description + keywords)
-    _, version_loc_id = get_or_create_version_localization(token, app_id)
+    version_id, version_loc_id = get_or_create_version_localization(token, app_id)
     if version_loc_id:
         set_version_metadata(token, version_loc_id, description, meta["keywords"])
 
-        # 3. Screenshots — always clear and re-upload (iPhone + iPad)
+        # 3. Age rating, content rights, review details (required before review submission)
+        if info_id and version_id:
+            set_age_rating_and_rights(token, app_id, info_id, version_id)
+
+        # 4. Screenshots — always clear and re-upload (iPhone + iPad)
         sc_dir = ROOT / "screenshots" / slug
         if sc_dir.exists():
             # iPhone screenshots (non-ipad- files)

@@ -38,6 +38,7 @@ def make_jwt(key_id, issuer_id, private_key_pem):
     return f"{header}.{payload}.{raw_sig}"
 
 def asc_request(token, method, path, body=None, _retry=0):
+    asc_request._last_error = ""
     url = f"https://api.appstoreconnect.apple.com{path}"
     data = json.dumps(body).encode() if body else None
     req = urllib.request.Request(url, data=data, method=method, headers={
@@ -54,8 +55,9 @@ def asc_request(token, method, path, body=None, _retry=0):
             print(f"  Rate limited — waiting {wait}s...")
             time.sleep(wait)
             return asc_request(token, method, path, body, _retry + 1)
-        body_str = e.read().decode()[:800]
+        body_str = e.read().decode()[:1200]
         print(f"  HTTP {e.code} {method} {path}: {body_str}")
+        asc_request._last_error = body_str
         return None
     except Exception as e:
         if _retry < 2:
@@ -192,6 +194,19 @@ def submit_for_review(token, app_id, version_id):
             }
         })
         if not resp2 or not resp2.get("data"):
+            # Check if version already belongs to a different submission — extract and submit that one
+            import re as _re
+            err_str = getattr(asc_request, '_last_error', '')
+            m = _re.search(r'already added to another reviewSubmission with id ([a-f0-9-]{36})', err_str)
+            if m:
+                other_sub_id = m.group(1)
+                print(f"  Version already in submission {other_sub_id[:8]}... — submitting that instead")
+                resp3 = asc_request(token, "PATCH", f"/v1/reviewSubmissions/{other_sub_id}", {
+                    "data": {"type": "reviewSubmissions", "id": other_sub_id,
+                             "attributes": {"submitted": True}}
+                })
+                if resp3 is not None:
+                    return True, other_sub_id
             return False, "add reviewSubmissionItem failed"
 
     # Submit (set submitted=true)
