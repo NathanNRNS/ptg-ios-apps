@@ -4,9 +4,15 @@ Submit apps for App Store review via ASC REST API.
 Usage: python3 scripts/submit-for-review.py [slug] [--all] [--new-only]
 Requires: ASC_KEY_ID, ASC_ISSUER_ID, ASC_PRIVATE_KEY env vars
 """
-import os, sys, json, time, base64
+import os, sys, json, time, base64, subprocess
 import urllib.request, urllib.error
 from pathlib import Path
+
+def tg_ios(msg):
+    try:
+        subprocess.run(["tg", "app_ios", msg], timeout=5, capture_output=True)
+    except Exception:
+        pass
 
 ROOT = Path(__file__).parent.parent
 
@@ -77,24 +83,29 @@ def get_editable_version(token, app_id):
     return None, None
 
 def attach_build_to_version(token, app_id, version_id):
-    """Find the latest valid build and link it to the App Store Version. Returns build_id or None."""
+    """Find a valid build and link it to the App Store Version. Tries up to 5 builds. Returns build_id or None."""
     builds = asc_request(token, "GET",
-        f"/v1/builds?filter[app]={app_id}&filter[processingState]=VALID&filter[expired]=false&sort=-uploadedDate&limit=1")
+        f"/v1/builds?filter[app]={app_id}&filter[processingState]=VALID&filter[expired]=false&sort=-uploadedDate&limit=5")
     if not builds or not builds.get("data"):
         print(f"  No valid builds found")
         return None
-    build_id = builds["data"][0]["id"]
-    build_ver = builds["data"][0]["attributes"].get("version", "?")
-    resp = asc_request(token, "PATCH", f"/v1/appStoreVersions/{version_id}", {
-        "data": {
-            "type": "appStoreVersions",
-            "id": version_id,
-            "relationships": {"build": {"data": {"type": "builds", "id": build_id}}}
-        }
-    })
-    if resp is not None:
-        print(f"  Attached build {build_ver} ({build_id})")
-        return build_id
+    for build in builds["data"]:
+        build_id = build["id"]
+        build_ver = build["attributes"].get("version", "?")
+        resp = asc_request(token, "PATCH", f"/v1/appStoreVersions/{version_id}", {
+            "data": {
+                "type": "appStoreVersions",
+                "id": version_id,
+                "relationships": {"build": {"data": {"type": "builds", "id": build_id}}}
+            }
+        })
+        if resp is not None:
+            print(f"  Attached build {build_ver} ({build_id})")
+            return build_id
+        # If error contains "already set" it just means build was already attached — still OK
+        if "already set" in (asc_request._last_error or "").lower():
+            print(f"  Build {build_ver} already attached (OK)")
+            return build_id
     return None
 
 def set_export_compliance(token, build_id):
@@ -263,32 +274,32 @@ def process_app(creds, slug, app_data):
     token = make_jwt(key_id, issuer_id, private_key)  # fresh token per app (avoids 20-min expiry)
     app_id = app_data.get("ascAppId")
     if not app_id:
-        return
+        return "skipped"
 
     print(f"\n[{slug}] app_id={app_id}")
 
     version_id, state = get_editable_version(token, app_id)
     if not version_id:
         print(f"  No editable version (already submitted or live)")
-        return
+        return "already"
 
     print(f"  State: {state}")
 
     if state in ("WAITING_FOR_REVIEW", "IN_REVIEW", "PENDING_DEVELOPER_RELEASE", "READY_FOR_SALE"):
         print(f"  Already in review or live, skipping")
-        return
+        return "already"
 
     # Validate before submitting
     ready, issues = validate_app_ready(token, app_id, version_id, slug)
     if not ready:
         print(f"  ⚠ Not ready: {', '.join(issues)} — skipping submit")
-        return
+        return "skipped"
 
     # Attach build to version (required before submit)
     build_id = attach_build_to_version(token, app_id, version_id)
     if not build_id:
         print(f"  ⚠ Could not attach build — skipping submit")
-        return
+        return "skipped"
 
     # Mark build as not using non-exempt encryption
     set_export_compliance(token, build_id)
@@ -297,14 +308,19 @@ def process_app(creds, slug, app_data):
     sc_ready = wait_for_screenshots_ready(token, version_id)
     if not sc_ready:
         print(f"  ⚠ FAILED screenshots detected — skipping submit, re-run upload-metadata first")
-        return
+        return "skipped"
 
     # Submit for review
     ok, info = submit_for_review(token, app_id, version_id)
+    app_label = " ".join(w.capitalize() for w in slug.replace("-", " ").split())
     if ok:
         print(f"  ✅ Submitted for review (submission_id={info})")
+        tg_ios(f"✅ <b>{app_label}</b> submitted for review\n📱 App ID: {app_id}")
+        return "submitted"
     else:
         print(f"  ❌ Submit failed: {info}")
+        tg_ios(f"❌ <b>{app_label}</b> submit failed: {info}\n📱 App ID: {app_id}")
+        return "failed"
 
 def main():
     key_id     = os.environ.get("ASC_KEY_ID", "")
@@ -326,11 +342,23 @@ def main():
     else:
         target_slugs = slugs_arg
 
+    submitted = failed = skipped = already = 0
     for slug in target_slugs:
         if slug not in apps:
             print(f"Unknown slug: {slug}")
             continue
-        process_app(creds, slug, apps[slug])
+        result = process_app(creds, slug, apps[slug])
+        if result == "submitted": submitted += 1
+        elif result == "already": already += 1
+        elif result == "failed": failed += 1
+        else: skipped += 1
+
+    tg_ios(
+        f"📊 <b>Submit run complete</b>\n"
+        f"✅ Submitted: {submitted} | ⏭ Already in review: {already}\n"
+        f"❌ Failed: {failed} | ⚠️ Skipped: {skipped}\n"
+        f"Total targeted: {len(target_slugs)}"
+    )
 
 if __name__ == "__main__":
     main()
