@@ -55,6 +55,12 @@ def main():
         print(f"  Resizing source from {img.size} to 1024x1024")
         img = img.resize((1024, 1024), Image.LANCZOS)
 
+    # Apple rejects any app icon (especially the 1024 App Store marketing icon)
+    # that has an alpha channel — flatten onto opaque white before saving.
+    background = Image.new('RGB', img.size, (255, 255, 255))
+    background.paste(img, mask=img.split()[3])
+    img = background
+
     images_manifest = []
     written = set()
 
