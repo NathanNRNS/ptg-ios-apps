@@ -7,6 +7,9 @@ on:
         description: 'Slugs csv, all/batch2/batch3/batch4/unbuilt'
         required: false
         default: 'unbuilt'
+  push:
+    paths:
+      - 'build-trigger.txt'
 
 jobs:
   prepare:
@@ -19,6 +22,10 @@ jobs:
         id: set-matrix
         run: |
           INPUT="${{ github.event.inputs.apps || 'unbuilt' }}"
+          if [ "${{ github.event_name }}" = "push" ]; then
+            # push-trigger mode: slugs CSV comes from build-trigger.txt (first non-comment line)
+            INPUT=$(grep -v '^#' build-trigger.txt | head -1 | tr -d ' \n')
+          fi
           if [ "$INPUT" = "unbuilt" ]; then
             SLUGS=$(python3 -c "import json,sys; a=json.load(open('apps.json')); print(json.dumps([k for k,v in a.items() if v.get('ascAppId')]))")
           elif [ "$INPUT" = "all" ]; then
