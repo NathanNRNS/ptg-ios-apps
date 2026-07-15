@@ -49,6 +49,30 @@ if (fs.existsSync(htmlPath)) {
   fs.writeFileSync(htmlPath, html);
 }
 
+// Patch the native Info.plist's CFBundleDisplayName. `npx cap add ios` no-ops
+// once ios/ already exists in the checkout (it's committed to git), and
+// `cap sync` never touches this key — so without this, every build ships
+// whatever display name was baked in when ios/ was first generated.
+const plistPath = path.join(__dirname, '..', 'ios', 'App', 'App', 'Info.plist');
+if (fs.existsSync(plistPath)) {
+  let plist = fs.readFileSync(plistPath, 'utf8');
+  const displayName = (app.ascName || app.name)
+    .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+  const before = plist;
+  plist = plist.replace(
+    /(<key>CFBundleDisplayName<\/key>\s*<string>)[^<]*(<\/string>)/,
+    `$1${displayName}$2`
+  );
+  if (plist === before) {
+    console.error('WARNING: CFBundleDisplayName key not found/replaced in Info.plist');
+  } else {
+    fs.writeFileSync(plistPath, plist);
+    console.log(`Patched CFBundleDisplayName -> "${displayName}"`);
+  }
+} else {
+  console.error('WARNING: Info.plist not found yet (expected before cap sync)');
+}
+
 console.log(`Customized for: ${app.ascName || app.name}`);
 console.log(`Bundle ID: ${config.appId}`);
 console.log(`URL: ${app.url}`);
