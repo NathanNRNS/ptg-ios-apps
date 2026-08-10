@@ -102,8 +102,9 @@ platform :ios do
     issuer_id   = ENV["ASC_ISSUER_ID"]
     private_key = ENV["ASC_PRIVATE_KEY"]
 
+    ipa_path = "/tmp/prebuilt_app.ipa"
     UI.message("Downloading prebuilt ipa for #{bundle_id} from #{ipa_url}")
-    sh("curl -fL '#{ipa_url}' -o app.ipa")
+    sh("curl -fL '#{ipa_url}' -o #{ipa_path}")
 
     api_key = app_store_connect_api_key(
       key_id:                key_id,
@@ -118,7 +119,7 @@ platform :ios do
       upload_to_testflight(
         api_key:                           api_key,
         app_identifier:                    bundle_id,
-        ipa:                               "./app.ipa",
+        ipa:                               ipa_path,
         skip_waiting_for_build_processing: true,
         skip_submission:                   true
       )
