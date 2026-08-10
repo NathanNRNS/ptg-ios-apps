@@ -12,6 +12,9 @@ on:
       bundle_id:
         description: 'Bundle identifier of the target ASC app'
         required: false
+      asc_app_id:
+        description: 'Numeric App Store Connect app id'
+        required: false
 
 jobs:
   upload:
@@ -24,14 +27,17 @@ jobs:
         run: |
           IPA_URL=$(sed -n '1p' upload-trigger.txt)
           BUNDLE_ID=$(sed -n '2p' upload-trigger.txt)
+          ASC_APP_ID=$(sed -n '3p' upload-trigger.txt)
           echo "IPA_URL=$IPA_URL" >> "$GITHUB_ENV"
           echo "BUNDLE_ID=$BUNDLE_ID" >> "$GITHUB_ENV"
+          echo "ASC_APP_ID=$ASC_APP_ID" >> "$GITHUB_ENV"
 
       - name: Use workflow_dispatch inputs
         if: github.event_name == 'workflow_dispatch'
         run: |
           echo "IPA_URL=${{ github.event.inputs.ipa_url }}" >> "$GITHUB_ENV"
           echo "BUNDLE_ID=${{ github.event.inputs.bundle_id }}" >> "$GITHUB_ENV"
+          echo "ASC_APP_ID=${{ github.event.inputs.asc_app_id }}" >> "$GITHUB_ENV"
 
       - name: Setup Ruby & Fastlane
         uses: ruby/setup-ruby@v1
@@ -47,6 +53,7 @@ jobs:
         env:
           IPA_URL:         ${{ env.IPA_URL }}
           BUNDLE_ID:       ${{ env.BUNDLE_ID }}
+          ASC_APP_ID:      ${{ env.ASC_APP_ID }}
           ASC_KEY_ID:      ${{ secrets.ASC_KEY_ID }}
           ASC_ISSUER_ID:   ${{ secrets.ASC_ISSUER_ID }}
           ASC_PRIVATE_KEY: ${{ secrets.ASC_PRIVATE_KEY }}

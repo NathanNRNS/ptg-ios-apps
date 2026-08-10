@@ -98,6 +98,7 @@ platform :ios do
   lane :upload_prebuilt do
     ipa_url     = ENV["IPA_URL"]
     bundle_id   = ENV["BUNDLE_ID"]
+    asc_app_id  = ENV["ASC_APP_ID"]
     key_id      = ENV["ASC_KEY_ID"]
     issuer_id   = ENV["ASC_ISSUER_ID"]
     private_key = ENV["ASC_PRIVATE_KEY"]
@@ -118,15 +119,18 @@ platform :ios do
       upload_attempts += 1
       upload_to_testflight(
         api_key:                           api_key,
+        apple_id:                          asc_app_id, # numeric ASC app id — avoids the
+                                                        # flaky bundle-id search pilot does
+                                                        # when only app_identifier is given
         app_identifier:                    bundle_id,
         ipa:                               ipa_path,
         skip_waiting_for_build_processing: true,
         skip_submission:                   true
       )
     rescue => e
-      if upload_attempts < 3 && e.message.to_s.include?("500")
-        UI.message("Apple 500 error on attempt #{upload_attempts}, retrying in 30s...")
-        sleep(30)
+      if upload_attempts < 3 && (e.message.to_s.include?("500") || e.message.to_s.include?("Couldn't find app"))
+        UI.message("Transient error on attempt #{upload_attempts} (#{e.message.to_s[0,80]}), retrying in 20s...")
+        sleep(20)
         retry
       end
       raise
