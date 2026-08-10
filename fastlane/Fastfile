@@ -128,9 +128,13 @@ platform :ios do
         skip_submission:                   true
       )
     rescue => e
-      if upload_attempts < 3 && (e.message.to_s.include?("500") || e.message.to_s.include?("Couldn't find app"))
-        UI.message("Transient error on attempt #{upload_attempts} (#{e.message.to_s[0,80]}), retrying in 20s...")
-        sleep(20)
+      transient = e.message.to_s.include?("500") ||
+                  e.message.to_s.include?("Couldn't find app") ||
+                  e.message.to_s.include?("Cannot determine the Apple ID from Bundle ID")
+      if upload_attempts < 5 && transient
+        wait = 30 * upload_attempts
+        UI.message("Transient error on attempt #{upload_attempts} (#{e.message.to_s[0,100]}), retrying in #{wait}s...")
+        sleep(wait)
         retry
       end
       raise
