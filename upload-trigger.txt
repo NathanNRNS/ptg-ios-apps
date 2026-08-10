@@ -1,4 +1,3 @@
-https://expo.dev/artifacts/eas/SUxr6-Mx5YEVWnRUUJsuesoOW0vX55RJq55uJAwxhS8.ipa
-com.practicetestgeeks.cna
+https://expo.dev/artifacts/eas/MRhetHAmRzSLEHQ1a7cw7-2NQ2qmrJlw7Gx1Lny8gkc.ipa
+CNAPracticeTest
 6747978792
-
