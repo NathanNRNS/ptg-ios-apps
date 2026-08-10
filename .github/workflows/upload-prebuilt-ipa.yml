@@ -1,0 +1,52 @@
+name: Upload Prebuilt IPA to TestFlight
+
+on:
+  push:
+    paths:
+      - 'upload-trigger.txt'
+  workflow_dispatch:
+    inputs:
+      ipa_url:
+        description: 'Direct URL to the .ipa (e.g. an EAS build artifact)'
+        required: false
+      bundle_id:
+        description: 'Bundle identifier of the target ASC app'
+        required: false
+
+jobs:
+  upload:
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Read trigger file (push-trigger mode)
+        if: github.event_name == 'push'
+        run: |
+          IPA_URL=$(sed -n '1p' upload-trigger.txt)
+          BUNDLE_ID=$(sed -n '2p' upload-trigger.txt)
+          echo "IPA_URL=$IPA_URL" >> "$GITHUB_ENV"
+          echo "BUNDLE_ID=$BUNDLE_ID" >> "$GITHUB_ENV"
+
+      - name: Use workflow_dispatch inputs
+        if: github.event_name == 'workflow_dispatch'
+        run: |
+          echo "IPA_URL=${{ github.event.inputs.ipa_url }}" >> "$GITHUB_ENV"
+          echo "BUNDLE_ID=${{ github.event.inputs.bundle_id }}" >> "$GITHUB_ENV"
+
+      - name: Setup Ruby & Fastlane
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.3'
+          bundler-cache: true
+
+      - name: Install Fastlane
+        run: bundle install --jobs 4 --retry 3
+
+      - name: Upload to TestFlight
+        run: bundle exec fastlane upload_prebuilt
+        env:
+          IPA_URL:         ${{ env.IPA_URL }}
+          BUNDLE_ID:       ${{ env.BUNDLE_ID }}
+          ASC_KEY_ID:      ${{ secrets.ASC_KEY_ID }}
+          ASC_ISSUER_ID:   ${{ secrets.ASC_ISSUER_ID }}
+          ASC_PRIVATE_KEY: ${{ secrets.ASC_PRIVATE_KEY }}
