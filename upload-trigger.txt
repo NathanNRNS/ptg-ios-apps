@@ -1,3 +1,3 @@
-https://expo.dev/artifacts/eas/hZubCLODmZ1y6SGwEPhKpY8mEt0-pwvyvyRxpL37JfQ.ipa
-ServSafe-Practice-Test
-6751770183
+https://expo.dev/artifacts/eas/KKhI92QgnW0MKMXy1DaSyAFuUHrWBSl40NREYtgFa6A.ipa
+CNAPracticeTest
+6747978792
