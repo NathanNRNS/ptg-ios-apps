@@ -1,3 +1,3 @@
-https://expo.dev/artifacts/eas/dBBWkS1TW6HLWU_rSURACy7PGZPODlmJ2_-Iom1XtwE.ipa
-CNAPracticeTest
-6747978792
+https://expo.dev/artifacts/eas/Cmtc9suwWlewXWV0-WCE5pYQDyCVGY97jOCRRC_5uXk.ipa
+GED-Practice-Test
+6751770083
